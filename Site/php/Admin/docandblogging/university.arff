@@ -1,0 +1,22 @@
+﻿@relation 'university data'
+
+@attribute ID numeric
+@attribute Degree {First,Second,Pass}
+@attribute University {UON,MOI,KU}
+@attribute Letter {GOOD,BAD}
+@attribute Expr {YES,NO}
+@attribute 'OUTCOME' {Y,N}
+
+@data
+1,First,UON,GOOD,YES,Y
+2,First,UON,GOOD,NO,Y
+3,First,MOI,BAD,NO,Y
+4,Second,UON,GOOD,YES,Y
+5,Second,MOI,GOOD,NO,Y
+6,Second,KU,GOOD,YES,Y
+7,Second,KU,GOOD,NO,N
+8,Second,UON,GOOD,NO,N
+9,Pass,MOI,BAD,YES,N
+10,Pass,UON,BAD,NO,N
+11,Pass,KU,GOOD,NO,N
+12,Pass,KU,GOOD,NO,N
