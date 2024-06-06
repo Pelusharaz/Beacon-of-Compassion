@@ -255,13 +255,15 @@
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus nisi consequuntur labore sint id optio 
         deserunt inventore in earum, magnam mollitia accusantium. Voluptas veniam saepe natus dolor dolore repellat enim.
       </p>
+      <br>
       <button type="submit" class="donate-button" style="color:white;">DONATE NOW TO SUPPORT OUR WORK</button>
      </div>
-
+     <br><br>
      <!-- where we support -->
-     <div class="support row container">
-      <!-- Photo Grid -->
-          <div class="column">
+     <div class="support container">
+      <div class="row">
+        <!-- Photo Grid -->
+        <div class="column">
             <div class="image-container" style="background-image: url('img/kids.jpg');background-size: contain; height: 200px;">
               <div class="support-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
@@ -312,9 +314,9 @@
                   </div>
               </div>
             </div>
-            
           </div>
 
+      </div>aaaaaaaaaa
           
      </div>
     
