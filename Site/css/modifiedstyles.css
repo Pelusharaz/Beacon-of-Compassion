@@ -694,11 +694,3 @@ form, input, select, textarea, label {
     height: 100%;
     color:white;
   }
-  .support-maskinfo{
-    text-align: center;
-    width: 40%;
-    margin-bottom: 20px;
-    background-color:white; 
-    color:orangered;
-    z-index: -2;
-  }

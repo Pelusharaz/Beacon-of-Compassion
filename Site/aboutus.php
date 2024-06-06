@@ -259,20 +259,56 @@
      </div>
 
      <!-- where we support -->
-     <div class="support row">
+     <div class="support row container">
       <!-- Photo Grid -->
           <div class="column">
-            <div class="image-container" style="background-image: url('img/top-kids.jpg');background-size: contain; height: 200px;">
+            <div class="image-container" style="background-image: url('img/kids.jpg');background-size: contain; height: 200px;">
               <div class="support-mask">
-                  <div class="support-maskinfo">
-                    <h4 class="mb-2">Basic survival</h4>
+                  <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
+                    <h4 class="mb-2">BASIC NECESSITIES</h4>
                   </div>
               </div>
             </div>
             <div class="image-container" style="background-image: url('img/top-kids2.jpg');background-size: contain; height: 200px;">
               <div class="support-mask">
-                  <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;">
-                    <h4 class="mb-2">Childrens Home</h4>
+                  <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
+                    <h4 class="mb-2">ACADEMIA</h4>
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="column">
+            <div class="image-container" style="background-image: url('img/top-kids.jpg');background-size: contain; height: 200px;">
+              <div class="support-mask">
+                  <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
+                    <h4 class="mb-2">SECURITIES</h4>
+                  </div>
+              </div>
+            </div>
+            <div class="image-container" style="background-image: url('img/top-kids2.jpg');background-size: contain; height: 200px;">
+              <div class="support-mask">
+                  <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
+                    <h4 class="mb-2">EMERGENCIES</h4>
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="column">
+            <div class="image-container" style="background-image: url('img/top-kids.jpg');background-size: contain; height: 200px;">
+              <div class="support-mask">
+                  <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
+                    <h4 class="mb-2">CLIMATE CRISIS</h4>
+                  </div>
+              </div>
+            </div>
+            <div class="image-container" style="background-image: url('img/top-kids2.jpg');background-size: contain; height: 200px;">
+              <div class="support-mask">
+                  <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
+                    <h4 class="mb-2">HUNGER CRISIS</h4>
                   </div>
               </div>
             </div>
