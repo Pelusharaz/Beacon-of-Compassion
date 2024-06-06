@@ -45,12 +45,12 @@
           </a>
           
           <div class="collapse navbar-collapse header-links" id="navbarExample01">
-            <a class="navbar-brand large-screen-logo" href="home-loggedin.php">
+            <a class="navbar-brand large-screen-logo" href="index.php">
               <img src="img/bof-logo2-rec.png" height="100" style alt="" loading="lazy" />
             </a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-top:15px;">
               <li class="nav-item">
-                <a class="nav-link" style="color:black;" aria-current="page" href="contact&about.php">What we Do</a>
+                <a class="nav-link" style="color:black;" aria-current="page" href="aboutus.php">What we Do</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" style="color:black; cursor:pointer;" aria-current="page" onclick="impacts()">Impacts</a>

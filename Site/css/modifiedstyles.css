@@ -658,3 +658,47 @@ form, input, select, textarea, label {
     max-width: 100%;
   }
 }
+
+
+/* what-we-do */
+.what-we-do{
+  text-align: center;
+  margin-top: -20px;
+}
+.what-we-do-header{
+  font-weight: bold;
+  color:black;
+}
+.what-we-do-info{
+  color:black;
+}
+.quick-link{
+  color:grey;
+
+}
+.donate-button {
+  width: auto;
+  padding:10px;
+  border: none;
+  border-radius: 5px; 
+  background:black  ;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  }
+  .donate-button:hover {
+    background: orangered;
+    }
+  .support-mask{
+    background-color: rgba(0, 0, 0, 0.171);
+    height: 100%;
+    color:white;
+  }
+  .support-maskinfo{
+    text-align: center;
+    width: 40%;
+    margin-bottom: 20px;
+    background-color:white; 
+    color:orangered;
+    z-index: -2;
+  }
