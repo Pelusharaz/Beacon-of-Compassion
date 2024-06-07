@@ -364,7 +364,7 @@
         <!-- Photo Grid -->
         <div class="row"> 
           <div class="column">
-            <div class="image-container" style="background-image: url('img/top-kids.jpg');background-size: contain; height: 200px;">
+            <div class="image-container bg-image" style="background-image: url('img/top-kids.jpg'); height: 200px;">
               <div class="image-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;">
                     <h4 class="mb-2">Kids in the East</h4>
@@ -374,7 +374,7 @@
                   </div>
               </div>
             </div>
-            <div class="image-container" style="background-image: url('img/top-kids2.jpg');background-size: contain; height: 200px;">
+            <div class="image-container bg-image" style="background-image: url('img/top-kids2.jpg'); height: 200px;">
               <div class="image-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;">
                     <h4 class="mb-2">Childrens Home</h4>
@@ -388,7 +388,7 @@
           </div>
 
           <div class="column">
-            <div class="image-container" style="background-image: url('img/top-kids3.jpg');background-size: contain; height: 200px;">
+            <div class="image-container bg-image" style="background-image: url('img/top-kids3.jpg'); height: 200px;">
               <div class="image-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;">
                     <h4 class="mb-2">Touch a Heart</h4>
@@ -398,7 +398,7 @@
                   </div>
               </div>
             </div>
-            <div class="image-container" style="background-image: url('img/top-kids.jpg');background-size: contain; height: 200px;">
+            <div class="image-container bg-image" style="background-image: url('img/top-kids.jpg'); height: 200px;">
               <div class="image-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;">
                     <h4 class="mb-2">School Projects</h4>
@@ -412,7 +412,7 @@
           </div>
 
           <div class="column">
-            <div class="image-container" style="background-image: url('img/top-kids3.jpg');background-size: contain; height: 200px;">
+            <div class="image-container bg-image" style="background-image: url('img/top-kids3.jpg'); height: 200px;">
               <div class="image-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;">
                     <h4 class="mb-2">Volunteer projects</h4>
@@ -422,7 +422,7 @@
                   </div>
               </div>
             </div>
-            <div class="image-container" style="background-image: url('img/top-kids2.jpg');background-size: contain; height: 200px;">
+            <div class="image-container bg-image" style="background-image: url('img/top-kids2.jpg'); height: 200px;">
               <div class="image-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;">
                     <h4 class="mb-2">Clean water projects</h4>

@@ -34,15 +34,15 @@
       <div class="slideshow-container">
      
       <div class="p-5 text-center bg-image shadow-1-strong"
-        style="background-image: url('img/what-we-do.jpg'); height: 550px;">
+        style="background-image: url('img/partner.webp'); height: 550px;">
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
           <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white">
-              <h1 class="mb-3">WHAT WE DO</h1>
+              <h1 class="mb-3">PARTNER WITH US</h1>
               <h5 class="mb-3" style="color:rgb(238, 81, 8);">
                   Touching a soul one by one each day
               </h4>
-              <a class="links" href="index.php">Home</a> > <a class="links quick-link" href="aboutus.php">What We Do</a>
+              <a class="links" href="index.php">Home</a> > <a class="links quick-link" href="partner.php">Partner</a>
             </div>
           </div>
         </div>
@@ -245,80 +245,7 @@
             }
           </style>
 
-     <div class="what-we-do container">
-      <h5 class="what-we-do-header">THROUGH OUR PROGRAMMING, EMERGENCY RESPONSES AND ADVOCACY, WE PUT THE MOST VULNERABLE CHILDREN FIRST</h5>
-      <br>
-      <p class="what-we-do-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus nisi consequuntur labore sint id optio 
-        deserunt inventore in earum, magnam mollitia accusantium. Voluptas veniam saepe natus dolor dolore repellat enim.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus nisi consequuntur labore sint id optio 
-        deserunt inventore in earum, magnam mollitia accusantium. Voluptas veniam saepe natus dolor dolore repellat enim.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus nisi consequuntur labore sint id optio 
-        deserunt inventore in earum, magnam mollitia accusantium. Voluptas veniam saepe natus dolor dolore repellat enim.
-      </p>
-      <br>
-      <button type="submit" class="donate-button" style="color:white;">DONATE NOW TO SUPPORT OUR WORK</button>
-     </div>
-     <br><br>
-     <!-- where we support -->
-     <div class="support container">
-      <div class="row">
-        <!-- Photo Grid -->
-        <div class="column">
-            <div class="image-container bg-image" style="background-image: url('img/kids.jpg'); height: 200px;">
-              <div class="support-mask">
-                  <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
-                    <h4 class="mb-2">BASIC NECESSITIES</h4>
-                  </div>
-              </div>
-            </div>
-            <div class="image-container bg-image" style="background-image: url('img/learning.jpg'); height: 200px;">
-              <div class="support-mask">
-                  <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
-                    <h4 class="mb-2">ACADEMIA</h4>
-                  </div>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="column">
-            <div class="image-container bg-image" style="background-image: url('img/kid-security.jpg'); height: 200px;">
-              <div class="support-mask">
-                  <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
-                    <h4 class="mb-2">SECURITY</h4>
-                  </div>
-              </div>
-            </div>
-            <div class="image-container bg-image" style="background-image: url('img/refugee camp.webp'); height: 200px;">
-              <div class="support-mask">
-                  <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
-                    <h4 class="mb-2">EMERGENCIES</h4>
-                  </div>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="column">
-            <div class="image-container bg-image" style="background-image: url('img/climate-crisis.jpg'); height: 200px;">
-              <div class="support-mask">
-                  <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
-                    <h4 class="mb-2">CLIMATE CRISIS</h4>
-                  </div>
-              </div>
-            </div>
-            <div class="image-container bg-image" style="background-image: url('img/hunger-crisis.webp'); height: 200px;">
-              <div class="support-mask">
-                  <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
-                    <h4 class="mb-2">HUNGER CRISIS</h4>
-                  </div>
-              </div>
-            </div>
-          </div>
-
-      </div>
-          
-     </div>
+     
     
      <div class="contact-us">
       <div class="customer-care-img">
@@ -347,26 +274,6 @@
       </div>
      </div>
      <br>
-
-     <div class="p-5 text-center bg-image shadow-1-strong"
-        style="background-image: url('img/kid2.jpg'); height: 550px;">
-        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
-          <div class="d-flex justify-content-center align-items-center h-100">
-            <div class="text-white">
-              <h1 class="mb-3">A CHILD-RIGHTS APPROACH</h1>
-              <p class="mb-3" style="color:white">
-                Since Save the Children was founded 100 years ago, we have been committed to ensuring all children's rights 
-                are recognised. We promote change from the ground up by engaging children, their families and their communities.
-                Together with children, we work with governments and international organisations to ensure children's rights are on the political agenda. We hold leaders to account for the commitments they have made, ensuring systems are in place to protect and provide for all children.
-              </p>
-           
-            </div>
-          </div>
-        </div>
-      </div>
-
-    <br><br>
-    <h4 class="mb-3" style="color:black;">TOGETHER WE ARE STRONGER</h4>
       
     </main>
 

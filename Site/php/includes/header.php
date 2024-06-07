@@ -59,7 +59,7 @@
                 <a class="nav-link" style="color:black; cursor:pointer;"aria-current="page" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Volunteer</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link"style="color:black;" aria-current="page" href="contact&about.php">Partner with us</a>
+                <a class="nav-link"style="color:black;" aria-current="page" href="partner.php">Partner with us</a>
               </li>
 
               <li class="nav-item me-3 me-lg-0 dropdown">
