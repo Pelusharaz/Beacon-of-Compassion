@@ -212,9 +212,9 @@
             .introduction{
               display:flex;
               padding:100px;
-              background-color: blue;
+              background-color: #f1f1f1;
               width:100%;
-              margin-top:-40px;
+              margin-top:-70px;
               color:white;
             }
             .info{
@@ -245,6 +245,26 @@
             }
           </style>
 
+       <div class="introduction">
+        <div class="img">
+          <h6 style="font-weight:bolder;color:rgb(238, 81, 8);">PARTNER WITH US IN THE LONG LIFE CHANGING JOURNEY</h6>
+          <h5 style="color:black;">Touching a soul one by one each day</h5>
+          <!-- <img src="img/home.jpg" class="img-fluid" alt="" style="max-height:100%;">     -->
+        </div>
+        <div class="info" style="color:black;">
+        <p class="large-screen">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio libero facilis sequi error, iusto 
+          ex porro. Distinctio eos magni alias quae sapiente tempora provident nemo! Facilis, eius! Explicabo,
+          autem in! Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio libero facilis 
+          sequi error, iusto
+        </p>
+        </div>
+      </div> 
+      <br>
+      <div class="our-team" style="text-align: center;">
+        <h4 style="font-weight:bolder;color:black;">OUR ABLE TEAM</h4>
+        <p class="what-we-do-info">we have an able diverse team
+      </div>
      
     
      <div class="contact-us">
