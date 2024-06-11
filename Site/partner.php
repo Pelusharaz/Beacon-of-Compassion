@@ -261,9 +261,100 @@
         </div>
       </div> 
       <br>
+
       <div class="our-team" style="text-align: center;">
         <h4 style="font-weight:bolder;color:black;">OUR ABLE TEAM</h4>
-        <p class="what-we-do-info">we have an able diverse team
+        <p class="what-we-do-info">Meet our able diverse team
+      </div>
+
+      <div class="pics">
+      <div class="row">
+        <div class="column">
+
+          <div class="blog" style="margin:0px 10px 0px 10px;background-color:#f1f1f1;padding:30px;">
+          <img src="img/top-kids2.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"  >
+          
+           <div class="Blog-title"><h4 style="color:black;">DIRECTOR</h4></div>
+           <div class="info"style="margin-left:0px;width:100%;">
+             <p>
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure exercitationem non officiis nihil tenetur.
+               Magnam alias ea, eos ipsa beatae doloremque! Rerum animi unde aliquam qui aliquid ullam dicta consequatur!
+             </p>
+             <a class="btn blogbtn" role="button"><i class="fa fa-arrow-circle-right fa-lg" ></i>  Read More</a>
+           </div>
+          </div>
+
+          <div class="blog" style="margin:20px 10px 0px 10px;background-color:#f1f1f1;padding:30px;">
+          <div class="blog-img" style="background-image: url('img/top-kids3.jpg');background-size: contain; height: 200px;">
+            <div class="blog-mask" id="blog-mask3"></div>
+          </div>
+           <script>
+            $('#blog-mask3').hover(
+            function(){ $(this).removeClass('blog-mask') },
+            function(){ $(this).addClass('blog-mask') }
+	          )
+           </script>
+           <h6 style="margin:-30px 10px 0px 20px;color:white;"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="width:100%;"> by admin</i></h6>
+           <br><br>
+           <div class="date"><h6>16th Jan 2024</h6></div>
+           <div class="Blog-title"><h4 style="color:black;">Fire Disaster in Eastlands</h4></div>
+           <div class="info"style="margin-left:0px;width:100%;">
+             <p>
+            
+             </p>
+             <a class="btn blogbtn" role="button"><i class="fa fa-arrow-circle-right fa-lg" ></i>  Read More</a>
+           </div>
+          </div>
+
+        </div>
+        <div class="column">
+
+          <div class="blog" style="margin:0px 10px 0px 10px;background-color:#f1f1f1;padding:30px;">
+          <div class="blog-img" style="background-image: url('img/top-kids2.jpg');background-size: contain; height: 200px;">
+            <div class="blog-mask" id="blog-mask4"></div>
+          </div>
+           <script>
+            $('#blog-mask4').hover(
+            function(){ $(this).removeClass('blog-mask') },
+            function(){ $(this).addClass('blog-mask') }
+	          )
+           </script>
+           <h6 style="margin:-30px 10px 0px 20px;color:white;"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="width:100%;"> by admin</i></h6>
+           <br><br>
+           <div class="date"><h6>16th Jan 2024</h6></div>
+           <div class="Blog-title"><h4 style="color:black;">War in Ukraine</h4></div>
+           <div class="info"style="margin-left:0px;width:100%;">
+             <p>
+            
+             </p>
+             <a class="btn blogbtn" role="button"><i class="fa fa-arrow-circle-right fa-lg" ></i>  Read More</a>
+           </div>
+          </div>
+
+          <div class="blog" style="margin:20px 10px 0px 10px;background-color:#f1f1f1;padding:30px;">
+          <div class="blog-img" style="background-image: url('img/top-kids.jpg');background-size: contain; height: 200px;">
+            <div class="blog-mask" id="blog-mask5"></div>
+          </div>
+           <script>
+            $('#blog-mask5').hover(
+            function(){ $(this).removeClass('blog-mask') },
+            function(){ $(this).addClass('blog-mask') }
+	          )
+           </script>
+           <h6 style="margin:-30px 10px 0px 20px;color:white;"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="width:100%;"> by admin</i></h6>
+           <br><br>
+           <div class="date"><h6>16th Jan 2024</h6></div>
+           <div class="Blog-title"><h4 style="color:black;">Global Hunger</h4></div>
+           <div class="info"style="margin-left:0px;width:100%;">
+             <p>
+            
+             </p>
+             <a class="btn blogbtn" role="button"><i class="fa fa-arrow-circle-right fa-lg" ></i>  Read More</a>
+           </div>
+          </div>
+          
+        </div>
+      </div>
       </div>
      
     
