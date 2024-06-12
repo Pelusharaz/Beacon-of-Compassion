@@ -271,9 +271,9 @@
       <div class="row">
         <div class="column">
 
-          <div class="blog" style="margin:0px 10px 0px 10px;background-color:#f1f1f1;padding:30px;">
-          <img src="img/top-kids2.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"  >
-          
+          <div class="blog" style="margin:0px 10px 0px 10px;background-color:#f1f1f1;padding:30px;text-align:center;">
+          <img src="img/top-kids2.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;margin-top:-100px;">
+           <br><br>
            <div class="Blog-title"><h4 style="color:black;">DIRECTOR</h4></div>
            <div class="info"style="margin-left:0px;width:100%;">
              <p>
