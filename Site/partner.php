@@ -271,16 +271,16 @@
       <div class="row">
         <div class="column">
 
-          <div class="blog" style="margin:0px 10px 0px 10px;background-color:#f1f1f1;padding:30px;text-align:center;">
-          <img src="img/top-kids2.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;margin-top:-100px;">
-           <br><br>
-           <div class="Blog-title"><h4 style="color:black;">DIRECTOR</h4></div>
+          <div class="blog" style="margin:0px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/top-kids2.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+           <br>
+           <div class="Blog-title"><h4>DIRECTOR</h4></div>
            <div class="info"style="margin-left:0px;width:100%;">
              <p>
                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure exercitationem non officiis nihil tenetur.
                Magnam alias ea, eos ipsa beatae doloremque! Rerum animi unde aliquam qui aliquid ullam dicta consequatur!
              </p>
-             <a class="btn blogbtn" role="button"><i class="fa fa-arrow-circle-right fa-lg" ></i>  Read More</a>
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
            </div>
           </div>
 
