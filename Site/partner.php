@@ -267,11 +267,11 @@
         <p class="what-we-do-info">Meet our able diverse team
       </div>
 
-      <div class="pics">
+      <div class="container">
       <div class="row">
         <div class="column">
 
-          <div class="blog" style="margin:0px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <div class="blog" style="margin:10px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
           <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/top-kids2.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
            <br>
            <div class="Blog-title"><h4>DIRECTOR</h4></div>
@@ -280,99 +280,162 @@
                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure exercitationem non officiis nihil tenetur.
                Magnam alias ea, eos ipsa beatae doloremque! Rerum animi unde aliquam qui aliquid ullam dicta consequatur!
              </p>
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
+             <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
            </div>
+             <!-- Facebook -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100064267020188" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
+             <!-- Twitter -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
+             <!-- Instagram -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
+             <!-- whatsapp -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
           </div>
 
-          <div class="blog" style="margin:20px 10px 0px 10px;background-color:#f1f1f1;padding:30px;">
-          <div class="blog-img" style="background-image: url('img/top-kids3.jpg');background-size: contain; height: 200px;">
-            <div class="blog-mask" id="blog-mask3"></div>
-          </div>
-           <script>
-            $('#blog-mask3').hover(
-            function(){ $(this).removeClass('blog-mask') },
-            function(){ $(this).addClass('blog-mask') }
-	          )
-           </script>
-           <h6 style="margin:-30px 10px 0px 20px;color:white;"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="width:100%;"> by admin</i></h6>
-           <br><br>
-           <div class="date"><h6>16th Jan 2024</h6></div>
-           <div class="Blog-title"><h4 style="color:black;">Fire Disaster in Eastlands</h4></div>
+          <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/top-kids2.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+           <br>
+           <div class="Blog-title"><h4>MARKETING MANAGER</h4></div>
            <div class="info"style="margin-left:0px;width:100%;">
              <p>
-            
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure exercitationem non officiis nihil tenetur.
+               Magnam alias ea, eos ipsa beatae doloremque! Rerum animi unde aliquam qui aliquid ullam dicta consequatur!
              </p>
-             <a class="btn blogbtn" role="button"><i class="fa fa-arrow-circle-right fa-lg" ></i>  Read More</a>
+             <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
            </div>
+             <!-- Facebook -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100064267020188" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
+             <!-- Twitter -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
+             <!-- Instagram -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
+             <!-- whatsapp -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
           </div>
 
         </div>
         <div class="column">
 
-          <div class="blog" style="margin:0px 10px 0px 10px;background-color:#f1f1f1;padding:30px;">
-          <div class="blog-img" style="background-image: url('img/top-kids2.jpg');background-size: contain; height: 200px;">
-            <div class="blog-mask" id="blog-mask4"></div>
-          </div>
-           <script>
-            $('#blog-mask4').hover(
-            function(){ $(this).removeClass('blog-mask') },
-            function(){ $(this).addClass('blog-mask') }
-	          )
-           </script>
-           <h6 style="margin:-30px 10px 0px 20px;color:white;"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="width:100%;"> by admin</i></h6>
-           <br><br>
-           <div class="date"><h6>16th Jan 2024</h6></div>
-           <div class="Blog-title"><h4 style="color:black;">War in Ukraine</h4></div>
+          <div class="blog" style="margin:10px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/top-kids2.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+           <br>
+           <div class="Blog-title"><h4>CHEIF FINANCE OFFICER</h4></div>
            <div class="info"style="margin-left:0px;width:100%;">
              <p>
-            
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure exercitationem non officiis nihil tenetur.
+               Magnam alias ea, eos ipsa beatae doloremque! Rerum animi unde aliquam qui aliquid ullam dicta consequatur!
              </p>
-             <a class="btn blogbtn" role="button"><i class="fa fa-arrow-circle-right fa-lg" ></i>  Read More</a>
+             <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
            </div>
+             <!-- Facebook -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100064267020188" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
+             <!-- Twitter -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
+             <!-- Instagram -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
+             <!-- whatsapp -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
           </div>
 
-          <div class="blog" style="margin:20px 10px 0px 10px;background-color:#f1f1f1;padding:30px;">
-          <div class="blog-img" style="background-image: url('img/top-kids.jpg');background-size: contain; height: 200px;">
-            <div class="blog-mask" id="blog-mask5"></div>
-          </div>
-           <script>
-            $('#blog-mask5').hover(
-            function(){ $(this).removeClass('blog-mask') },
-            function(){ $(this).addClass('blog-mask') }
-	          )
-           </script>
-           <h6 style="margin:-30px 10px 0px 20px;color:white;"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="width:100%;"> by admin</i></h6>
-           <br><br>
-           <div class="date"><h6>16th Jan 2024</h6></div>
-           <div class="Blog-title"><h4 style="color:black;">Global Hunger</h4></div>
+          <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/top-kids2.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+           <br>
+           <div class="Blog-title"><h4>PRODUCTS MANAGER</h4></div>
            <div class="info"style="margin-left:0px;width:100%;">
              <p>
-            
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure exercitationem non officiis nihil tenetur.
+               Magnam alias ea, eos ipsa beatae doloremque! Rerum animi unde aliquam qui aliquid ullam dicta consequatur!
              </p>
-             <a class="btn blogbtn" role="button"><i class="fa fa-arrow-circle-right fa-lg" ></i>  Read More</a>
+             <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
            </div>
+             <!-- Facebook -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100064267020188" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
+             <!-- Twitter -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
+             <!-- Instagram -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
+             <!-- whatsapp -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
           </div>
-          
+
         </div>
+
+        <div class="column">
+
+          <div class="blog" style="margin:10px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/top-kids2.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+           <br>
+           <div class="Blog-title"><h4>HUMAN RESOURCE</h4></div>
+           <div class="info"style="margin-left:0px;width:100%;">
+             <p>
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure exercitationem non officiis nihil tenetur.
+               Magnam alias ea, eos ipsa beatae doloremque! Rerum animi unde aliquam qui aliquid ullam dicta consequatur!
+             </p>
+             <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
+           </div>
+             <!-- Facebook -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100064267020188" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
+             <!-- Twitter -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
+             <!-- Instagram -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
+             <!-- whatsapp -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
+          </div>
+
+          <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/top-kids2.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+           <br>
+           <div class="Blog-title"><h4>MEMBER</h4></div>
+           <div class="info"style="margin-left:0px;width:100%;">
+             <p>
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure exercitationem non officiis nihil tenetur.
+               Magnam alias ea, eos ipsa beatae doloremque! Rerum animi unde aliquam qui aliquid ullam dicta consequatur!
+             </p>
+             <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
+           </div>
+             <!-- Facebook -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100064267020188" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
+             <!-- Twitter -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
+             <!-- Instagram -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
+             <!-- whatsapp -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
+          </div>
+
+        </div>
+        
       </div>
       </div>
-     
+
+     <br><br>
+      <div class="our-team" style="text-align: center;">
+        <h4 style="font-weight:bold;color:black;">OUR TRUSTED PARTNERS</h4>
+      </div><br>
+      <div class="partners-logos container">
+        <div class="partner-profile"><img class="partner-logo" src="img/top-kids2.jpg" alt="profile"></div>
+        <div class="partner-profile"><img class="partner-logo" src="img/top-kids2.jpg" alt="profile"></div>
+        <div class="partner-profile"><img class="partner-logo" src="img/top-kids2.jpg" alt="profile"></div>
+        <div class="partner-profile"><img class="partner-logo" src="img/top-kids2.jpg" alt="profile"></div>
+      </div>
+      
     
      <div class="contact-us">
-      <div class="customer-care-img">
-        <img src="img/top-kids3.jpg" alt="customer-care" style="height:450px;">
+      <div class="customer-care-img bg-image" style="background-image: url('img/partners.jpg');">
+        <!-- <img src="img/top-kids3.jpg" alt="customer-care" style="height:450px;"> -->
       </div>
       <div class="contact-us-info">
         <form action=" " method="POST" style="box-shadow:none;">
           <div class="form-container">
             <div class="container">
-              <h3> Want to hear More from us ?<img src="img/icons/services.png" alt="" align="left" width="30"></h3>
+              <h3><i class="fa fa-handshake fa-lg" width="30"></i> Become a Partner </h3>
               <hr><br>
               <label for="name"><b>Name</b></label>
               <input type="text" placeholder="Enter Name" name="name" required>
-              <label for="Email"><b>email</b></label>
+              <label for="Email"><b>Email</b></label>
               <input type="email" placeholder="Enter email" name="email" required>
-              <label for="password"><b>Your Message</b></label>
+              <label for="password"><b>How can you contribute</b></label>
               <textarea type="text" name="message" placeholder="Enter message" required></textarea>
               <label for="refreral"><b>How did you hear about us</b></label>
               <input type="text" placeholder="We appreciate the support" name="referals">

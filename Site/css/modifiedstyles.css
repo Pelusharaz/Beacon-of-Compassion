@@ -320,6 +320,7 @@
   }
   .customer-care-img{
     width:100%;
+    display:block;
   }
   .customer-care-img img{
     width:100%;
@@ -694,3 +695,38 @@ form, input, select, textarea, label {
     height: 100%;
     color:white;
   }
+
+  /* partner-with-us */
+  .test-btn a:hover {
+    background-color: black;
+  }
+  .partners-logos{
+    display:flex;
+  }
+  /* Responsive layout */
+  @media screen and (max-width: 800px) {
+  .partners-logos{
+    display:block;
+  }
+ }
+.partner-profile{
+  border-radius:50%;
+  width: 165px; 
+  height: 165px;
+  background-color: orangered;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  text-align: center;
+}
+.partner-logo{
+  border-radius:50%;
+  width: 150px; 
+  height: 150px;
+  margin-top: 7px;
+}
+
+/* dontion pop-up */
+.payment-methods{
+  display: flex;
+}

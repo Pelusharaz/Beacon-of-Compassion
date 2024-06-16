@@ -56,7 +56,7 @@
                 <a class="nav-link" style="color:black; cursor:pointer;" aria-current="page" onclick="impacts()">Impacts</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" style="color:black; cursor:pointer;"aria-current="page" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Volunteer</a>
+                <a class="nav-link" style="color:black; cursor:pointer;"aria-current="page">Volunteer</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link"style="color:black;" aria-current="page" href="partner.php">Partner with us</a>
@@ -81,17 +81,17 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" href="services/developement.php" style="font-weight:bolder;"> <img src="img/m-pesa.jpg" width="20" height="15" alt="services"> Via Mpesa </a>
+                    <a class="dropdown-item" style="font-weight:bolder;"data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <img src="img/m-pesa.jpg" width="20" height="15" alt="services"> Via Mpesa </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="services/networking.php" style="font-weight:bolder;"> <img src="img/visa.png" width="20" alt="services">Master Card </a>
+                    <a class="dropdown-item" style="font-weight:bolder;" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <img src="img/visa.png" width="20" alt="services">Master Card </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="services/studio.php"> <i class="fa fa-university" aria-hidden="true"> Online Banking</i> </a>
+                    <a class="dropdown-item"  data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fa fa-university" aria-hidden="true"> Online Banking</i> </a>
                   </li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
-                    <a class="dropdown-item" href="sharazstore.php" style="color:red;"><i class="fa fa-heart"> Touch a Heart Today</i></a>
+                    <a class="dropdown-item" style="color:red;" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-heart"> Touch a Heart Today</i></a>
                   </li>
                 </ul>
               </li>

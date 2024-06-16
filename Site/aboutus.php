@@ -321,8 +321,8 @@
      </div>
     
      <div class="contact-us">
-      <div class="customer-care-img">
-        <img src="img/top-kids3.jpg" alt="customer-care" style="height:450px;">
+      <div class="customer-care-img bg-image" style="background-image: url('img/top-kids3.jpg');">
+        <!-- <img src="img/top-kids3.jpg" alt="customer-care" style="height:450px;"> -->
       </div>
       <div class="contact-us-info">
         <form action=" " method="POST" style="box-shadow:none;">
@@ -332,7 +332,7 @@
               <hr><br>
               <label for="name"><b>Name</b></label>
               <input type="text" placeholder="Enter Name" name="name" required>
-              <label for="Email"><b>email</b></label>
+              <label for="Email"><b>Email</b></label>
               <input type="email" placeholder="Enter email" name="email" required>
               <label for="password"><b>Your Message</b></label>
               <textarea type="text" name="message" placeholder="Enter message" required></textarea>
