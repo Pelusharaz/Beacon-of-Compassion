@@ -120,7 +120,8 @@
   margin-right:-80px;
 }
 .header-socials{
-  margin-left:850px;
+  margin-left:600px;
+  /* margin-left:800px; */
   display:flex;
 }
 .header-socials a{
