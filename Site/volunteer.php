@@ -190,10 +190,10 @@
         <form action=" " method="POST" style="box-shadow:none;">
           <div class="form-container">
             <div class="container">
-              <h3><i class="fa fa-handshake fa-lg" width="50"></i> Volunteer Form </h3>
-              <h5>Apply to be a volunteer</h5>
-              <hr><br>
-              <label for="name"><b>Name</b></label>
+              <h3><i class="fa fa-handshake fa-lg" width="50"></i> Volunteer Form </h3><br>
+              <h5 style="color:orangered;">Apply to volunteer</h5>
+              <hr>
+              <label for="name"><b>Name</b><span>*</span></label>
               <input type="text" placeholder="Enter full name" name="name" required>
               <label for="gender"><b>Gender</b></label><br>
               <div class="email-phone" style="display:flex;">
@@ -206,21 +206,40 @@
                     <option value="rather-not-say">Rather-not-say</option>
                   </select><br>
                 </div>
-                <div class="mail" style="margin-top:-20px;width:50%;">
-                  <label for="Address *"><b>Address *</b></label><br>
-                  <input type="email" placeholder="Enter email" name="Address *" required>
+                <div class="address" style="margin-top:-20px;width:50%;">
+                  <label for="Address *"><b>Address<span>*</span></b></label><br>
+                  <input type="email" placeholder="Enter address" name="Address *" required>
                 </div>
               </div>
               <div class="email-phone" style="display:flex;">
                 <div class="phone" style="width:50%;">
-                  <label for="Phone"><b>Phone</b></label><br>
-                  <input type="phone" placeholder="Enter phone number" name="phone" required>
+                  <label for="Phone"><b>Phone</b><span>*</span></label><br>
+                  <input type="phone" placeholder="E.g +2547 96 526 231" name="phone" required>
                 </div>
                 <div class="mail" style="width:50%;">
                   <label for="Email"><b>Email</b></label><br>
                   <input type="email" placeholder="Enter email" name="email" required>
                 </div>
-              </div>
+              </div><br>
+              <h5 style="color:orangered;">Emergency Contact Information</h5>
+              <hr>
+              <label for="name"><b>Emergency Contact Name</b><span>*</span></label>
+              <input type="text" placeholder="Enter full name" name="name" required>
+              <div class="email-phone" style="display:flex;">
+                <div class="phone" style="width:50%;">
+                  <label for="Phone"><b>Emergency Contact Phone</b><span>*</span></label><br>
+                  <input type="phone" placeholder="Enter phone number" name="phone" required>
+                </div>
+                <div class="mail" style="width:50%;">
+                  <label for="Email"><b>Emergency Contact Email</b><span>*</span></label><br>
+                  <input type="email" placeholder="Enter email" name="email" required>
+                </div>
+              </div><br>
+              <h5 style="color:orangered;">Volunteer Details</h5>
+              <hr>
+              <label for="name"><b>Which days of the week are you available ?</b><span>*</span></label>
+              <input type="text" placeholder="E.g Mon, Tue, Wed, Thur, Fri, Sat,Sun, TBD, No Preference" name="name" required>
+
               <label for="password"><b>Your Message</b></label>
               <textarea type="text" name="message" placeholder="Enter message" required></textarea>
               <label for="refreral"><b>How did you hear about us</b></label>
