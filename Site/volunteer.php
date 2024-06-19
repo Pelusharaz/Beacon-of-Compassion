@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport"  content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Beacon of Compassion | Home</title>
+    <title>Beacon of Compassion | Volunteer</title>
     <!-- Tees Icon -->
     <link rel="icon" href="img/bof-logo.png"/>
     <!-- Badge Icons from Font Awesome -->
@@ -249,16 +249,24 @@
               <h5 style="color:orangered;">Volunteer Authorizations</h5>
               <hr>
               <label for="password"><b>Background Check <span>*</span></b></label><br>
-              <input id="information" type="checkbox" name="checkbox" required />
+              <input id="information"class="bg-input" type="checkbox" name="checkbox" required />
               <label for="booktitle" style="font-size:15px;" >I authorize and consent to a background check conducted by this organization<span>*</span></label><br>
               <style>
-                input[type=checkbox] {
+                .bg-input {
                 display: inline;
-                margin-left: 5px -10px 0px -10px;
+                margin: 5px -30px 0px -40px;
                 width: 8%;
               }
-              </style>
-
+              @media screen and (max-width: 600px) {
+                .bg-input {
+                  /* margin:0px 0px -100px 0px; */
+                }
+              }
+              </style><br>
+              <label for="password"><b>Liability waiver <span>*</span></b></label><br>
+              <input id="information" class="bg-input" type="checkbox" name="checkbox" required />
+              <label for="booktitle" style="font-size:15px;" >I hereby waive this organization of any liability and release them from any responsibility<span>*</span></label><br>
+              <br>
               <button type="submit" class="form-button" name="contactmsg" style="color:white;">Send</button>
 
             </div>

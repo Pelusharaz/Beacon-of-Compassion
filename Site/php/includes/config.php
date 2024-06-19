@@ -1,12 +1,12 @@
 <?php
 $host = 'localhost';
-$db_name = 'sharaz-techs';
+$db_name = 'beaconofcompassion';
 $username = 'root';
 $password ='';
 
 try {
     //code...
-    $DBH =new PDO("mysql:host=$host; dbname=$db_name", $username, $password);
+    $DBH =new PDO ("mysql:host=$host; dbname=$db_name", $username, $password);
     $DBH->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "";
 } catch (PDOException $e) {
@@ -20,7 +20,7 @@ try {
 class DBController {
 	private $host = "localhost";
 	private $user = "root";
-	private $database = "sharaz-techs";
+	private $database = "beaconofcompassion";
 	private $password ='';
 	private $conn;
 	
