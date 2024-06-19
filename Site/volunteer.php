@@ -239,11 +239,25 @@
               <hr>
               <label for="name"><b>Which days of the week are you available ?</b><span>*</span></label>
               <input type="text" placeholder="E.g Mon, Tue, Wed, Thur, Fri, Sat,Sun, TBD, No Preference" name="name" required>
+              <label for="name"><b>What time do you prefer ?</b><span>*</span></label>
+              <input type="text" placeholder="E.g Morning, Afternoon, Evening" name="name" required>
 
-              <label for="password"><b>Your Message</b></label>
+              <label for="password"><b>Describe your skills, Passion and Qualifications</b></label>
               <textarea type="text" name="message" placeholder="Enter message" required></textarea>
               <label for="refreral"><b>How did you hear about us</b></label>
-              <input type="text" placeholder="We appreciate the support" name="referals">
+              <input type="text" placeholder="We appreciate the support" name="referals"><br>
+              <h5 style="color:orangered;">Volunteer Authorizations</h5>
+              <hr>
+              <label for="password"><b>Background Check <span>*</span></b></label><br>
+              <input id="information" type="checkbox" name="checkbox" required />
+              <label for="booktitle" style="font-size:15px;" >I authorize and consent to a background check conducted by this organization<span>*</span></label><br>
+              <style>
+                input[type=checkbox] {
+                display: inline;
+                margin-left: 5px -10px 0px -10px;
+                width: 8%;
+              }
+              </style>
 
               <button type="submit" class="form-button" name="contactmsg" style="color:white;">Send</button>
 
