@@ -25,7 +25,7 @@ $total = $stmt->rowCount();
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Boc | Admin Panel</title>
     <!-- Tees Icon -->
-    <link rel="icon" href="../../img/sharaz-logo.jpg" />
+    <link rel="icon" href="../../img/bof-logo.png" />
     <!-- Badge Icons from Font Awesome -->
     <link
       rel="stylesheet"
@@ -58,7 +58,7 @@ $total = $stmt->rowCount();
           </a>
           <div class="collapse navbar-collapse" id="navbarExample01">
             <a class="navbar-brand" href="#">
-              <img src="../../img/sharaz-logo.jpg" height="60"alt="" loading="lazy" style="border-radius:50%;" />
+              <img src="../../img/bof-logo2-rec.png" height="60"alt="" loading="lazy" style="border-radius:50%;" />
             </a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item active">
@@ -201,10 +201,9 @@ $total = $stmt->rowCount();
                   <select style="padding-top:8px; padding-bottom:8px;" name="role" required>
                     <option value="<?php echo "{$row->role}"; ?>" disabled selected><?php echo "{$row->role}"; ?> <span>*</span></option>
                     <option value="super admin">super admin</option>
-                    <option value="Lead Developer">Lead Developer</option>
-                    <option value="Finance and operations Manager">Finance and operations Manager</option>
-                    <option value="Software and Hardware Specialist">Software and Hardware Specialist</option>
-                    <option value="Sales and Marketing Manager">Sales and Marketing Manager</option>
+                    <option value="Content Manager">Content Manager</option>
+                    <option value="Customer Care">Customer Care</option>
+                    <option value="Maintainance">Maintainance</option>
                   </select>
                   <div class="item" style="display:none;">
                     <label for="additional-information"> Employee No<span>*</span></label>
@@ -286,77 +285,14 @@ $total = $stmt->rowCount();
     </main>
 
     <!--Footer-->
-    <footer class="text-center text-white" style="background-color: #f1f1f1">
-      <!-- Grid container -->
-      <div class="container pt-4">
-        <!-- Section: Social media -->
-        <section class="mb-4">
-          <!-- Facebook -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-
-          <!-- Twitter -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-twitter"></i
-          ></a>
-
-          <!-- Google -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-google"></i
-          ></a>
-
-          <!-- Instagram -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-instagram"></i
-          ></a>
-
-          <!-- Linkedin -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <!-- Github -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-github"></i
-          ></a>
-        </section>
-        <!-- Section: Social media -->
-      </div>
-      <!-- Grid container -->
-
+    <footer class="text-center text-white" style="background-color: #f1f1f1; bottom:0; position:; width:100%;">
       <!-- Copyright -->
-      <div
-        class="text-center text-dark p-3"
-        style="background-color: rgba(0, 0, 0, 0.2)"
-      >
-        <p> &copy; Copyright <?php $year=date("Y"); echo $year; ?>
-        <a class="text-dark" href="">Sharaz Techs.</a></p>
+      <div class="text-center text-dark p-3" style="background-color: blue;">
+      <p style="color:white;"> &copy; Copyright <?php $year = date("Y"); echo $year; ?>
+        Beacon of Compassion Foundation || 
+       <a class="text-white" target="blank" href="../../../../sharaztechs.66ghz.com">Developed by Sharaz Technologies</a>
+      </p>
       </div>
-      <!-- Copyright -->
     </footer>
   </body>
   <!-- Scripts -->

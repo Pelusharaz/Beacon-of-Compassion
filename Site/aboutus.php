@@ -1,3 +1,28 @@
+<!-- contact messages -->
+<?php
+require_once 'php/includes/config.php';
+if (isset($_POST['contactmsg'])) {
+
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $message = $_POST['message'];
+  $referals = $_POST['referals'];
+  try {
+    //code...
+    $sql = 'INSERT INTO contact(name,email,message,referals,Date,Time ) VALUES(?,?,?,?,Now(),Now() )';
+    $sth = $DBH->prepare($sql);
+    $sth->execute(array($name, $email, $message, $referals));
+    $_SESSION['success'] = "message sent successfully.";
+  } catch (PDOException $e) {
+    //throw $th;
+    echo $e->getMessage();
+  }
+  echo "<script>alert('Message sent successfully. We value Your Feedback')</script>
+  <script>window.location = 'aboutus.php'</script>";
+}
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -183,14 +208,25 @@
           </style>
 
      <div class="what-we-do container">
-      <h5 class="what-we-do-header">THROUGH OUR PROGRAMMING, EMERGENCY RESPONSES AND ADVOCACY, WE PUT THE MOST VULNERABLE CHILDREN FIRST</h5>
+      <h5 class="what-we-do-header">WHAT WE ENTAIL</h5>
       <br>
-      <p class="what-we-do-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus nisi consequuntur labore sint id optio 
-        deserunt inventore in earum, magnam mollitia accusantium. Voluptas veniam saepe natus dolor dolore repellat enim.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus nisi consequuntur labore sint id optio 
-        deserunt inventore in earum, magnam mollitia accusantium. Voluptas veniam saepe natus dolor dolore repellat enim.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus nisi consequuntur labore sint id optio 
-        deserunt inventore in earum, magnam mollitia accusantium. Voluptas veniam saepe natus dolor dolore repellat enim.
+      <p class="what-we-do-info">The Beacon of compassion  is a newly established charitable organization 
+         founded in Kenya with a noble mission to make a positive impact on society. The inspiration to create
+         this foundation stemmed from the unwavering support and generosity of our esteemed sponsors, with Karola 
+         serving as our esteemed patron and Sr. Barbra as our dedicated guardian.
+         Fueled by a shared sense of compassion and dedication to making a difference, the Beacon of Compassion 
+         aims to uphold the values and principles exemplified by our sponsors. Their commitment to philanthropy 
+         and social responsibility serves as a guiding light for our foundation as we embark on our journey to create 
+         meaningful change in the community.With our recent registration in Kenya, we are now poised to fully realize 
+         our mission and vision. The foundation is driven by a deep sense of purpose to address critical social issues 
+         and contribute towards the betterment of society. Through strategic initiatives and collaborative efforts, we 
+         are determined to bring about sustainable solutions and foster a culture of empathy and kindness.
+         As we step into this new chapter, the Beacon of Compassion is dedicated to upholding transparency, integrity, and 
+         accountability in all our endeavors. With Karola's patronage and Sr. Barbra's guidance, we are confident in our 
+         ability to make a real and lasting impact on the lives of those in need.
+         Together, with our sponsors, volunteers, and supporters, we are committed to building a brighter future and 
+         creating a world where compassion and generosity prevail
+
       </p>
       <br>
       <button type="submit" class="donate-button" style="color:white;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">DONATE NOW TO SUPPORT OUR WORK</button>

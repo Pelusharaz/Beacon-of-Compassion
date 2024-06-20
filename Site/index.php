@@ -44,6 +44,31 @@
   }
   ?>
 
+<!-- contact messages -->
+<?php
+require_once 'php/includes/config.php';
+if (isset($_POST['contactmsg'])) {
+
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $message = $_POST['message'];
+  $referals = $_POST['referals'];
+  try {
+    //code...
+    $sql = 'INSERT INTO contact(name,email,message,referals,Date,Time ) VALUES(?,?,?,?,Now(),Now() )';
+    $sth = $DBH->prepare($sql);
+    $sth->execute(array($name, $email, $message, $referals));
+    $_SESSION['success'] = "message sent successfully.";
+  } catch (PDOException $e) {
+    //throw $th;
+    echo $e->getMessage();
+  }
+  echo "<script>alert('Message sent successfully. We value Your Feedback')</script>
+  <script>window.location = 'index.php'</script>";
+}
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -236,16 +261,13 @@
         </div>
         <div class="info">
         <p class="large-screen">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio libero facilis sequi error, iusto 
-          ex porro. Distinctio eos magni alias quae sapiente tempora provident nemo! Facilis, eius! Explicabo,
-          autem in! Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio libero facilis 
-          sequi error, iusto
+          Together, with our sponsors, volunteers, and supporters, we are committed to building a 
+          brighter future and creating a world where compassion and generosity prevail
         </p>
-        <p style="margin-left:40px;" class="small-screen">Lorem ipsum dolor sit amet consectetur adipisicing 
-          elit. Optio libero facilis sequi error, iusto 
-          <span id="dots">...</span><span id="more">Distinctio eos magni alias quae sapiente tempora 
-            provident nemo! Facilis, eius! Explicabo, autem in! Lorem ipsum dolor sit amet consectetur 
-            adipisicing elit. Optio libero facilis sequi error, iusto
+        <p style="margin-left:40px;" class="small-screen">Together, with our sponsors, volunteers, and 
+          supporters, we are 
+          <span id="dots">...</span><span id="more">committed to building a brighter future and creating a 
+            world where compassion and generosity prevail
           </span></p>
           <style>
             #more {display: none;}
@@ -387,7 +409,7 @@
       </div>
 
       <div class="profile-button">
-        <a class="btn btn-outline-mask" href="mailto:sharaztechs@gmail.com" role="button"><i class="fa fa-arrow-circle-right fa-lg" style="margin-right:10px;"></i>View Profile</a>
+        <a class="btn btn-outline-mask" href="img/BCF-Foundation.docx" role="button"><i class="fa fa-arrow-circle-right fa-lg" style="margin-right:10px;"></i>View Profile</a>
       </div>
      </div>
 

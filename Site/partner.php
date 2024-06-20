@@ -1,3 +1,27 @@
+<!-- partner requests-->
+<?php
+require_once 'php/includes/config.php';
+if (isset($_POST['partnermsg'])) {
+
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $message = $_POST['message'];
+  $referals = $_POST['referals'];
+  try {
+    //code...
+    $sql = 'INSERT INTO partners(name,email,message,referals,Date,Time ) VALUES(?,?,?,?,Now(),Now() )';
+    $sth = $DBH->prepare($sql);
+    $sth->execute(array($name, $email, $message, $referals));
+    $_SESSION['success'] = "message sent successfully.";
+  } catch (PDOException $e) {
+    //throw $th;
+    echo $e->getMessage();
+  }
+  echo("<script>alert('Welcome on board dear partner. We'll contact you with further details')</script>
+  <script>window.location = 'partner.php'</script>");
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -191,10 +215,8 @@
         </div>
         <div class="info" style="color:black;">
         <p class="large-screen">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio libero facilis sequi error, iusto 
-          ex porro. Distinctio eos magni alias quae sapiente tempora provident nemo! Facilis, eius! Explicabo,
-          autem in! Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio libero facilis 
-          sequi error, iusto
+          Together, with our sponsors, volunteers, and supporters, we are committed to building a brighter 
+          future and creating a world where compassion and generosity prevail
         </p>
         </div>
       </div> 
@@ -210,13 +232,14 @@
         <div class="column">
 
           <div class="blog" style="margin:10px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
-          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/top-kids2.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/staff/Robert-mogesi.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
            <br>
-           <div class="Blog-title"><h4>DIRECTOR</h4></div>
+           <div class="Blog-title"><h4>Joseph Mogesi Robert</h4></div>
+           <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">FOUNDER AND CHAIRPERSON</h6></div>
            <div class="info"style="margin-left:0px;width:100%;">
              <p>
-               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure exercitationem non officiis nihil tenetur.
-               Magnam alias ea, eos ipsa beatae doloremque! Rerum animi unde aliquam qui aliquid ullam dicta consequatur!
+               Robert is holds a bachelor of science in health systems management and an MBA in accounting and 
+               finance.He's focused to seeing an equitable society
              </p>
              <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
            </div>
@@ -231,13 +254,16 @@
           </div>
 
           <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
-          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/top-kids2.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/staff/Steve-odongo.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
            <br>
-           <div class="Blog-title"><h4>MARKETING MANAGER</h4></div>
+           <div class="Blog-title"><h4>Steve Odongo</h4></div>
+           <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">FOUNDER AND FINANCE DIRECTOR</h6></div>
            <div class="info"style="margin-left:0px;width:100%;">
              <p>
-               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure exercitationem non officiis nihil tenetur.
-               Magnam alias ea, eos ipsa beatae doloremque! Rerum animi unde aliquam qui aliquid ullam dicta consequatur!
+                He holds Bachelors of laws, Certified professional mediator. 
+                Steve's dual expertise in law and finance positions him uniquely to navigate and integrate 
+                complex legal and financial landscapes.Steve's commitment to both fields demonstrates his 
+                versatility and dedication, making him a valuable asset in any professional setting.
              </p>
              <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
            </div>
@@ -249,19 +275,21 @@
              <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
              <!-- whatsapp -->
              <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
-          </div>
+            </div>
 
         </div>
         <div class="column">
 
-          <div class="blog" style="margin:10px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
-          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/top-kids2.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+         <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/staff/Damiana-indoshi.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
            <br>
-           <div class="Blog-title"><h4>CHEIF FINANCE OFFICER</h4></div>
+           <div class="Blog-title"><h4>Damiana Indoshi Amwayi</h4></div>
+           <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">DEPUTY CHAIRPERSON</h6></div>
            <div class="info"style="margin-left:0px;width:100%;">
              <p>
-               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure exercitationem non officiis nihil tenetur.
-               Magnam alias ea, eos ipsa beatae doloremque! Rerum animi unde aliquam qui aliquid ullam dicta consequatur!
+               She holds a Bachelor's in Food Nutrition and Dietetics 
+               Dedicated to serve and contribute to the society in ways that can help save life and 
+               needs of  people ..
              </p>
              <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
            </div>
@@ -273,16 +301,20 @@
              <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
              <!-- whatsapp -->
              <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
-          </div>
+            </div>
 
-          <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
-          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/top-kids2.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+         <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/staff/Sean-Isaac.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
            <br>
-           <div class="Blog-title"><h4>PRODUCTS MANAGER</h4></div>
+           <div class="Blog-title"><h4>Isaac Sean</h4></div>
+           <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">FOUNDER AND SECRETARY GENERAL</h6></div>
            <div class="info"style="margin-left:0px;width:100%;">
              <p>
-               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure exercitationem non officiis nihil tenetur.
-               Magnam alias ea, eos ipsa beatae doloremque! Rerum animi unde aliquam qui aliquid ullam dicta consequatur!
+                He holds a Bachelor's in Procurement and Chain Supply Management 
+                He brings expertise in procurement and supply chain management to the foundation. 
+                With a strong passion for creating opportunities for the marginalized, Isaac is a dedicated
+                leader committed to making a positive impact in the community through collaborative efforts 
+                and strategic initiatives
              </p>
              <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
            </div>
@@ -294,20 +326,21 @@
              <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
              <!-- whatsapp -->
              <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
-          </div>
+            </div>
 
         </div>
 
         <div class="column">
 
-          <div class="blog" style="margin:10px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
-          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/top-kids2.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+         <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/staff/Billia Chenamba.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
            <br>
-           <div class="Blog-title"><h4>HUMAN RESOURCE</h4></div>
+           <div class="Blog-title"><h4> Billia Chenamba Pusikwang</h4></div>
+           <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">DEPUTY SECRETARY</h6></div>
            <div class="info"style="margin-left:0px;width:100%;">
              <p>
-               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure exercitationem non officiis nihil tenetur.
-               Magnam alias ea, eos ipsa beatae doloremque! Rerum animi unde aliquam qui aliquid ullam dicta consequatur!
+               She holds a Bachelor of science in Agricultural Education and Extension
+               Devoted to Initiate a smile on a face
              </p>
              <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
            </div>
@@ -319,9 +352,9 @@
              <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
              <!-- whatsapp -->
              <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
-          </div>
+            </div>
 
-          <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <!-- <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
           <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/top-kids2.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
            <br>
            <div class="Blog-title"><h4>MEMBER</h4></div>
@@ -332,15 +365,15 @@
              </p>
              <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
            </div>
-             <!-- Facebook -->
+             
              <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100064267020188" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
-             <!-- Twitter -->
+             
              <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
-             <!-- Instagram -->
+             
              <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
-             <!-- whatsapp -->
+             
              <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
-          </div>
+          </div> -->
 
         </div>
         
@@ -378,7 +411,7 @@
               <label for="refreral"><b>How did you hear about us</b></label>
               <input type="text" placeholder="We appreciate the support" name="referals">
 
-              <button type="submit" class="form-button" name="contactmsg" style="color:white;">Send</button>
+              <button type="submit" class="form-button" name="partnermsg" style="color:white;">Send</button>
 
             </div>
           </div>

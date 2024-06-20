@@ -154,6 +154,31 @@
     
  ?>
 
+ <!---Delete partner-->
+<?php
+ require_once '../includes/config.php';
+ if (isset($_POST['deletepartner_btn'])){
+
+    $id = $_POST['deletepartner_id'];
+    echo $id;
+  
+
+    try {
+        //code...
+        $sql = "DELETE FROM partners WHERE id='$id'";
+        $sth = $DBH->prepare($sql);
+        $sth->execute(array());
+        $_SESSION['success'] = "message sent successfully.";
+      } catch (PDOException $e) {
+        //throw $th;
+        echo $e->getMessage();
+      }
+      echo "<script>alert('Partner has been deleted successfully')</script>
+		   <script>window.location = 'contactmessages.php'</script>"; 
+    }
+    
+ ?>
+
 <!---Delete registered user-->
 <?php
  require_once '../includes/config.php';

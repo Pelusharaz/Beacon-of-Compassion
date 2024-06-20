@@ -1,23 +1,23 @@
     <div class="about-us" id="whoweare">
       <div class="who-we-are">
         <h5 style="color:rgb(238, 81, 8); font-weight:bolder;">Who we are</h5>
-        <p>At Beacon of compassion foundation, we beleive that Lorem ipsum dolor sit amet consectetur 
-           adipisicing elit. Et unde dolore, ipsa quam at sed cumque ratione possimus repudiandae incidunt
-           dolor modi vero consequuntur id quaerat eum quo iure deserunt. 
+        <p>The Beacon of compassion  is a newly established charitable organization founded in Kenya with 
+           a noble mission to make a positive impact on society. Fueled by a shared sense of compassion and
+           dedication to making a difference, the Beacon of Compassion aims to uphold the values and principles
+           exemplified by our sponsors
         </p>
         <br>
         <h5 style="color:rgb(238, 81, 8); font-weight:bolder;">Our Mission</h5>
-        <p>To reach as many lives as Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-           Harum numquam iste adipisci beatae omnis cumque, maiores aliquid quas rerum autem 
-           labore cum optio voluptas, earum expedita accusamus hic fugit reprehenderit?
+        <p>To transform lives and maximize potential to the marginalized communities in Kenya through 
+           access to education, healthcare, and sustainable livelihood opportunities, guided by principles
+           of compassion and social justice.
         </p>
       </div>
       <div class="core-values">
         <div class="vision">
           <h5 style="color:rgb(238, 81, 8); font-weight:bolder;">Our vision</h5>
-          <p>To Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet neque minus corrupti
-             cum consectetur, quae officia. Corporis ut, quas omnis molestiae doloribus autem tenetur 
-             facilis fugiat molestias animi iste nulla!
+          <p>To create a society in Kenya where every individual has the opportunity to thrive and reach 
+             their full potential, supported by a community that values equality, inclusion, and empowerment.
           </p>
         </div>
         <ul class="values">

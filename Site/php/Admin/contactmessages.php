@@ -26,7 +26,7 @@ $total = $stmt->rowCount();
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Boc | Admin Panel</title>
     <!-- Tees Icon -->
-    <link rel="icon" href="../../img/sharaz-logo.jpg" />
+    <link rel="icon" href="../../img/bof-logo.png" />
     <!-- Badge Icons from Font Awesome -->
     <link
       rel="stylesheet"
@@ -59,7 +59,7 @@ $total = $stmt->rowCount();
           </a>
           <div class="collapse navbar-collapse" id="navbarExample01">
             <a class="navbar-brand" href="#">
-              <img src="../../img/sharaz-logo.jpg" height="60"alt="" loading="lazy" style="border-radius:50%;" />
+              <img src="../../img/bof-logo2-rec.png" height="60"alt="" loading="lazy" style="border-radius:50%;" />
             </a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item active">
@@ -135,7 +135,7 @@ $total = $stmt->rowCount();
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
           <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white">
-              <h1 class="mb-3">Sharaz Technologies</h1>
+              <h1 class="mb-3">Beacon of Compassion Foundation</h1>
               <h4 class="mb-3">
                 Contact Messages
               </h4>
@@ -161,15 +161,13 @@ $total = $stmt->rowCount();
     </div>
     <br>
     <div class="container" style="overflow:scroll; height:900px; max-width:1000px;">
-     <table>
+    <table>
          <th><strong style="color:orange;">Messages</strong></th>
          <tr style="border-radius: 20px;">
-             <th>First Name</td>
-             <th>Last Name</td>
-             <th>Country</td>
+             <th>Senders Name</td>
              <th>Email</td>
-             <th>Phone</td>
              <th>Message</td>
+             <th>Reffered By</td>
              <th>Date</td>
              <th>Time</td>
              <th>Delete</td>
@@ -177,11 +175,9 @@ $total = $stmt->rowCount();
         </tr>
         <!-- <tr>
             <td>Test</td>
-            <td>Wainaina</td>
-            <td>test-kenya</td>
             <td>test@gmail.com</td>
-            <td>0791386752</td>
-            <td>test</td>
+            <td>test message</td>
+            <td>reffered by test</td>
             <td>1/29/2022</td>
             <td>6:06 PM</td>
             <td><button type="submit" class="logoutbtn">DELETE</button></td>
@@ -200,12 +196,10 @@ $total = $stmt->rowCount();
               while($row = $stmt->fetchObject()) {
             ?>
         <tr>
-            <td><?php echo "{$row->firstname}"; ?></td>
-            <td><?php echo "{$row->lastname}"; ?></td>
-            <td><?php echo "{$row->country}"; ?></td>
-            <td><?php echo "{$row->eaddress}"; ?></td>
-            <td><?php echo "{$row->phone}"; ?></td>
-            <td><?php echo "{$row->subject}"; ?></td>
+            <td><?php echo "{$row->name}"; ?></td>
+            <td><?php echo "{$row->email}"; ?></td>
+            <td><?php echo "{$row->message}"; ?></td>
+            <td><?php echo "{$row->referals}"; ?></td>
             <td><?php echo "{$row->Date}"; ?></td>
             <td><?php echo "{$row->Time}"; ?></td>
             <td>
@@ -214,7 +208,67 @@ $total = $stmt->rowCount();
                     <button type="submit" class="logoutbtn" name="deletemessage_btn">DELETE</button>
                 </form>
             </td>
-            <td><a href="mailto:<?php echo "{$row->eaddress}"; ?>?&subject=Subject : Sharaz Techs Information Desk&body=Dear <?php echo "{$row->firstname}"; ?> <?php echo "{$row->lastname}"; ?>, " target="_blank"><button type="submit" class="logoutbtn">REPLY</button></a></td>
+            <td><a href="mailto:<?php echo "{$row->email}"; ?>?&subject=Subject : Beacon of compassion Information Desk&body=Dear <?php echo "{$row->name}"; ?>, " target="_blank"><button type="submit" class="logoutbtn">REPLY</button></a></td>
+        </tr>
+        <?php
+         }
+        ?>  
+     </table>
+     </div>
+
+     <div class="messages" style="marging-left:auto;margin-right:auto;display:block;text-align:center;">
+      <h4>Partners Requests</h4>
+    </div>
+    <br>
+    <div class="container" style="overflow:scroll; height:900px; max-width:1000px;">
+    <table>
+         <th><strong style="color:orange;">Partners Requests</strong></th>
+         <tr style="border-radius: 20px;">
+             <th>Senders Name</td>
+             <th>Email</td>
+             <th>Contribution</td>
+             <th>Reffered By</td>
+             <th>Date</td>
+             <th>Time</td>
+             <th>Delete</td>
+            <th>Reply</td>
+        </tr>
+        <!-- <tr>
+            <td>Test</td>
+            <td>test@gmail.com</td>
+            <td>test message</td>
+            <td>reffered by test</td>
+            <td>1/29/2022</td>
+            <td>6:06 PM</td>
+            <td><button type="submit" class="logoutbtn">DELETE</button></td>
+            <td><button type="submit" class="logoutbtn">REPLY</button></td>
+            
+        </tr> -->
+        <?php
+         require_once '../includes/config.php';
+         $sql="SELECT * FROM partners ";
+         $stmt = $DBH->prepare($sql);
+         $stmt->execute();
+         $total = $stmt->rowCount();
+
+        ?>
+        <?php
+              while($row = $stmt->fetchObject()) {
+            ?>
+        <tr>
+            <td><?php echo "{$row->name}"; ?></td>
+            <td><?php echo "{$row->email}"; ?></td>
+            <td><?php echo "{$row->message}"; ?></td>
+            <td><?php echo "{$row->referals}"; ?></td>
+            <td><?php echo "{$row->Date}"; ?></td>
+            <td><?php echo "{$row->Time}"; ?></td>
+            <td>
+                <form action="deleteproducts.php" method="post" style="box-shadow:none;background-color:transparent;">
+                    <input type="hidden" name="deletepartner_id" value="<?php echo "{$row->id}"; ?>">
+                    <button type="submit" class="logoutbtn" name="deletepartner_btn">DELETE</button>
+                </form>
+            </td>
+            <td><a href="mailto:<?php echo "{$row->email}"; ?>?&subject=Subject : Beacon of compassion Information Desk&body=Dear <?php echo "{$row->name}"; ?>, " target="_blank"><button type="submit" class="logoutbtn">REPLY</button></a></td>
         </tr>
         <?php
          }
@@ -224,77 +278,14 @@ $total = $stmt->rowCount();
     </main>
 
     <!--Footer-->
-    <footer class="text-center text-white" style="background-color: #f1f1f1">
-      <!-- Grid container -->
-      <div class="container pt-4">
-        <!-- Section: Social media -->
-        <section class="mb-4">
-          <!-- Facebook -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-
-          <!-- Twitter -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-twitter"></i
-          ></a>
-
-          <!-- Google -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-google"></i
-          ></a>
-
-          <!-- Instagram -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-instagram"></i
-          ></a>
-
-          <!-- Linkedin -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <!-- Github -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-github"></i
-          ></a>
-        </section>
-        <!-- Section: Social media -->
-      </div>
-      <!-- Grid container -->
-
+    <footer class="text-center text-white" style="background-color: #f1f1f1; bottom:0; position:; width:100%;">
       <!-- Copyright -->
-      <div
-        class="text-center text-dark p-3"
-        style="background-color: rgba(0, 0, 0, 0.2)"
-      >
-        <p> &copy; Copyright <?php $year=date("Y"); echo $year; ?>
-        <a class="text-dark" href="">Sharaz Techs.</a></p>
+      <div class="text-center text-dark p-3" style="background-color: blue;">
+      <p style="color:white;"> &copy; Copyright <?php $year = date("Y"); echo $year; ?>
+        Beacon of Compassion Foundation || 
+       <a class="text-white" target="blank" href="../../../../sharaztechs.66ghz.com">Developed by Sharaz Technologies</a>
+      </p>
       </div>
-      <!-- Copyright -->
     </footer>
   </body>
   <!-- Scripts -->

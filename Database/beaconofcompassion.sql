@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2024 at 04:19 PM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.0.32
+-- Generation Time: Jun 20, 2024 at 11:02 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -46,8 +45,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `email`, `question`, `answer`, `role`, `password`, `repeatpassword`, `Date`, `Time`) VALUES
-(1, 'superadmin', 'superadmin@gmail.com', '$2y$10$mXRs8bYGKjgRcSXu.0o0OeZMf.GdugY8a/zAQCq1f5VvgYHvp3NbG', 'black', 'super admin', '$2y$10$2jdmk/YU.pvaKx0iUua/IemTD24vXnV4XM6XlmBz3C1025L1/VnXe', '$2y$10$4CSA4qjXLSXn/ZRvNXsMPu0oFqKb9yEIGgJ/GBac9PHLsNF4D8EvG', '2024-06-19', '2024-06-19 22:37:35'),
-(2, 'admin', 'admin@gmail.com', '$2y$10$6.2droNeFWnOyNZwt4Y1eux//FoNzBBGkrRpNtc7JF0cQmqr2L/OW', 'black', '', '$2y$10$RMldzFAQuns8nz8jzjAo4.1iRNDStJszyu6CEo7mHJ.qkTJ6DgJTG', '$2y$10$zL3qEDBroGBzKo90TqVbkOLLyjA5/MmMCzBVUGIm2nSHvWuVw9iEa', '2024-06-19', '2024-06-19 22:39:33');
+(1, 'superadmin', 'superadmin@gmail.com', '$2y$10$mXRs8bYGKjgRcSXu.0o0OeZMf.GdugY8a/zAQCq1f5VvgYHvp3NbG', 'black', 'super admin', '$2y$10$2jdmk/YU.pvaKx0iUua/IemTD24vXnV4XM6XlmBz3C1025L1/VnXe', '$2y$10$4CSA4qjXLSXn/ZRvNXsMPu0oFqKb9yEIGgJ/GBac9PHLsNF4D8EvG', '2024-06-19', '2024-06-19 22:37:35');
 
 -- --------------------------------------------------------
 
@@ -123,6 +121,14 @@ CREATE TABLE `contact` (
   `Date` date NOT NULL,
   `Time` time(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `name`, `email`, `message`, `referals`, `Date`, `Time`) VALUES
+(1, 'test', 'test@gmail.com', 'test', 'online', '2024-06-20', '22:20:46.0'),
+(2, 'test about', 'test@gmail.com', 'test', 'test', '2024-06-20', '22:23:00.0');
 
 -- --------------------------------------------------------
 
@@ -203,6 +209,29 @@ INSERT INTO `offers` (`id`, `productname`, `productimage`, `ext`, `productinfo`,
 (1, 'Valentine Offer', 'MATUU (5).png', 'png', 'Special Valentine Sale .Gift yourself or loved ones this month.', '2023-02-06'),
 (3, 'Title Deed Handover Ceremony', 'Invites You to (12).png', 'png', 'We invite all our potential clients and clients for Golden Keys Estate and Tulia Gardens Phase 1 to our official title handover ceremony.', '0000-00-00'),
 (4, 'May Offer', 'phase 2 (1).jpg', 'jpg', 'Buy a plot at Tulia Gardens Cash today @230K and get a 3days , 2nights fully paid trip to Mombasa.', '2023-05-04');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `partners`
+--
+
+CREATE TABLE `partners` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `message` varchar(200) NOT NULL,
+  `referals` varchar(100) NOT NULL,
+  `Date` date NOT NULL,
+  `Time` time(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `partners`
+--
+
+INSERT INTO `partners` (`id`, `name`, `email`, `message`, `referals`, `Date`, `Time`) VALUES
+(3, 'sharaz techs', 'sharaztech@gmail.com', 'test', 'website', '2024-06-20', '23:41:13.0');
 
 -- --------------------------------------------------------
 
@@ -326,7 +355,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `question`, `answer`, `password`, `repeatpassword`, `Date`, `Time`) VALUES
-(1, 'user', 'user@gmail.com', '$2y$10$eAJaEdcQ8jFVplcGhyquK.J.S7NS.0T3kg7XwuxBCQQGn8D9DhoFO', 'Black', '$2y$10$Aj8KO9yAbbss4Nb/DYVjQuNwldMe7m4vBUjoNkbbP0gbj54j79sqi', '$2y$10$Au7WLzygotBTBK35ZxUvVeoKnLB.VYBjw2n2I6ksywTqkXvfigfrG', '2024-06-20', '16:46:10.0');
+(1, 'user', 'user@gmail.com', '$2y$10$/e2mwAxGQQeeZCkykXgQR.RVlbEuufFlvpL3aH8JLxYtWVi/GN.sy', 'Black', '$2y$10$uxGwh4XjpuI7GEn0IwNbRuild/1BNlYNRO4McXUgJxIj57el5MSHa', '$2y$10$ndEgTRmERLOfHuc3Z9NbeeXB/IMBkSISOSOjHXlT0pN.SRVXSlE66', '2024-06-20', '21:37:56.0');
 
 --
 -- Indexes for dumped tables
@@ -372,6 +401,12 @@ ALTER TABLE `enquiries`
 -- Indexes for table `offers`
 --
 ALTER TABLE `offers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `partners`
+--
+ALTER TABLE `partners`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -430,7 +465,7 @@ ALTER TABLE `callrequests`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `enquiries`
@@ -445,10 +480,16 @@ ALTER TABLE `offers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `partners`
+--
+ALTER TABLE `partners`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=230;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=243;
 
 --
 -- AUTO_INCREMENT for table `soldout`
