@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2024 at 12:06 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- Generation Time: Jun 20, 2024 at 04:19 PM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.0.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -325,8 +326,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `question`, `answer`, `password`, `repeatpassword`, `Date`, `Time`) VALUES
-(1, 'user', 'user@gmail.com', '$2y$10$0NSppTBd6BU2.M89ve28NOvGKBt8o9sGBiAF.5yks8794dHnogCEO', 'usermom', '$2y$10$.XhDcrKY2uewYM3DTOkBUuL/FTU2KD3CALzSZit.kJj1IXjlSRwv.', '$2y$10$Q7ImfVyYTVWmQiDXZVn4kOFwxtdLvW/eBG3SBon5c3m7NkQBqnjgW', '2022-12-09', '11:47:03.0'),
-(2, 'Mefijwdihwdjwsjdhwjqsqodkwfk fjebfhjhdjwshfewifejqwwqfewjfewhgewu kfwejfwefhewgeuwh:jfefehfejfjehfie', 'al.be.r.tha.n.shin4.9@gmail.com', '$2y$10$PkaW1nvRzcDCW1GF6qNnDuJgOf4qlTTmnL4JkrJpeTNn6/9wAim8u', 'Mefijwdihwdjwsjdhwjqsqodkwfk fjebfhjhdjwshfewifejqwwqfewjfewhgewu kfwejfwefhewgeuwh:jfefehfejfjehfie', '$2y$10$2uOdyHHm4P/6do4CH0mR0efTxv5ZXkGYaR8fUW/oHip5P9Ax6JjF2', '$2y$10$9WP6PtfvDvydRimFvohGKOamvrl9AKcJ3WHqZUAWJMIlU3JTVhJ8S', '2023-03-02', '05:30:32.0');
+(1, 'user', 'user@gmail.com', '$2y$10$eAJaEdcQ8jFVplcGhyquK.J.S7NS.0T3kg7XwuxBCQQGn8D9DhoFO', 'Black', '$2y$10$Aj8KO9yAbbss4Nb/DYVjQuNwldMe7m4vBUjoNkbbP0gbj54j79sqi', '$2y$10$Au7WLzygotBTBK35ZxUvVeoKnLB.VYBjw2n2I6ksywTqkXvfigfrG', '2024-06-20', '16:46:10.0');
 
 --
 -- Indexes for dumped tables
@@ -448,7 +448,7 @@ ALTER TABLE `offers`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=243;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=230;
 
 --
 -- AUTO_INCREMENT for table `soldout`
@@ -461,6 +461,12 @@ ALTER TABLE `soldout`
 --
 ALTER TABLE `studio`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -4,7 +4,7 @@
     <div class="sticky">
     <nav class="navbar navbar-expand-lg navbar-light bg-white" style="padding:0px;">
         <div class="container-fluid">
-          <a href="home-loggedin.php">
+          <a href="../../index.php">
             <img src="../../img/bof-logo2-rec.png" class="small-screen-logo" align="right" height="80" width=" " alt="" loading="lazy" />
           </a>
           <a
@@ -19,21 +19,21 @@
           </a>
           
           <div class="collapse navbar-collapse header-links" id="navbarExample01">
-            <a class="navbar-brand large-screen-logo" href="index.php">
+            <a class="navbar-brand large-screen-logo" href="../../index.php">
               <img src="../../img/bof-logo2-rec.png" height="100" style alt="" loading="lazy" />
             </a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-top:15px;">
               <li class="nav-item">
-                <a class="nav-link" style="color:black;" aria-current="page" href="aboutus.php">What we Do</a>
+                <a class="nav-link" style="color:black;" aria-current="page" href="../../aboutus.php">What we Do</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" style="color:black; cursor:pointer;" aria-current="page" onclick="impacts()">Impacts</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" style="color:black; cursor:pointer;"aria-current="page" href="volunteer.php">Volunteer</a>
+                <a class="nav-link" style="color:black; cursor:pointer;"aria-current="page" href="../../volunteer.php">Volunteer</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link"style="color:black;" aria-current="page" href="partner.php">Partner with us</a>
+                <a class="nav-link"style="color:black;" aria-current="page" href="../../partner.php">Partner with us</a>
               </li>
 
               <li class="nav-item me-3 me-lg-0 dropdown">
@@ -45,20 +45,20 @@
                   data-mdb-toggle="dropdown"
                   aria-expanded="false">
 
-                <button
+                <!-- <button
                   class="btn-outline-primary"
                   type="submit"
                   name="submit"
                   data-mdb-ripple-color="dark">Donate
-                </button>
+                </button> -->
                   <img src="../../img/icons/service-revamp.png" width="35" alt="services">
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" style="font-weight:bolder;"data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <img src="img/m-pesa.jpg" width="20" height="15" alt="services"> Via Mpesa </a>
+                    <a class="dropdown-item" style="font-weight:bolder;"data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <img src="../../img/m-pesa.jpg" width="20" height="15" alt="services"> Via Mpesa </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" style="font-weight:bolder;" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <img src="img/visa.png" width="20" alt="services">Master Card </a>
+                    <a class="dropdown-item" style="font-weight:bolder;" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <img src="../../img/visa.png" width="20" alt="services">Master Card </a>
                   </li>
                   <li>
                     <a class="dropdown-item"  data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fa fa-university" aria-hidden="true"> Online Banking</i> </a>

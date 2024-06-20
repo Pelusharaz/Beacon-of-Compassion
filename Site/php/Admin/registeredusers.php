@@ -23,7 +23,7 @@ $total = $stmt->rowCount();
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Sharaz-Techs | Admin Panel</title>
+    <title>Boc | Admin Panel</title>
     <!-- Tees Icon -->
     <link rel="icon" href="../../img/sharaz-logo.jpg" />
     <!-- Badge Icons from Font Awesome -->
@@ -134,7 +134,7 @@ $total = $stmt->rowCount();
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
           <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white">
-              <h1 class="mb-3">Sharaz Technologies</h1>
+              <h1 class="mb-3">Beacon of compassion</h1>
               <h4 class="mb-3">
                 Registered Users
               </h4>
@@ -158,7 +158,7 @@ $total = $stmt->rowCount();
 
     <!-- Employees accounts -->
     <div class="messages" style="marging-left:auto;margin-right:auto;display:block;text-align:center;">
-      <h4>Sharaz Employees</h4>
+      <h4>Beacon of Compassion Employees</h4>
     </div>
     <br>
     <div class="container" style="overflow:scroll; height:500px; max-width:1000px;">

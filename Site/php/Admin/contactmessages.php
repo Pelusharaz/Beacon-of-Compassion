@@ -24,7 +24,7 @@ $total = $stmt->rowCount();
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Sharaz-Techs | Admin Panel</title>
+    <title>Boc | Admin Panel</title>
     <!-- Tees Icon -->
     <link rel="icon" href="../../img/sharaz-logo.jpg" />
     <!-- Badge Icons from Font Awesome -->

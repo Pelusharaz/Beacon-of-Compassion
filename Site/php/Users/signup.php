@@ -51,7 +51,7 @@
     <link rel="shortcut icon" type="image" href="../../img/bof-logo.png" sizes="96x96" style="border-radius: 50%;"/>
     <link rel="stylesheet" href="../../css/modified-styles.css" />
     <!-- Styles -->
-    <link rel ="stylesheet" type = "text/css" href ="css/admin.css">
+    <link rel ="stylesheet" type = "text/css" href ="../Admin/css/admin.css">
     <link rel="stylesheet" href="../../css/styles.css" />
     <link rel="stylesheet" href="../../css/extrastyles.css" />
     <!-- Badge Icons from Font Awesome -->
@@ -97,14 +97,14 @@
     </style>
     
         <div class="wrapper" style="display:flex; justify-content: center; ">
-        <div class="picture" style="margin:40px -85px 0px 0px; width:40%;">
+        <div class="picture" style="margin:40px -180px 0px 0px; width:40%;">
             <img src="../../img/kids.jpg" alt="" height="570px" width="460px">
         </div>
         <div class="form-information" style="margin-top:40px;">
         <form action="signup.php" method="POST">
         <div class="form-container">
             <div class="container">
-                <h3 style="font-weight:bold;"><img src="images/profile.png" alt="" width="35"> Join The Real Estate community </h3>
+                <h3 style="font-weight:bold;"><img src="images/profile.png" alt="" width="35"> Join The Welfare Community </h3>
                 <hr><br>
                 <label for="name"><b>Name</b></label>
                 <input type="text" placeholder="Enter Username" name="username" required>
@@ -137,7 +137,7 @@
                 
                 <button type="submit" name="submit" class="registerbtn"style="margin:auto; display:block;">Sign up</button>
                 <br><a href="login.php"style="text-decoration:none;color:white;background:blue;padding: 14px 48px;">Log in</a>
-                <button style="float:right; background:blue;margin-top:-5px;" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><a  style="text-decoration:none;color:white;">Forgot Password</a></button>
+                <button style="float:right; background:blue;margin-top:-10px;padding: 10px;" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><a  style="text-decoration:none;color:white;">Forgot Password</a></button>
                 <br><br>
               </div>
         </div>
@@ -233,15 +233,17 @@
     </script>
     <script type="text/javascript" src="../../js/script1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <br><br>
-    <!-- Copyright -->
-    <div class="text-center text-dark p-3" style="background-color: blue;">
+    <br><br><br><br>
+    <!--Footer-->
+    <footer class="text-center text-white" style="background-color: #f1f1f1; bottom:0; position:fixed; width:100%;">
+      <!-- Copyright -->
+      <div class="text-center text-dark p-3" style="background-color: blue;">
       <p style="color:white;"> &copy; Copyright <?php $year = date("Y"); echo $year; ?>
         Beacon of Compassion Foundation || 
        <a class="text-white" target="blank" href="../../../../sharaztechs.66ghz.com">Developed by Sharaz Technologies</a>
       </p>
-    </div>
-    <!-- Copyright -->
+      </div>
+    </footer>
 
     </body>
 </html>
