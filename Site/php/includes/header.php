@@ -1,8 +1,8 @@
     <div class="header-top">
       <div class="header-contacts">
-        <a class="nav-link links" href="mailto:beaconfoundation@gmail.com">
+        <a class="nav-link links" href="mailto:beaconofcompassion07@gmail.com">
           <span class="badge badge-pill bg-danger"></span>
-          <span class="socials-header"><i class="fa fa-envelope fa fa-flip-horizontal"></i> <div class="header-text">beaconofcompassion@gmail.com</div></span>
+          <span class="socials-header"><i class="fa fa-envelope fa fa-flip-horizontal"></i> <div class="header-text">beaconofcompassion07@gmail.com</div></span>
         </a>
         <a class="nav-link links" href="tel:0719411322">
           <span class="badge badge-pill bg-danger"></span>

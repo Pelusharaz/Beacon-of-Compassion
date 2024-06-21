@@ -94,7 +94,7 @@ $total = $stmt->rowCount();
                     <a class="dropdown-item" href="registeredusers.php">Registered Users</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="bookings.php">Bookings</a>
+                    <a class="dropdown-item" href="volunteers.php">Volunteers</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="orders.php">Orders</a>

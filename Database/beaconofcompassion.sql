@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2024 at 11:02 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- Generation Time: Jun 21, 2024 at 04:02 PM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.0.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -357,6 +358,39 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `email`, `question`, `answer`, `password`, `repeatpassword`, `Date`, `Time`) VALUES
 (1, 'user', 'user@gmail.com', '$2y$10$/e2mwAxGQQeeZCkykXgQR.RVlbEuufFlvpL3aH8JLxYtWVi/GN.sy', 'Black', '$2y$10$uxGwh4XjpuI7GEn0IwNbRuild/1BNlYNRO4McXUgJxIj57el5MSHa', '$2y$10$ndEgTRmERLOfHuc3Z9NbeeXB/IMBkSISOSOjHXlT0pN.SRVXSlE66', '2024-06-20', '21:37:56.0');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `volunteer`
+--
+
+CREATE TABLE `volunteer` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `gender` varchar(100) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `phone` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `ename` varchar(100) NOT NULL,
+  `ephone` varchar(100) NOT NULL,
+  `eemail` varchar(100) NOT NULL,
+  `days` varchar(100) NOT NULL,
+  `vtime` time(1) NOT NULL,
+  `referals` varchar(100) NOT NULL,
+  `bcheckbox` varchar(50) NOT NULL,
+  `lcheckbox` varchar(50) NOT NULL,
+  `Date` date NOT NULL,
+  `Time` time(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `volunteer`
+--
+
+INSERT INTO `volunteer` (`id`, `name`, `gender`, `address`, `phone`, `email`, `ename`, `ephone`, `eemail`, `days`, `vtime`, `referals`, `bcheckbox`, `lcheckbox`, `Date`, `Time`) VALUES
+(1, 'test', 'male', '141', '0796526231', 'test@gmail.com', 'Test', '0796526231', 'test@gmail.com', 'Mon', '00:00:00.0', 'online', 'on', 'on', '2024-06-21', '16:39:52.0'),
+(2, 'test', 'male', 'Nairobi', '0796526231', 'test@gmail.com', 'Test', '0796526231', 'test@gmail.com', 'Mon', '00:00:00.0', 'test', 'on', 'on', '2024-06-21', '16:40:56.0');
+
 --
 -- Indexes for dumped tables
 --
@@ -434,6 +468,12 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `volunteer`
+--
+ALTER TABLE `volunteer`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -508,6 +548,12 @@ ALTER TABLE `studio`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `volunteer`
+--
+ALTER TABLE `volunteer`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

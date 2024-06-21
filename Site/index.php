@@ -111,8 +111,7 @@ if (isset($_POST['contactmsg'])) {
             <div class="text-white">
               <h1 class="mb-3">Beacon of Compassion Foundation</h1>
               <h5 class="mb-3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                | Obcaecati nulla repudiandae deserunt odit vel fuga iste 
+                Building a brighter future
               </h4>
               <a class="btn btn-outline-light btn-lg" href="mailto:sharaztechs@gmail.com"  role="button">Touch a Heart !</a>
             </div>
@@ -127,8 +126,7 @@ if (isset($_POST['contactmsg'])) {
             <div class="text-white">
               <h1 class="mb-3">Help save a life today</h1>
               <h5 class="mb-3">
-                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                 | Obcaecati nulla repudiandae deserunt odit vel fuga iste
+                Creating a world where compassion and generosity prevail
               </h4>
               <a class="btn btn-outline-light btn-lg" href="mailto:sharaztechs@gmail.com"  role="button">Touch a Heart !</a>
             </div>
@@ -143,7 +141,7 @@ if (isset($_POST['contactmsg'])) {
             <div class="text-white">
               <h1 class="mb-3">Touch a heart</h1>
               <h5 class="mb-3">
-                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Making a real and lasting impact on the lives of those in need.
               </h4>
               <a class="btn btn-outline-light btn-lg" href="mailto:sharaztechs@gmail.com" role="button">Touch a Heart !</a>
             </div>

@@ -1,3 +1,36 @@
+<!-- contact messages -->
+<?php
+require_once 'php/includes/config.php';
+if (isset($_POST['volunteer'])) {
+
+  $name = $_POST['name'];
+  $gender = $_POST['gender'];
+  $address = $_POST['address'];
+  $phone = $_POST['phone'];
+  $email = $_POST['email'];
+  $ename = $_POST['ename'];
+  $ephone = $_POST['ephone'];
+  $eemail = $_POST['eemail'];
+  $days = $_POST['days'];
+  $vtime = $_POST['vtime'];
+  $referals = $_POST['referals'];
+  $bcheckbox = $_POST['bcheckbox'];
+  $lcheckbox = $_POST['lcheckbox'];
+  try {
+    //code...
+    $sql = 'INSERT INTO volunteer(name,gender,address,phone,email,ename,ephone,eemail,days,vtime,referals,bcheckbox,lcheckbox,Date,Time ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,Now(),Now() )';
+    $sth = $DBH->prepare($sql);
+    $sth->execute(array($name,$gender,$address,$phone,$email,$ename,$ephone,$eemail,$days,$vtime,$referals,$bcheckbox,$lcheckbox));
+    $_SESSION['success'] = "message sent successfully.";
+  } catch (PDOException $e) {
+    //throw $th;
+    echo $e->getMessage();
+  }
+  echo "<script>alert('Message sent successfully. We value Your Feedback')</script>
+  <script>window.location = 'volunteer.php'</script>";
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -198,7 +231,7 @@
               <label for="gender"><b>Gender</b></label><br>
               <div class="email-phone" style="display:flex;">
                 <div class="gender" style="width:50%;">
-                  <select style="padding:8px 0px 8px 0px;width:98%;"name="type" required>
+                  <select style="padding:8px 0px 8px 0px;width:98%;"name="gender" required>
                     <option value="" disabled selected>Select gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -208,7 +241,7 @@
                 </div>
                 <div class="address" style="margin-top:-20px;width:50%;">
                   <label for="Address *"><b>Address<span>*</span></b></label><br>
-                  <input type="email" placeholder="Enter address" name="Address *" required>
+                  <input type="text" placeholder="Enter address" name="address" required>
                 </div>
               </div>
               <div class="email-phone" style="display:flex;">
@@ -224,23 +257,23 @@
               <h5 style="color:orangered;">Emergency Contact Information</h5>
               <hr>
               <label for="name"><b>Emergency Contact Name</b><span>*</span></label>
-              <input type="text" placeholder="Enter full name" name="name" required>
+              <input type="text" placeholder="Enter full name" name="ename" required>
               <div class="email-phone" style="display:flex;">
                 <div class="phone" style="width:50%;">
                   <label for="Phone"><b>Emergency Contact Phone</b><span>*</span></label><br>
-                  <input type="phone" placeholder="Enter phone number" name="phone" required>
+                  <input type="phone" placeholder="Enter phone number" name="ephone" required>
                 </div>
                 <div class="mail" style="width:50%;">
                   <label for="Email"><b>Emergency Contact Email</b><span>*</span></label><br>
-                  <input type="email" placeholder="Enter email" name="email" required>
+                  <input type="email" placeholder="Enter email" name="eemail" required>
                 </div>
               </div><br>
               <h5 style="color:orangered;">Volunteer Details</h5>
               <hr>
               <label for="name"><b>Which days of the week are you available ?</b><span>*</span></label>
-              <input type="text" placeholder="E.g Mon, Tue, Wed, Thur, Fri, Sat,Sun, TBD, No Preference" name="name" required>
+              <input type="text" placeholder="E.g Mon, Tue, Wed, Thur, Fri, Sat,Sun, TBD, No Preference" name="days" required>
               <label for="name"><b>What time do you prefer ?</b><span>*</span></label>
-              <input type="text" placeholder="E.g Morning, Afternoon, Evening" name="name" required>
+              <input type="text" placeholder="E.g Morning, Afternoon, Evening" name="vtime" required>
 
               <label for="password"><b>Describe your skills, Passion and Qualifications</b></label>
               <textarea type="text" name="message" placeholder="Enter message" required></textarea>
@@ -249,7 +282,7 @@
               <h5 style="color:orangered;">Volunteer Authorizations</h5>
               <hr>
               <label for="password"><b>Background Check <span>*</span></b></label><br>
-              <input id="information"class="bg-input" type="checkbox" name="checkbox" required />
+              <input id="information"class="bg-input" type="checkbox" name="bcheckbox" required />
               <label for="booktitle" style="font-size:15px;" >I authorize and consent to a background check conducted by this organization<span>*</span></label><br>
               <style>
                 .bg-input {
@@ -264,10 +297,10 @@
               }
               </style><br>
               <label for="password"><b>Liability waiver <span>*</span></b></label><br>
-              <input id="information" class="bg-input" type="checkbox" name="checkbox" required />
+              <input id="information" class="bg-input" type="checkbox" name="lcheckbox" required />
               <label for="booktitle" style="font-size:15px;" >I hereby waive this organization of any liability and release them from any responsibility<span>*</span></label><br>
               <br>
-              <button type="submit" class="form-button" name="contactmsg" style="color:white;">Send</button>
+              <button type="submit" class="form-button" name="volunteer" style="color:white;">Send</button>
 
             </div>
           </div>

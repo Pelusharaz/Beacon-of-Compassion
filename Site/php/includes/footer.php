@@ -39,9 +39,9 @@
             </a>
           </li>
           <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link links" href="mailto:beaconofcompassion@gmail.com">
+            <a class="nav-link links" href="mailto:beaconofcompassion07@gmail.com">
               <span class="badge badge-pill bg-danger"></span>
-              <span><i class="fa fa-envelope fa fa-flip-horizontal"></i> beaconofcompassion@gmail.com</span>
+              <span><i class="fa fa-envelope fa fa-flip-horizontal"></i> beaconofcompassion07@gmail.com</span>
             </a>
           </li>
           <!-- <li class="nav-item me-3 me-lg-0">

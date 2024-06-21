@@ -131,13 +131,13 @@ $total = $stmt->rowCount();
       <!-- Background image -->
       <div
         class="p-5 text-center bg-image shadow-1-strong"
-        style="background-image: url('../../img/icons/contact.webp'); height: 550px">
+        style="background-image: url('../../img/admin.jpg'); height: 550px">
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
           <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white">
               <h1 class="mb-3">Beacon of Compassion Foundation</h1>
               <h4 class="mb-3">
-                Contact Messages
+                Volunteers
               </h4>
               <a class="btn btn-outline-light btn-lg" href="#!" role="button">welcome <?php echo "{$row->username}"; ?></a>
               <?php
@@ -165,9 +165,18 @@ $total = $stmt->rowCount();
          <th><strong style="color:orange;">Messages</strong></th>
          <tr style="border-radius: 20px;">
              <th>Senders Name</td>
+             <th>Gender</td>
+             <th>Address</td>
+             <th>Phone</td>
              <th>Email</td>
-             <th>Message</td>
+             <th>Emergency Name</td>
+             <th>Emergency Phone</td>
+             <th>Emergency Email</td>
+             <th>Volunteer's Days</td>
+             <th>Volunteer's Time</td>
              <th>Reffered By</td>
+             <th>Background Check</td>
+             <th>Liability waiver</td>
              <th>Date</td>
              <th>Time</td>
              <th>Delete</td>
@@ -186,7 +195,7 @@ $total = $stmt->rowCount();
         </tr> -->
         <?php
          require_once '../includes/config.php';
-         $sql="SELECT * FROM contact ";
+         $sql="SELECT * FROM volunteer ";
          $stmt = $DBH->prepare($sql);
          $stmt->execute();
          $total = $stmt->rowCount();
@@ -197,9 +206,18 @@ $total = $stmt->rowCount();
             ?>
         <tr>
             <td><?php echo "{$row->name}"; ?></td>
+            <td><?php echo "{$row->gender}"; ?></td>
+            <td><?php echo "{$row->address}"; ?></td>
+            <td><?php echo "{$row->phone}"; ?></td>
             <td><?php echo "{$row->email}"; ?></td>
-            <td><?php echo "{$row->message}"; ?></td>
+            <td><?php echo "{$row->ename}"; ?></td>
+            <td><?php echo "{$row->ephone}"; ?></td>
+            <td><?php echo "{$row->eemail}"; ?></td>
+            <td><?php echo "{$row->days}"; ?></td>
+            <td><?php echo "{$row->vtime}"; ?></td>
             <td><?php echo "{$row->referals}"; ?></td>
+            <td><?php echo "{$row->bcheckbox}"; ?></td>
+            <td><?php echo "{$row->lcheckbox}"; ?></td>
             <td><?php echo "{$row->Date}"; ?></td>
             <td><?php echo "{$row->Time}"; ?></td>
             <td>
@@ -216,65 +234,7 @@ $total = $stmt->rowCount();
      </table>
      </div>
 
-     <div class="messages" style="marging-left:auto;margin-right:auto;display:block;text-align:center;">
-      <h4>Partners Requests</h4>
-    </div>
-    <br>
-    <div class="container" style="overflow:scroll; height:900px; max-width:1000px;">
-    <table>
-         <th><strong style="color:orange;">Partners Requests</strong></th>
-         <tr style="border-radius: 20px;">
-             <th>Senders Name</td>
-             <th>Email</td>
-             <th>Contribution</td>
-             <th>Reffered By</td>
-             <th>Date</td>
-             <th>Time</td>
-             <th>Delete</td>
-            <th>Reply</td>
-        </tr>
-        <!-- <tr>
-            <td>Test</td>
-            <td>test@gmail.com</td>
-            <td>test message</td>
-            <td>reffered by test</td>
-            <td>1/29/2022</td>
-            <td>6:06 PM</td>
-            <td><button type="submit" class="logoutbtn">DELETE</button></td>
-            <td><button type="submit" class="logoutbtn">REPLY</button></td>
-            
-        </tr> -->
-        <?php
-         require_once '../includes/config.php';
-         $sql="SELECT * FROM partners ";
-         $stmt = $DBH->prepare($sql);
-         $stmt->execute();
-         $total = $stmt->rowCount();
-
-        ?>
-        <?php
-              while($row = $stmt->fetchObject()) {
-            ?>
-        <tr>
-            <td><?php echo "{$row->name}"; ?></td>
-            <td><?php echo "{$row->email}"; ?></td>
-            <td><?php echo "{$row->message}"; ?></td>
-            <td><?php echo "{$row->referals}"; ?></td>
-            <td><?php echo "{$row->Date}"; ?></td>
-            <td><?php echo "{$row->Time}"; ?></td>
-            <td>
-                <form action="deleteproducts.php" method="post" style="box-shadow:none;background-color:transparent;">
-                    <input type="hidden" name="deletepartner_id" value="<?php echo "{$row->id}"; ?>">
-                    <button type="submit" class="logoutbtn" name="deletepartner_btn">DELETE</button>
-                </form>
-            </td>
-            <td><a href="mailto:<?php echo "{$row->email}"; ?>?&subject=Subject : Beacon of compassion Information Desk&body=Dear <?php echo "{$row->name}"; ?>, " target="_blank"><button type="submit" class="logoutbtn">REPLY</button></a></td>
-        </tr>
-        <?php
-         }
-        ?>  
-     </table>
-     </div>
+    
     </main>
 
     <!--Footer-->
