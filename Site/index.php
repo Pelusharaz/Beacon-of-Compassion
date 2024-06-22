@@ -458,7 +458,7 @@ if (isset($_POST['contactmsg'])) {
              ?>
             
              <div class="col-lg-6 blog">
-               <div class="card" style="width:500px;height:550px;margin:0px -10px 10px -10px; background-color:transparent;box-shadow:none;color:black;padding:0px;" >
+               <div class="card" style="width:200px;height:550px;margin:0px -10px 10px -10px; background-color:transparent;box-shadow:none;color:black;padding:0px;" >
                 <div class="blog-img" style="margin:10px;">
                   <?php if($row->ext == 'mp4'){ ?>
                   <video style="width:350px; height:200px;" controls>

@@ -148,6 +148,30 @@
     }
     
  ?>
+ <!-- Update roles -->
+<?php
+ require_once '../includes/config.php';
+ if (isset($_POST['assign_role'])){
+
+  $id = $_POST['id'];
+  $role = $_POST['role'];
+
+    try {
+        //code...
+        $sql = "UPDATE admin SET role='$role' where id= '". $_POST["id"] ."' ";
+        $sth = $DBH->prepare($sql);
+        $sth->execute(array());
+        $_SESSION['success'] = "message sent successfully.";
+      } catch (PDOException $e) {
+        //throw $th;
+        echo $e->getMessage();
+      }
+      
+      echo "<script>alert('Role assigned Successfully')</script>
+		  <script>window.location = 'registeredusers.php'</script>";
+
+    }  
+ ?>
 
 <!-- blogs section -->
 <!-- Update blogs -->

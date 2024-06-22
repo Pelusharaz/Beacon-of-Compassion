@@ -30,7 +30,7 @@
     <div class="sticky">
     <nav class="navbar navbar-expand-lg navbar-light bg-white" style="padding:0px;">
         <div class="container-fluid">
-          <a href="home-loggedin.php">
+          <a href="index.php">
             <img src="img/bof-logo2-rec.png" class="small-screen-logo" align="right" height="80" width=" " alt="" loading="lazy" />
           </a>
           <a
