@@ -326,7 +326,7 @@ if (isset($_POST['contactmsg'])) {
               <div class="image-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;">
                     <h4 class="mb-2">Kids in the East</h4>
-                    <p class="mb-2"> Lorem ipsum dolor sit amet,
+                    <p class="mb-2"> Every child's life matters
                     </p>
                     <a class="btn btn-outline-mask" href="mailto:sharaztechs@gmail.com" role="button">Learn More</a>
                   </div>
@@ -335,8 +335,8 @@ if (isset($_POST['contactmsg'])) {
             <div class="image-container bg-image" style="background-image: url('img/top-kids2.jpg'); height: 200px;">
               <div class="image-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;">
-                    <h4 class="mb-2">Childrens Home</h4>
-                    <p class="mb-2"> Lorem ipsum dolor sit amet,
+                    <h4 class="mb-2">Childrens' Home</h4>
+                    <p class="mb-2"> Building a life day by day
                     </p>
                     <a class="btn btn-outline-mask" href="mailto:sharaztechs@gmail.com" role="button">Learn More</a>
                   </div>
@@ -350,7 +350,7 @@ if (isset($_POST['contactmsg'])) {
               <div class="image-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;">
                     <h4 class="mb-2">Touch a Heart</h4>
-                    <p class="mb-2"> Lorem ipsum dolor sit amet,
+                    <p class="mb-2">Touching a soul day by day
                     </p>
                     <a class="btn btn-outline-mask" href="mailto:sharaztechs@gmail.com" role="button">Learn More</a>
                   </div>
@@ -360,7 +360,7 @@ if (isset($_POST['contactmsg'])) {
               <div class="image-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;">
                     <h4 class="mb-2">School Projects</h4>
-                    <p class="mb-2"> consequuntur, reiciendis dolor amet modi unde eos libero.
+                    <p class="mb-2"> Getting education to all
                     </p>
                     <a class="btn btn-outline-mask" href="mailto:sharaztechs@gmail.com" role="button">Learn More</a>
                   </div>
@@ -374,7 +374,7 @@ if (isset($_POST['contactmsg'])) {
               <div class="image-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;">
                     <h4 class="mb-2">Volunteer projects</h4>
-                    <p class="mb-2"> velit adipisci dolorum recusandae. Eveniet.
+                    <p class="mb-2"> creating a world where compassion and generosity prevail 
                     </p>
                     <a class="btn btn-outline-mask" href="mailto:sharaztechs@gmail.com" role="button">Learn More</a>
                   </div>
@@ -384,7 +384,7 @@ if (isset($_POST['contactmsg'])) {
               <div class="image-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;">
                     <h4 class="mb-2">Clean water projects</h4>
-                    <p class="mb-2"> Recusandae, molestias maxime! Blanditiis, totam voluptates.
+                    <p class="mb-2"> Expanding and sharing life
                     </p>
                     <a class="btn btn-outline-mask" href="mailto:sharaztechs@gmail.com" role="button">Learn More</a>
                   </div>
@@ -448,7 +448,66 @@ if (isset($_POST['contactmsg'])) {
 
      <div class="blogs">
      <div class="current-blog">
-      <div class="blog-img" style="background-image: url('img/top-kids2.jpg');background-size: contain; height: 200px;">
+
+     <?php
+                require_once 'php/includes/config.php';
+                $sql="SELECT * FROM blogs ORDER BY id DESC LIMIT 1";
+                $stmt = $DBH->prepare($sql);
+                $stmt->execute();
+                while($row = $stmt->fetchObject()) {
+             ?>
+            
+             <div class="col-lg-6 blog">
+               <div class="card" style="width:500px;height:550px;margin:0px -10px 10px -10px; background-color:transparent;box-shadow:none;color:black;padding:0px;" >
+                <div class="blog-img" style="margin:10px;">
+                  <?php if($row->ext == 'mp4'){ ?>
+                  <video style="width:350px; height:200px;" controls>
+                   <source src="<?php echo "php/Admin/blogs/". "{$row->blogimage}";?>">
+                  </video>
+                  <?php }else{?>
+                      <img src="<?php echo "php/Admin/blogs/". "{$row->blogimage}";?>"
+                      class="img-fluid" style="width:350px; height:200px;" />
+                  <?php }?>
+                </div>
+                <div class="card-body">
+                  <p style="color:black;font-size:15px;"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="width:100%;"> By <?php echo $row->postedby ?></i></p>
+                  <div class="date"><h6 style="color:grey;"> <?php echo $row->dateposted ?></h6></div>
+                  <div class="Blog-title"><h4 style="color:black; font-weight: bolder;"><?php echo $row->blogtitle ?></h4></div>
+                  <div class="information">
+                    <p id="text" class="show-read-more"><?php echo $row->bloginfo ?></p>
+                      <script>
+                        $(document).ready(function() {
+                          var maxLength = 100;
+                          $(".show-read-more").each(function() {
+                            var myStr = $(this).text();
+                            if ($.trim(myStr).length > maxLength) {
+                              var newStr = myStr.substring(0, maxLength);
+                              var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+                              $(this).empty().html(newStr);
+                              $(this).append(' <a href="javascript:void(0);" class="read-more">...</a>');
+                              $(this).append('<span class="more-text">' + removedStr + '</span>');
+                            }
+                          });
+                          $(".read-more").click(function() {
+                            $(this).siblings(".more-text").contents().unwrap();
+                            $(this).remove();
+                          });
+                        });
+                      </script>
+                      <style>
+                       .show-read-more .more-text {
+                        display: none;
+                       }
+                      </style>
+                    <a type="submit" name="submit" href="services/blog.php?blog=<?php echo $row->id ?>" class="btn blogbtn"> <i class="fa fa-arrow-circle-right fa-lg" ></i> Read More</a>
+                  </div>
+                </div>
+                  
+               </div>
+             </div>
+  
+            <?php }?>
+      <!-- <div class="blog-img" style="background-image: url('img/top-kids2.jpg');background-size: contain; height: 200px;">
        <div class="blog-mask" id="blog-mask"></div>
       </div>
       <script>
@@ -468,10 +527,73 @@ if (isset($_POST['contactmsg'])) {
           rem officia dolorem.
         </p>
         <a class="btn blogbtn" role="button"><i class="fa fa-arrow-circle-right fa-lg" ></i>  Read More</a>
-      </div>
+      </div> -->
      </div>
      <div class="other-blogs">
-      <div class="row">
+
+          <div class="row row-blog" style="overflow:scroll; height:900px;">
+            
+            <?php
+                require_once 'php/includes/config.php';
+                $sql="SELECT * FROM blogs ORDER BY id DESC LIMIT 4";
+                $stmt = $DBH->prepare($sql);
+                $stmt->execute();
+                while($row = $stmt->fetchObject()) {
+             ?>
+            
+             <div class="col-lg-6 blog">
+               <div class="card" style="width:350px;height:550px;margin:0px 10px 20px 5px; background-color:#f1f1f1;color:black;padding:0px;" >
+                <div class="blog-img" style="margin:10px;">
+                  <?php if($row->ext == 'mp4'){ ?>
+                  <video style="width:330px; height:200px;" controls>
+                   <source src="<?php echo "php/Admin/blogs/". "{$row->blogimage}";?>">
+                  </video>
+                  <?php }else{?>
+                      <img src="<?php echo "php/Admin/blogs/". "{$row->blogimage}";?>"
+                      class="img-fluid" style="width:330px; height:200px;" />
+                  <?php }?>
+                </div>
+                <div class="card-body">
+                  <p style="color:black;font-size:15px;"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="width:100%;"> By <?php echo $row->postedby ?></i></p>
+                  <div class="date"><h6 style="color:grey;"> <?php echo $row->dateposted ?></h6></div>
+                  <div class="Blog-title"><h4 style="color:black; font-weight: bolder;"><?php echo $row->blogtitle ?></h4></div>
+                  <div class="information">
+                    <p id="text" class="show-read-more"><?php echo $row->bloginfo ?></p>
+                      <script>
+                        $(document).ready(function() {
+                          var maxLength = 100;
+                          $(".show-read-more").each(function() {
+                            var myStr = $(this).text();
+                            if ($.trim(myStr).length > maxLength) {
+                              var newStr = myStr.substring(0, maxLength);
+                              var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+                              $(this).empty().html(newStr);
+                              $(this).append(' <a href="javascript:void(0);" class="read-more">...</a>');
+                              $(this).append('<span class="more-text">' + removedStr + '</span>');
+                            }
+                          });
+                          $(".read-more").click(function() {
+                            $(this).siblings(".more-text").contents().unwrap();
+                            $(this).remove();
+                          });
+                        });
+                      </script>
+                      <style>
+                       .show-read-more .more-text {
+                        display: none;
+                       }
+                      </style>
+                    <a type="submit" name="submit" href="services/blog.php?blog=<?php echo $row->id ?>" class="btn blogbtn"> <i class="fa fa-arrow-circle-right fa-lg" ></i> Read More</a>
+                  </div>
+                </div>
+                  
+               </div>
+             </div>
+  
+            <?php }?>
+  
+          </div>
+      <!-- <div class="row">
         <div class="column">
 
           <div class="blog" style="margin:0px 10px 0px 10px;background-color:#f1f1f1;padding:30px;">
@@ -566,7 +688,7 @@ if (isset($_POST['contactmsg'])) {
           </div>
           
         </div>
-      </div>
+      </div> -->
 
      </div>
      </div>

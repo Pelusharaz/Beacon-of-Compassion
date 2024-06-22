@@ -1,135 +1,5 @@
-<!-- delete products -->
-<?php
- require_once '../includes/config.php';
- if (isset($_POST['deleteproduct_btn'])){
 
-    $id = $_POST['deletecode_id'];
-    echo $id;
-  
-
-    try {
-        //code...
-        $sql = "DELETE FROM products WHERE id='$id'";
-        $sth = $DBH->prepare($sql);
-        $sth->execute(array());
-        $_SESSION['success'] = "message sent successfully.";
-      } catch (PDOException $e) {
-        //throw $th;
-        echo $e->getMessage();
-      }
-      echo "<script>alert('product has been deleted successfully')</script>
-		   <script>window.location = 'admin.php'</script>"; 
-    }
-    
- ?>
-<!-- Update products -->
-<?php
- require_once '../includes/config.php';
- if (isset($_POST['updateproduct'])){
-
-  $id = $_POST['id'];
-  $productname = $_POST['productname'];
-  $price = $_POST['price'];
-  $productinfo = $_POST['productinfo'];
-  $category = $_POST['category'];
-  $productimage = $_FILES['productimage']['name'];
-
-  // image file directory
-  $target = "products/".basename($productimage);
-  
-  
-
-    try {
-        //code...
-        $sql = "UPDATE products SET productname='$productname',price='$price',productinfo='$productinfo',category='$category',productimage='$productimage'  where id= '". $_POST["id"] ."' ";
-        $sth = $DBH->prepare($sql);
-        $sth->execute(array());
-        $_SESSION['success'] = "message sent successfully.";
-      } catch (PDOException $e) {
-        //throw $th;
-        echo $e->getMessage();
-      }
-      
-      echo "<script>alert('Product edited Successfully')</script>
-		  <script>window.location = 'admin.php'</script>";
-
-    //uploading image
-    if (move_uploaded_file($_FILES['productimage']['tmp_name'], $target)){
-      header("location:admin.php");
-      $msg = "profile uploaded successfully";
-  	}else{
-  		$msg = "Failed to upload image";
-  	}
-
-    }  
- ?>
-
- <!---Edit gallery-->
- <!---Delete pictures-->
- <?php
- require_once '../includes/config.php';
- if (isset($_POST['deletepic_btn'])){
-
-    $id = $_POST['deletepic_id'];
-    echo $id;
-  
-
-    try {
-        //code...
-        $sql = "DELETE FROM studio WHERE id='$id'";
-        $sth = $DBH->prepare($sql);
-        $sth->execute(array());
-        $_SESSION['success'] = "message sent successfully.";
-      } catch (PDOException $e) {
-        //throw $th;
-        echo $e->getMessage();
-      }
-      echo "<script>alert('picture has been deleted successfully')</script>
-		   <script>window.location = 'updatestudio.php'</script>"; 
-    }
-    
- ?>
-
- <!---update gallery--->
- <?php
- require_once '../includes/config.php';
- if (isset($_POST['updategallery'])){
-
-  $id = $_POST['id'];
-  $category = $_POST['category'];
-  $image = $_FILES['image']['name'];
-
-  // image file directory
-  $target = "studio/".basename($image);
-  
-  
-
-    try {
-        //code...
-        $sql = "UPDATE studio SET category='$category',image='$image'  where id= '". $_POST["id"] ."' ";
-        $sth = $DBH->prepare($sql);
-        $sth->execute(array());
-        $_SESSION['success'] = "message sent successfully.";
-      } catch (PDOException $e) {
-        //throw $th;
-        echo $e->getMessage();
-      }
-      
-      echo "<script>alert('Gallery edited Successfully')</script>
-		  <script>window.location = 'updatestudio.php'</script>";
-
-    //uploading image
-    if (move_uploaded_file($_FILES['image']['tmp_name'], $target)){
-      header("location:updatestudio.php");
-      $msg = "Picture uploaded successfully";
-  	}else{
-  		$msg = "Failed to upload image";
-  	}
-
-    }  
- ?>
-
- <!---Delete contact messages-->
+<!---Delete contact messages-->
 <?php
  require_once '../includes/config.php';
  if (isset($_POST['deletemessage_btn'])){
@@ -175,6 +45,56 @@
       }
       echo "<script>alert('Partner has been deleted successfully')</script>
 		   <script>window.location = 'contactmessages.php'</script>"; 
+    }
+    
+ ?>
+
+ <!---Delete volunteer-->
+<?php
+ require_once '../includes/config.php';
+ if (isset($_POST['deletevolunteer_btn'])){
+
+    $id = $_POST['deletevolunteer_id'];
+    echo $id;
+  
+
+    try {
+        //code...
+        $sql = "DELETE FROM volunteer WHERE id='$id'";
+        $sth = $DBH->prepare($sql);
+        $sth->execute(array());
+        $_SESSION['success'] = "message sent successfully.";
+      } catch (PDOException $e) {
+        //throw $th;
+        echo $e->getMessage();
+      }
+      echo "<script>alert('Volunteer record has been deleted successfully')</script>
+		   <script>window.location = 'volunteers.php'</script>"; 
+    }
+    
+ ?>
+
+<!---Delete donation-->
+<?php
+ require_once '../includes/config.php';
+ if (isset($_POST['deletedonation_btn'])){
+
+    $id = $_POST['deletedonation_id'];
+    echo $id;
+  
+
+    try {
+        //code...
+        $sql = "DELETE FROM donations WHERE id='$id'";
+        $sth = $DBH->prepare($sql);
+        $sth->execute(array());
+        $_SESSION['success'] = "message sent successfully.";
+      } catch (PDOException $e) {
+        //throw $th;
+        echo $e->getMessage();
+      }
+      echo "<script>alert('Donation record has been deleted successfully')</script>
+		   <script>window.location = 'donations.php'</script>"; 
     }
     
  ?>
@@ -229,93 +149,28 @@
     
  ?>
 
- <!---Delete bookings-->
- <!-- studio bookings -->
+<!-- blogs section -->
+<!-- Update blogs -->
 <?php
  require_once '../includes/config.php';
- if (isset($_POST['deletestudiobooking_btn'])){
-
-    $id = $_POST['deletestudiobooking_id'];
-    echo $id;
-  
-
-    try {
-        //code...
-        $sql = "DELETE FROM studiobookings WHERE id='$id'";
-        $sth = $DBH->prepare($sql);
-        $sth->execute(array());
-        $_SESSION['success'] = "message sent successfully.";
-      } catch (PDOException $e) {
-        //throw $th;
-        echo $e->getMessage();
-      }
-      echo "<script>alert('Booking has been deleted successfully')</script>
-		   <script>window.location = 'bookings.php'</script>"; 
-    }
-    
- ?>
-
- <!-- doc & blogging bookings -->
-<?php
- require_once '../includes/config.php';
- if (isset($_POST['deletedocstudiobooking_btn'])){
-
-    $id = $_POST['deletedocstudiobooking_id'];
-    echo $id;
-  
-
-    try {
-        //code...
-        $sql = "DELETE FROM docandbloggingbookings WHERE id='$id'";
-        $sth = $DBH->prepare($sql);
-        $sth->execute(array());
-        $_SESSION['success'] = "message sent successfully.";
-      } catch (PDOException $e) {
-        //throw $th;
-        echo $e->getMessage();
-      }
-      echo "<script>alert('Booking has been deleted successfully')</script>
-		   <script>window.location = 'bookings.php'</script>"; 
-    }
-    
- ?>
-
- <!-- delete orders -->
-<?php
- require_once '../includes/config.php';
- if (isset($_POST['deleteorder_btn'])){
-
-    $id = $_POST['deleteorder_id'];
-    echo $id;
-  
-
-    try {
-        //code...
-        $sql = "DELETE FROM orders WHERE id='$id'";
-        $sth = $DBH->prepare($sql);
-        $sth->execute(array());
-        $_SESSION['success'] = "message sent successfully.";
-      } catch (PDOException $e) {
-        //throw $th;
-        echo $e->getMessage();
-      }
-      echo "<script>alert('Order has been deleted successfully')</script>
-		   <script>window.location = 'orders.php'</script>"; 
-    }
-    
- ?>
-
- <!-- Update products -->
-<?php
- require_once '../includes/config.php';
- if (isset($_POST['assign_role'])){
+ if (isset($_POST['updateblog'])){
 
   $id = $_POST['id'];
-  $role = $_POST['role'];
+  $blogtitle = $_POST['blogtitle'];
+  $postedby = $_POST['postedby'];
+  $dateposted = $_POST['dateposted'];
+  $bloginfo = $_POST['bloginfo'];
+  $blogimage = $_FILES['blogimage']['name'];
+  $ext = pathinfo($blogimage, PATHINFO_EXTENSION);
+
+  // image file directory
+  $target = "blogs/".basename($blogimage);
+  
+  
 
     try {
         //code...
-        $sql = "UPDATE admin SET role='$role' where id= '". $_POST["id"] ."' ";
+        $sql = "UPDATE blogs SET blogtitle='$blogtitle', postedby='$postedby', dateposted = '$dateposted',bloginfo='$bloginfo', blogimage='$blogimage',ext='$ext'  where id= '". $_POST["id"] ."' ";
         $sth = $DBH->prepare($sql);
         $sth->execute(array());
         $_SESSION['success'] = "message sent successfully.";
@@ -324,10 +179,40 @@
         echo $e->getMessage();
       }
       
-      echo "<script>alert('Role assigned Successfully')</script>
-		  <script>window.location = 'registeredusers.php'</script>";
+      echo "<script>alert('Blog edited Successfully')</script>
+		  <script>window.location = 'blogs.php'</script>";
+
+    //uploading image
+    if (move_uploaded_file($_FILES['blogimage']['tmp_name'], $target)){
+      header("location:blogs.php");
+      $msg = "Blog image uploaded successfully";
+  	}else{
+  		$msg = "Failed to upload image";
+  	}
 
     }  
  ?>
- 
-   
+ <!-- delete blog -->
+<?php
+ require_once '../includes/config.php';
+ if (isset($_POST['deleteblog_btn'])){
+
+    $id = $_POST['deleteblog_id'];
+    echo $id;
+  
+
+    try {
+        //code...
+        $sql = "DELETE FROM blogs WHERE id='$id'";
+        $sth = $DBH->prepare($sql);
+        $sth->execute(array());
+        $_SESSION['success'] = "message sent successfully.";
+      } catch (PDOException $e) {
+        //throw $th;
+        echo $e->getMessage();
+      }
+      echo "<script>alert('Blog has been deleted successfully')</script>
+		   <script>window.location = 'blogs.php'</script>"; 
+    }
+    
+ ?>

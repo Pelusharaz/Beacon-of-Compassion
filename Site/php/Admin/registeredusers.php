@@ -97,13 +97,13 @@ $total = $stmt->rowCount();
                     <a class="dropdown-item" href="volunteers.php">Volunteers</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="orders.php">Orders</a>
+                    <a class="dropdown-item" href="donations.php">Donations</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="admin.php">Add Products</a>
+                    <a class="dropdown-item" href="blogs.php">Blogs</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="updatestudio.php">Update Studio</a>
+                    <a class="dropdown-item" href="stories.php">Stories</a>
                   </li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
@@ -203,7 +203,7 @@ $total = $stmt->rowCount();
                     <option value="super admin">super admin</option>
                     <option value="Content Manager">Content Manager</option>
                     <option value="Customer Care">Customer Care</option>
-                    <option value="Maintainance">Maintainance</option>
+                    <option value="Maintainance">Maintenance</option>
                   </select>
                   <div class="item" style="display:none;">
                     <label for="additional-information"> Employee No<span>*</span></label>

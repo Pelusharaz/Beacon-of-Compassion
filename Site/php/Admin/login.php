@@ -22,7 +22,7 @@ if ($user && password_verify($_POST['password'], $user['password']))
   }
   elseif($_SESSION['role']=='Content Manager'){
     echo "<script>alert('Log in successful')</script>
-    <script>window.location = 'offers.php'</script>";
+    <script>window.location = 'blogs.php'</script>";
   }
   else{
     echo "<script>alert('Log in successful')</script>

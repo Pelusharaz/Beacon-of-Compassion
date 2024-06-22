@@ -26,7 +26,7 @@ if (isset($_POST['volunteer'])) {
     //throw $th;
     echo $e->getMessage();
   }
-  echo "<script>alert('Message sent successfully. We value Your Feedback')</script>
+  echo "<script>alert('Thank you for choosing to volunteer with us. An agent will get back to you shortly!')</script>
   <script>window.location = 'volunteer.php'</script>";
 }
 

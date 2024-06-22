@@ -1,15 +1,13 @@
-
-<?php
-session_start();
-if(!isset($_SESSION['role'])){
-  $_SESSION['redirectURL'] = $_SERVER['REQUEST_URL'];
-  header('location:../../index.php');
+<?php session_start();
+if($_SESSION['role']!=='super admin' && $_SESSION['role']!=='Customer Care' && $_SESSION['role']!=='Maintainance'){
+  echo "<script>alert('Access Denied !')</script>
+  <script>window.location = '../includes/logout.php'</script>";
 }
 ?>
 
 <?php
 require_once '../includes/config.php';
-$sql="SELECT * FROM admin where role='" . $_SESSION["role"] . "'";
+$sql="SELECT * FROM admin where role='" . $_SESSION["role"] . "' GROUP BY role";
 $stmt = $DBH->prepare($sql);
 $stmt->execute();
 $total = $stmt->rowCount();
@@ -98,13 +96,13 @@ $total = $stmt->rowCount();
                     <a class="dropdown-item" href="volunteers.php">Volunteers</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="orders.php">Orders</a>
+                    <a class="dropdown-item" href="donations.php">Donations</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="admin.php">Add Products</a>
+                    <a class="dropdown-item" href="blogs.php">Blogs</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="updatestudio.php">Update Studio</a>
+                    <a class="dropdown-item" href="stories.php">Stories</a>
                   </li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
@@ -131,7 +129,7 @@ $total = $stmt->rowCount();
       <!-- Background image -->
       <div
         class="p-5 text-center bg-image shadow-1-strong"
-        style="background-image: url('../../img/admin.jpg'); height: 550px">
+        style="background-image: url('../../img/volunteer-admin.webp'); height: 550px">
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
           <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white">
@@ -157,7 +155,7 @@ $total = $stmt->rowCount();
           }
     </style>
     <div class="messages" style="marging-left:auto;margin-right:auto;display:block;text-align:center;">
-      <h4>contact messages</h4>
+      <h4>Volunteers</h4>
     </div>
     <br>
     <div class="container" style="overflow:scroll; height:900px; max-width:1000px;">
@@ -169,9 +167,9 @@ $total = $stmt->rowCount();
              <th>Address</td>
              <th>Phone</td>
              <th>Email</td>
-             <th>Emergency Name</td>
-             <th>Emergency Phone</td>
-             <th>Emergency Email</td>
+             <th>Emergency Contact's Name</td>
+             <th>Emergency Contact's Phone</td>
+             <th>Emergency Contact's Email</td>
              <th>Volunteer's Days</td>
              <th>Volunteer's Time</td>
              <th>Reffered By</td>
@@ -222,8 +220,8 @@ $total = $stmt->rowCount();
             <td><?php echo "{$row->Time}"; ?></td>
             <td>
                 <form action="deleteproducts.php" method="post" style="box-shadow:none;background-color:transparent;">
-                    <input type="hidden" name="deletemessage_id" value="<?php echo "{$row->id}"; ?>">
-                    <button type="submit" class="logoutbtn" name="deletemessage_btn">DELETE</button>
+                    <input type="hidden" name="deletevolunteer_id" value="<?php echo "{$row->id}"; ?>">
+                    <button type="submit" class="logoutbtn" name="deletevolunteer_btn">DELETE</button>
                 </form>
             </td>
             <td><a href="mailto:<?php echo "{$row->email}"; ?>?&subject=Subject : Beacon of compassion Information Desk&body=Dear <?php echo "{$row->name}"; ?>, " target="_blank"><button type="submit" class="logoutbtn">REPLY</button></a></td>
