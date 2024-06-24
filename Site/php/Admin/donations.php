@@ -27,15 +27,10 @@ $total = $stmt->rowCount();
     <!-- Tees Icon -->
     <link rel="icon" href="../../img/bof-logo.png" />
     <!-- Badge Icons from Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    <link el="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
     />
     <!-- Fonts from Google-->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"/>
     <!-- Styles -->
     <link rel ="stylesheet" type = "text/css" href ="css/admin.css">
     <link rel="stylesheet" href="../../css/styles.css" />

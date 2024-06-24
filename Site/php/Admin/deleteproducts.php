@@ -240,3 +240,60 @@
     }
     
  ?>
+
+ <!-- events -->
+ <?php
+ require_once '../includes/config.php';
+ if (isset($_POST['soldbtn'])){
+    $id = $_POST['soldid'];
+    try {
+        //code...
+        $sql1 = "SELECT * FROM events WHERE storyId = '$id' ";
+        $sth1 = $DBH->prepare($sql1);
+        $sth1->execute(array());
+
+        if($sth1->rowCount() == 1) {
+          echo "<script>alert('Error! Story already Marked as done')</script>
+          <script>window.location = 'stories.php'</script>"; 
+        }else{
+          $sql = "INSERT INTO events(storyId) VALUES(?)";
+          $sth = $DBH->prepare($sql);
+          $sth->execute(array($id));
+        }
+
+        $_SESSION['success'] = "message sent successfully.";
+      } catch (PDOException $e) {
+        //throw $th;
+        echo $e->getMessage();
+      }
+      
+      echo "<script>alert('Story Marked as done successfully')</script>
+		  <script>window.location = 'stories.php'</script>"; 
+
+    }  
+ ?>
+
+ <!-- delete stories-->
+<?php
+ require_once '../includes/config.php';
+ if (isset($_POST['deletestory_btn'])){
+
+    $id = $_POST['deletecode_id'];
+    echo $id;
+  
+
+    try {
+        //code...
+        $sql = "DELETE FROM stories WHERE code='$id'";
+        $sth = $DBH->prepare($sql);
+        $sth->execute(array());
+        $_SESSION['success'] = "message sent successfully.";
+      } catch (PDOException $e) {
+        //throw $th;
+        echo $e->getMessage();
+      }
+      echo "<script>alert('Story has been deleted successfully')</script>
+		   <script>window.location = 'stories.php'</script>"; 
+    }
+    
+ ?>

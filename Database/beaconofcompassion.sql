@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2024 at 06:47 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- Generation Time: Jun 24, 2024 at 04:02 PM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.0.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -132,6 +133,25 @@ INSERT INTO `donations` (`id`, `paymentcheckbox`, `amount`, `freqcheckbox`, `fre
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `events`
+--
+
+CREATE TABLE `events` (
+  `id` int(20) NOT NULL,
+  `storyId` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`id`, `storyId`) VALUES
+(1, 'pr66797351c0ead'),
+(2, 'pr66795f64912b3');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `partners`
 --
 
@@ -151,6 +171,36 @@ CREATE TABLE `partners` (
 
 INSERT INTO `partners` (`id`, `name`, `email`, `message`, `referals`, `Date`, `Time`) VALUES
 (3, 'sharaz techs', 'sharaztech@gmail.com', 'test', 'website', '2024-06-20', '23:41:13.0');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `stories`
+--
+
+CREATE TABLE `stories` (
+  `id` int(11) NOT NULL,
+  `storytitle` varchar(100) NOT NULL,
+  `category` varchar(100) NOT NULL,
+  `storyinfo` varchar(500) NOT NULL,
+  `code` varchar(100) NOT NULL,
+  `productimage` varchar(100) NOT NULL,
+  `ext` varchar(50) NOT NULL,
+  `Date` date NOT NULL,
+  `Time` time(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `stories`
+--
+
+INSERT INTO `stories` (`id`, `storytitle`, `category`, `storyinfo`, `code`, `productimage`, `ext`, `Date`, `Time`) VALUES
+(13, 'Test story3', 'Local', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'Bof-logo2.png', 'png', '2024-06-24', '15:10:48.0'),
+(14, 'Test story3', 'Local', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'donations.jpg', 'jpg', '2024-06-24', '15:10:48.0'),
+(15, 'Test story3', 'Local', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'icon-delete.png', 'png', '2024-06-24', '15:10:48.0'),
+(16, 'Test story4', 'International', 'test', 'pr66797351c0ead', 'admin.jpg', 'jpg', '2024-06-24', '16:23:52.0'),
+(17, 'Test story4', 'International', 'test', 'pr66797351c0ead', 'customer-care.jpg', 'jpg', '2024-06-24', '16:23:52.0'),
+(18, 'Test story4', 'International', 'test', 'pr66797351c0ead', 'top-kids.jpg', 'jpg', '2024-06-24', '16:23:52.0');
 
 -- --------------------------------------------------------
 
@@ -239,9 +289,21 @@ ALTER TABLE `donations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `events`
+--
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `partners`
 --
 ALTER TABLE `partners`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `stories`
+--
+ALTER TABLE `stories`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -285,10 +347,22 @@ ALTER TABLE `donations`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `events`
+--
+ALTER TABLE `events`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `partners`
 --
 ALTER TABLE `partners`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `stories`
+--
+ALTER TABLE `stories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `users`
