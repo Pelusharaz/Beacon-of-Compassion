@@ -110,7 +110,9 @@ $total = $stmt->rowCount();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"integrity= "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"crossorigin="anonymous"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"> </script>
-    
+    <!-- length of blogs -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
     <!-- Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel ="stylesheet" type = "text/css" href ="css/admin.css">
@@ -479,9 +481,33 @@ $total = $stmt->rowCount();
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
-                  <p class="card-text">
+                  <p class="show-read-more card-text">
                   <?php echo "{$row->storyinfo}"; ?>
                   </p>
+                  <script>
+                      $(document).ready(function() {
+                        var maxLength = 200;
+                        $(".show-read-more").each(function() {
+                          var myStr = $(this).text();
+                          if ($.trim(myStr).length > maxLength) {
+                            var newStr = myStr.substring(0, maxLength);
+                            var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+                            $(this).empty().html(newStr);
+                            $(this).append(' <a href="javascript:void(0);" class="read-more">...</a>');
+                            $(this).append('<span class="more-text">' + removedStr + '</span>');
+                          }
+                        });
+                        $(".read-more").click(function() {
+                          $(this).siblings(".more-text").contents().unwrap();
+                          $(this).remove();
+                        });
+                      });
+                    </script>
+                    <style>
+                     .show-read-more .more-text {
+                      display: none;
+                     }
+                    </style>
                   <div class="location-size"><h6 style="text-alig:center;">Date Posted : <?php echo "{$row->Date}"; ?></div>
                   <br><br>
                   <div class="tools" style="display:flex;margin-left:-40px;">
@@ -508,7 +534,7 @@ $total = $stmt->rowCount();
 
                     <div class="delete-edit" style="margin-left:auto;margin-right:auto;display:block;">
                       <div class="edit" >
-                        <a href="aditstory.php?story=<?php echo "{$row->code}"; ?>"><button style="margin-top:20px;" class="btn btn-dark ">Edit Property</button></a>
+                        <a href="editstory.php?story=<?php echo "{$row->code}"; ?>"><button style="margin-top:20px;" class="btn btn-dark ">Edit Property</button></a>
                         <!-- <button style="margin-top:20px;" class="btn btn-dark " onclick=editproduct2()>EDIT PROPERTY</button> -->
                       </div>
                       <form action="deleteproducts.php" method="post" style="box-shadow:none;">
@@ -646,9 +672,33 @@ $total = $stmt->rowCount();
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   
-                  <p class="card-text">
+                  <p class="show-read-more card-text">
                   <?php echo "{$row->storyinfo}"; ?>
                   </p>
+                  <script>
+                      $(document).ready(function() {
+                        var maxLength = 200;
+                        $(".show-read-more").each(function() {
+                          var myStr = $(this).text();
+                          if ($.trim(myStr).length > maxLength) {
+                            var newStr = myStr.substring(0, maxLength);
+                            var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+                            $(this).empty().html(newStr);
+                            $(this).append(' <a href="javascript:void(0);" class="read-more">...</a>');
+                            $(this).append('<span class="more-text">' + removedStr + '</span>');
+                          }
+                        });
+                        $(".read-more").click(function() {
+                          $(this).siblings(".more-text").contents().unwrap();
+                          $(this).remove();
+                        });
+                      });
+                    </script>
+                    <style>
+                     .show-read-more .more-text {
+                      display: none;
+                     }
+                    </style>
                   <div class="location-size"><h6 style="text-alig:center;">Date Posted : <?php echo "{$row->Date}"; ?></div>
                   <br><br>
                   <div class="tools" style="display:flex;margin-left:-40px;">
@@ -755,9 +805,33 @@ $total = $stmt->rowCount();
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
-                  <p class="card-text">
+                  <p class="show-read-more card-text">
                   <?php echo "{$row->storyinfo}"; ?>
                   </p>
+                  <script>
+                      $(document).ready(function() {
+                        var maxLength = 200;
+                        $(".show-read-more").each(function() {
+                          var myStr = $(this).text();
+                          if ($.trim(myStr).length > maxLength) {
+                            var newStr = myStr.substring(0, maxLength);
+                            var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+                            $(this).empty().html(newStr);
+                            $(this).append(' <a href="javascript:void(0);" class="read-more">...</a>');
+                            $(this).append('<span class="more-text">' + removedStr + '</span>');
+                          }
+                        });
+                        $(".read-more").click(function() {
+                          $(this).siblings(".more-text").contents().unwrap();
+                          $(this).remove();
+                        });
+                      });
+                    </script>
+                    <style>
+                     .show-read-more .more-text {
+                      display: none;
+                     }
+                    </style>
                   <div class="location-size"><h6 style="text-alig:center;">Date Posted : <?php echo "{$row->Date}"; ?></div>
                   <br><br>
                     <div class="tools" style="display:flex;margin-left:-40px;">

@@ -23,9 +23,9 @@ $total = $stmt->rowCount();
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Golden Chance | Admin Panel</title>
+    <title>BOC | Admin Panel</title>
     <!-- Tees Icon -->
-    <link rel="icon" href="../../img/Golden chance logo.png" />
+    <link rel="icon" href="../../img/bof-logo.png" />
     <!-- Badge Icons from Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
     />
@@ -134,13 +134,13 @@ $total = $stmt->rowCount();
       <!-- Background image -->
       <div
         class="p-5 text-center bg-image shadow-1-strong"
-        style="background-image: url('../../img/land 1.jpg'); height: 550px">
+        style="background-image: url('../../img/hunger-crisis.webp'); height: 550px">
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
           <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white">
-              <h1 class="mb-3">Golden Chance</h1>
+              <h1 class="mb-3">Beacon of Compassion</h1>
               <h4 class="mb-3">
-                Add Properties
+                Edit story
               </h4>
               <a class="btn btn-outline-light btn-lg" href="#!" role="button">welcome <?php echo "{$row->username}"; ?></a>
               <?php
@@ -155,7 +155,7 @@ $total = $stmt->rowCount();
     
     <br>
     <div class="sharaz-store" style="marging-left:auto;margin-right:auto;display:block;text-align:center;">
-    <h4><a href="stories.php"> <i class="fa fa-arrow-left"></i> Back To Properties</a></h4>
+    <h4><a href="stories.php"> <i class="fa fa-arrow-left"></i> Back To Stories</a></h4>
     </div>
     <br><br>
       
@@ -181,7 +181,7 @@ $total = $stmt->rowCount();
             <div class="mainpic">
             <?php
               require_once '../includes/config.php';
-              $sql="SELECT  * FROM products where code = '" .$_GET["property"] . "' LIMIT 1 ";
+              $sql="SELECT  * FROM stories where code = '" .$_GET["story"] . "' LIMIT 1 ";
               $stmt = $DBH->prepare($sql);
               $stmt->execute();
               while($row = $stmt->fetchObject()) {
@@ -195,10 +195,10 @@ $total = $stmt->rowCount();
               </form>
               <?php if($row->ext == 'mp4'){ ?>
                  <video style="width:100%; height:250px;margin-top:-10px;" controls>
-                   <source src="<?php echo "products/". "{$row->productimage}";?>" style="max-width:250px;margin-left:auto;margin-right:auto;display:block;">
+                   <source src="<?php echo "stories/". "{$row->productimage}";?>" style="max-width:250px;margin-left:auto;margin-right:auto;display:block;">
                  </video>
                 <?php }else{?>
-                    <img src="<?php echo "products/". "{$row->productimage}";?>" style="width:100%;height:300px;margin-left:auto;margin-right:auto;display:block;">
+                    <img src="<?php echo "stories/". "{$row->productimage}";?>" style="width:100%;height:300px;margin-left:auto;margin-right:auto;display:block;">
               <?php }?>
             </div>
             
@@ -208,7 +208,7 @@ $total = $stmt->rowCount();
             <div class="flexbox">
             <?php
               require_once '../includes/config.php';
-              $sql="SELECT  * FROM products where code = '" .$_GET["property"] . "' ORDER BY id DESC LIMIT 5";
+              $sql="SELECT  * FROM stories where code = '" .$_GET["story"] . "' ORDER BY id DESC LIMIT 5";
               $stmt = $DBH->prepare($sql);
               $stmt->execute();
               while($row = $stmt->fetchObject()) {
@@ -222,10 +222,10 @@ $total = $stmt->rowCount();
               </form>
               <?php if($row->ext == 'mp4'){ ?>
                  <video style="width:100%; height:100px;margin-top:0px;" controls>
-                   <source src="<?php echo "products/". "{$row->productimage}";?>" style="max-width:250px;margin-left:auto;margin-right:auto;display:block;">
+                   <source src="<?php echo "stories/". "{$row->productimage}";?>" style="max-width:250px;margin-left:auto;margin-right:auto;display:block;">
                  </video>
                 <?php }else{?>
-                    <img src="<?php echo "products/". "{$row->productimage}";?>" style="width:100%;height:100px;margin-left:auto;margin-right:auto;display:block;">
+                    <img src="<?php echo "stories/". "{$row->productimage}";?>" style="width:100%;height:100px;margin-left:auto;margin-right:auto;display:block;">
               <?php }?>
             </div>
             
@@ -284,7 +284,7 @@ $total = $stmt->rowCount();
           <!-- add to the gallery -->
           <?php
             require_once '../includes/config.php';
-            $sql="SELECT * FROM stories where code = '" .$_GET["property"] . "' LIMIT 1  ";
+            $sql="SELECT * FROM stories where code = '" .$_GET["story"] . "' LIMIT 1  ";
             $stmt = $DBH->prepare($sql);
             $stmt->execute();
             while($row = $stmt->fetchObject()) {
@@ -296,31 +296,14 @@ $total = $stmt->rowCount();
                       <div class="columns">
                         <div class="item"style="display:none;">
                           <label for="booktitle">Property Name<span>*</span></label>
-                          <input id="booktitle" type="text" name="productname" value="<?php echo "{$row->productname}"; ?>" />
-                        </div>
-                        <div class="item"style="display:none;">
-                          <label for="information"> Price<span>*</span></label>
-                          <input id="information" type="text" name="price" value="<?php echo "{$row->price}"; ?>" />
-                        </div>
-                        <div class="item" style="display:none;">
-                          <label for="additional-information"> Information about The Property<span>*</span></label>
-                          <input id="information" type="text" name="products" value="products" />
-                        </div>
-                        <div class="item"style="display:none;">
-                          <label for="information"> Location<span>*</span></label>
-                          <input id="information" type="text" name="location" value="<?php echo "{$row->location}"; ?>" />
-                        </div>
-                        <div class="item"style="display:none;">
-                          <label for="information"> Size<span>*</span></label>
-                          <input id="information" type="text" name="size" value="<?php echo "{$row->size}"; ?>" />
+                          <input id="booktitle" type="text" name="storytitle" value="<?php echo "{$row->storytitle}"; ?>" />
                         </div>
                         <div class="item"style="display:none;">
                         <label for="information"> Category <span>*</span></label>
                           <select name="category" value="<?php echo "{$row->category}"; ?>" >
                            <option value="<?php echo "{$row->category}"; ?>"><?php echo "{$row->category}"; ?></option>
-                           <option value="featured" >Featured</option>
-                           <option value="bestselling">Best Selling</option>
-                           <option value="hotdeals">Hot Deals</option>
+                           <option value="International" >International</option>
+                           <option value="Local">Local</option>
                           </select>
                         </div>
                         <div class="item" style="display:none;">
@@ -329,9 +312,9 @@ $total = $stmt->rowCount();
                         </div>
                       </div>  
                     </fieldset>
-                    <div class="item"style="display:none;">
+                    <div class="item" style="display:none;">
                       <label for="information"> Information about The Property<span>*</span></label>
-                      <textarea name="productinfo" id="information"><?php echo "{$row->productinfo}"; ?></textarea>
+                      <textarea name="productinfo" id="information"><?php echo "{$row->storyinfo}"; ?></textarea>
                     </div>
                     
                     <div class="item">
@@ -373,7 +356,7 @@ $total = $stmt->rowCount();
           
           <?php
             require_once '../includes/config.php';
-            $sql="SELECT * FROM products where code = '" .$_GET["property"] . "' LIMIT 1  ";
+            $sql="SELECT * FROM stories where code = '" .$_GET["story"] . "' LIMIT 1  ";
             $stmt = $DBH->prepare($sql);
             $stmt->execute();
             while($row = $stmt->fetchObject()) {
@@ -384,28 +367,15 @@ $total = $stmt->rowCount();
                     <fieldset>
                       <div class="columns">
                         <div class="item">
-                          <label for="booktitle">Property Name<span>*</span></label>
-                          <input id="booktitle" type="text" name="productname" value="<?php echo "{$row->productname}"; ?>" />
+                          <label for="booktitle">Story Title<span>*</span></label>
+                          <input id="booktitle" type="text" name="storytitle" value="<?php echo "{$row->storytitle}"; ?>" />
                         </div>
-                        <div class="item">
-                          <label for="information"> Price<span>*</span></label>
-                          <input id="information" type="text" name="price" value="<?php echo "{$row->price}"; ?>" />
-                        </div>
-                        <div class="item">
-                          <label for="information"> Location<span>*</span></label>
-                          <input id="information" type="text" name="location" value="<?php echo "{$row->location}"; ?>" />
-                        </div>
-                        <div class="item">
-                          <label for="information"> Size<span>*</span></label>
-                          <input id="information" type="text" name="size" value="<?php echo "{$row->size}"; ?>" />
-                        </div>
-                        <div class="item">
+                        <div class="item"style="margin:6px 0px 0px 0px;">
                         <label for="information"> Category <span>*</span></label>
-                          <select name="category" value="<?php echo "{$row->category}"; ?>" >
+                          <select name="category" value="<?php echo "{$row->category}"; ?>" style="padding-top:8px; padding-bottom:8px;width:100%;" >
                            <option value="<?php echo "{$row->category}"; ?>"><?php echo "{$row->category}"; ?></option>
-                           <option value="featured" >Featured</option>
-                           <option value="bestselling">Best Selling</option>
-                           <option value="hotdeals">Hot Deals</option>
+                           <option value="International" >International</option>
+                           <option value="Local">Local</option>
                           </select>
                         </div>
                         <div class="item" style="display:none;">
@@ -416,7 +386,7 @@ $total = $stmt->rowCount();
                     </fieldset>
                     <div class="item">
                       <label for="information"> Information about The Property<span>*</span></label>
-                      <textarea name="productinfo" id="information"><?php echo "{$row->productinfo}"; ?></textarea>
+                      <textarea name="storyinfo" id="information"><?php echo "{$row->storyinfo}"; ?></textarea>
                     </div>
                     
             </div>
