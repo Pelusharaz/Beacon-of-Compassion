@@ -1,48 +1,48 @@
 <?php
-      session_start();
-      require_once("php/includes/config.php");
-      $db_handle = new DBController();
-      if(!empty($_GET["action"])) {
-      switch($_GET["action"]) {
-	    case "add":
-        if(!empty($_POST["quantity"])) {
-          $productByCode = $db_handle->runQuery("SELECT * FROM products WHERE code='" . $_GET["code"] . "'");
-          $itemArray = array($productByCode[0]["code"]=>array('productname'=>$productByCode[0]["productname"], 'code'=>$productByCode[0]["code"], 'quantity'=>$_POST["quantity"], 'price'=>$productByCode[0]["price"], 'productimage'=>$productByCode[0]["productimage"], 'productinfo'=>$productByCode[0]["productinfo"]));
-          
-          if(!empty($_SESSION["cart_item"])) {
-            if(in_array($productByCode[0]["code"],array_keys($_SESSION["cart_item"]))) {
-              foreach($_SESSION["cart_item"] as $k => $v) {
-                  if($productByCode[0]["code"] == $k) {
-                    if(empty($_SESSION["cart_item"][$k]["quantity"])) {
-                      $_SESSION["cart_item"][$k]["quantity"] = 0;
-                    }
-                    $_SESSION["cart_item"][$k]["quantity"] += $_POST["quantity"];
-                  }
+session_start();
+require_once("php/includes/config.php");
+$db_handle = new DBController();
+if (!empty($_GET["action"])) {
+  switch ($_GET["action"]) {
+    case "add":
+      if (!empty($_POST["quantity"])) {
+        $productByCode = $db_handle->runQuery("SELECT * FROM stories WHERE code='" . $_GET["code"] . "'");
+        $itemArray = array($productByCode[0]["code"] => array('storytitle' => $productByCode[0]["storytitle"], 'code' => $productByCode[0]["code"], 'quantity' => $_POST["quantity"], 'price' => $productByCode[0]["price"], 'productimage' => $productByCode[0]["productimage"], 'storyinfo' => $productByCode[0]["storyinfo"]));
+
+        if (!empty($_SESSION["cart_item"])) {
+          if (in_array($productByCode[0]["code"], array_keys($_SESSION["cart_item"]))) {
+            foreach ($_SESSION["cart_item"] as $k => $v) {
+              if ($productByCode[0]["code"] == $k) {
+                if (empty($_SESSION["cart_item"][$k]["quantity"])) {
+                  $_SESSION["cart_item"][$k]["quantity"] = 0;
+                }
+                $_SESSION["cart_item"][$k]["quantity"] += $_POST["quantity"];
               }
-            } else {
-              $_SESSION["cart_item"] = array_merge($_SESSION["cart_item"],$itemArray);
             }
           } else {
-            $_SESSION["cart_item"] = $itemArray;
+            $_SESSION["cart_item"] = array_merge($_SESSION["cart_item"], $itemArray);
           }
+        } else {
+          $_SESSION["cart_item"] = $itemArray;
         }
+      }
       break;
-      case "remove":
-        if(!empty($_SESSION["cart_item"])) {
-          foreach($_SESSION["cart_item"] as $k => $v) {
-              if($_GET["code"] == $k)
-                unset($_SESSION["cart_item"][$k]);				
-              if(empty($_SESSION["cart_item"]))
-                unset($_SESSION["cart_item"]);
-          }
+    case "remove":
+      if (!empty($_SESSION["cart_item"])) {
+        foreach ($_SESSION["cart_item"] as $k => $v) {
+          if ($_GET["code"] == $k)
+            unset($_SESSION["cart_item"][$k]);
+          if (empty($_SESSION["cart_item"]))
+            unset($_SESSION["cart_item"]);
         }
+      }
       break;
-      case "empty":
-        unset($_SESSION["cart_item"]);
+    case "empty":
+      unset($_SESSION["cart_item"]);
       break;
-    }
   }
-  ?>
+}
+?>
 
 <!-- contact messages -->
 <?php
@@ -315,8 +315,205 @@ if (isset($_POST['contactmsg'])) {
     <p style="text-align:center; margin-top:-50px;color:white;">Join us as we save a life day by day <a style="color:rgb(238, 81, 8);text-decoration:underline;" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Be a part of the journey</a></p>
     <br>
 
+    <h5 style="text-align:center;color:black;margin-bottom:-60px;">STORIES OF TOUCHED LIVES</h5><br><br>
+    <div class="properties container" id="impact">
+      <!--- database property -->
+      <section class="text-center mb-4" style="margin-left:auto;margin-right:auto;display:block; overflow:scroll; height:600px;" id="store">
+        <div class="row">
+          <div id="product-grid">
+            <?php
+            if (isset($_POST['submit'])) {
+              $search = $_POST['search'];
+              $product_array = $db_handle->runQuery("SELECT * FROM stories where (category LIKE '%" . $_POST["search"] . "%') OR (productname LIKE '%" . $_POST["search"] . "%') OR (productinfo LIKE '%" . $_POST["search"] . "%')OR (price LIKE '%" . $_POST["search"] . "%') OR (products LIKE '%" . $_POST["search"] . "%') GROUP BY code");
+              if (!empty($product_array)) {
+                foreach ($product_array as $key => $value) {
+            ?>
+                <a style="color:black;" title="see details of property" href="services/property.php?property=<?php echo $product_array[$key]["code"]; ?>">
+                  <div class="product-item card" style="width:270px;height:450px;">
+                    <iframe name="votar" style="display:none;"></iframe>
+                    <form method="post" target="votar" action="sharazstore.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>" onsubmit="showMsg()" style="box-shadow:none;">
+                    <div class="btn-warning" style="position:absolute;padding:10px 20px;margin-left:-2px;transform: skew(-20deg);"><?php echo $product_array[$key]["category"]; ?></div>
+                      <div class="product-image">
+                        <?php if ($product_array[$key]['ext'] == 'mp4') { ?>
+                          <video style="width:300px; height:310px;margin-top:-70px;" controls>
+                            <source src="<?php echo "php/Admin/products/" . $product_array[$key]['productimage']; ?>" style="max-width:250px; height:200px;margin-left:auto;margin-right:auto;display:block;">
+                          </video>
+                        <?php } else { ?>
+                          <img src="<?php echo "php/Admin/products/" . $product_array[$key]['productimage']; ?>" style="width:300px; height:250px;margin-left:auto;margin-right:auto;display:block;">
+                        <?php } ?>
+                      </div>
+                      <div class="product-tile-footer"><br><br><br><br>
+                        <div class="product-title">
+                          <h5><?php echo $product_array[$key]["productname"]; ?></h5>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <h6>Kes <?php echo number_format($product_array[$key]["price"]); ?>/=</h6>
+                          <p class="card-text show-read-more">
+                            <?php echo $product_array[$key]["productinfo"]; ?>
+                          </p>
+                          <script>
+                            $(document).ready(function() {
+                              var maxLength = 50;
+                              $(".show-read-more").each(function() {
+                                var myStr = $(this).text();
+                                if ($.trim(myStr).length > maxLength) {
+                                  var newStr = myStr.substring(0, maxLength);
+                                  var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+                                  $(this).empty().html(newStr);
+                                  $(this).append(' <a href="javascript:void(0);" class="read-more">...</a>');
+                                  $(this).append('<span class="more-text">' + removedStr + '</span>');
+                                }
+                              });
+                              $(".read-more").click(function() {
+                                $(this).siblings(".more-text").contents().unwrap();
+                                $(this).remove();
+                              });
+                            });
+                          </script>
+                          <style>
+                            .show-read-more .more-text {
+                              display: none;
+                            }
+                          </style>
+                        </div>
+
+                        <?php
+                        require_once 'php/includes/config.php';
+                        $sql = "SELECT * FROM events WHERE storyId = '" . $product_array[$key]["code"] . "'";
+                        $stmt = $DBH->prepare($sql);
+                        $stmt->execute();
+                        if ($stmt->rowCount() == 1) {
+                          while ($row = $stmt->fetchObject()) {
+                        ?>
+                            <!-- <a class="btn btn-danger" style="cursor: no-drop;">Property Sold Out</a> -->
+                            <a class="btn btn-danger" href="services/property.php?property=<?php echo $product_array[$key]["code"]; ?>">Property Sold Out</a>
+                          <?php }
+                        } else { ?>
+                          <!-- <button class="viewbtn" onclick="showMsg()">View Property</button> -->
+                          <a class="btn viewbtn" href="services/property.php?property=<?php echo $product_array[$key]["code"]; ?>">View Property</a>
+                        <?php } ?>
+
+                      </div>
+                    </form>
+                  </div>
+                 </a>
+
+                  <!-- success message -->
+                <script>
+                   function showMsg() {
+                   $("#alertMsg").fadeIn('slow', function() {
+                   $(this).delay(1500).fadeOut('slow');
+                   window.location = 'properties.php'
+                  });
+                 }
+                </script>
+                <?php
+                }
+              }
+            } else {
+              $product_array = $db_handle->runQuery("SELECT * FROM stories  GROUP BY code ORDER BY id ASC ");
+              if (!empty($product_array)) {
+                foreach ($product_array as $key => $value) {
+                ?>
+                  <a style="color:black;" title="see details of property" href="services/property.php?property=<?php echo $product_array[$key]["code"]; ?>">
+                  <div class="product-item card" style="width:270px;height:450px;box-shadow:none;">
+                    <iframe name="votar" style="display:none;"></iframe>
+                    <form method="post" target="votar" action="sharazstore.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>" onsubmit="showMsg()" style="box-shadow:none;">
+                      <div class="btn-warning" style="position:absolute;padding:10px 20px;margin-left:-2px;transform: skew(-20deg);"><?php echo $product_array[$key]["category"]; ?></div>
+                      <div class="product-image">
+                        <?php if ($product_array[$key]['ext'] == 'mp4') { ?>
+                          <video style="width:300px; height:310px;margin-top:-70px;" controls>
+                            <source src="<?php echo "php/Admin/stories/" . $product_array[$key]['productimage']; ?>" style="max-width:250px; height:200px;margin-left:auto;margin-right:auto;display:block;">
+                          </video>
+                        <?php } else { ?>
+                          <img src="<?php echo "php/Admin/stories/" . $product_array[$key]['productimage']; ?>" style="width:300px; height:250px;margin-left:auto;margin-right:auto;display:block;">
+                        <?php } ?>
+                      </div>
+                      <div class="product-tile-footer"><br><br><br><br>
+                        <div class="product-title">
+                          <h5><?php echo $product_array[$key]["storytitle"]; ?></h5>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          
+                          <p class="card-text show-read-more">
+                            <?php echo $product_array[$key]["storyinfo"]; ?>
+                          </p>
+                          <script>
+                            $(document).ready(function() {
+                              var maxLength = 50;
+                              $(".show-read-more").each(function() {
+                                var myStr = $(this).text();
+                                if ($.trim(myStr).length > maxLength) {
+                                  var newStr = myStr.substring(0, maxLength);
+                                  var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+                                  $(this).empty().html(newStr);
+                                  $(this).append(' <a href="javascript:void(0);" class="read-more">...</a>');
+                                  $(this).append('<span class="more-text">' + removedStr + '</span>');
+                                }
+                              });
+                              $(".read-more").click(function() {
+                                $(this).siblings(".more-text").contents().unwrap();
+                                $(this).remove();
+                              });
+                            });
+                          </script>
+                          <style>
+                            .show-read-more .more-text {
+                              display: none;
+                            }
+                          </style>
+                        </div>
+
+                        <?php
+                        require_once 'php/includes/config.php';
+                        $sql = "SELECT * FROM events WHERE storyId = '" . $product_array[$key]["code"] . "'";
+                        $stmt = $DBH->prepare($sql);
+                        $stmt->execute();
+                        if ($stmt->rowCount() == 1) {
+                          while ($row = $stmt->fetchObject()) {
+                        ?>
+                            <!-- <a class="btn btn-danger" style="cursor: no-drop;">Property Sold Out</a> -->
+                            <a class="btn btn-danger" href="services/property.php?property=<?php echo $product_array[$key]["code"]; ?>">Property Sold Out</a>
+                          <?php }
+                        } else { ?>
+                           <!-- <button class="viewbtn" onclick="showMsg()">View Property</button> -->
+                           <a class="btn viewbtn" href="services/property.php?property=<?php echo $product_array[$key]["code"]; ?>">View Property</a> 
+                        <?php } ?>
+
+
+                      </div>
+                    </form>
+                  </div>
+                  </a>
+
+                 <!-- success message -->
+                <script>
+                   function showMsg() {
+                   $("#alertMsg").fadeIn('slow', function() {
+                   $(this).delay(3000).fadeOut('slow');
+                   window.location = 'properties.php'
+                  });
+                 }
+                </script>
+            <?php
+                }
+              }
+            }
+            ?>
+          </div>
+
+       </section>
+     <!-- end --->
+    </div>
+
     <h5 style="text-align:center;color:black;">STORIES OF TOUCHED LIVES</h5><br><br>
-    <div class="comprehensive-services container" id="impact">
+    <div class="comprehensive-services container" id="impact2">
 
       <div class="services-img-containter"style="margin-left:20px;">
         <!-- Photo Grid -->
