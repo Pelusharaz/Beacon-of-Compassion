@@ -298,7 +298,7 @@
     
  ?>
 
- <!-- delete property images -->
+ <!-- delete story images -->
 <?php
  require_once '../includes/config.php';
  if (isset($_POST['deleteimg_btn'])){
@@ -320,4 +320,40 @@
        
     }
     
+ ?>
+
+
+<!-- Update stories-->
+<?php
+ require_once '../includes/config.php';
+ if (isset($_POST['updatestory'])){
+
+  $storytitle = $_POST['storytitle'];
+  $storyinfo = $_POST['storyinfo'];
+  $category = $_POST['category'];
+  $code = $_POST['code'];
+  
+    try {
+        //code...
+        $sql = "UPDATE stories SET storytitle='$storytitle',storyinfo='$storyinfo',category='$category' where code= '". $_POST["code"] ."' ";
+        $sth = $DBH->prepare($sql);
+        $sth->execute(array());
+        $_SESSION['success'] = "message sent successfully.";
+      } catch (PDOException $e) {
+        //throw $th;
+        echo $e->getMessage();
+      }
+      
+      echo "<script>alert('Story edited Successfully')</script>
+		  <script>window.location = 'editstory.php'</script>";
+     
+    // uploading image
+    // if (move_uploaded_file($_FILES['productimage']['tmp_name'], $target)){
+    //   header("location:admin.php");
+    //   $msg = "profile uploaded successfully";
+  	// }else{
+  	// 	$msg = "Failed to upload image";
+  	// }
+
+    }  
  ?>

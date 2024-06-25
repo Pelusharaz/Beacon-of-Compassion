@@ -165,7 +165,7 @@ $total = $stmt->rowCount();
        $("#staticBackdrop").modal('show');
        });
       </script>
-      <!-- Modal for Editing Properties -->
+      <!-- Modal for Editing stories -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -290,12 +290,12 @@ $total = $stmt->rowCount();
             while($row = $stmt->fetchObject()) {
             
           ?>      <iframe name="votar" style="display:none;"></iframe>
-                  <form action="admin.php" target="votar" onsubmit="showMsg()" method="POST" enctype="multipart/form-data" style="box-shadow:none;">
+                  <form action="stories.php" target="votar" onsubmit="showMsg()" method="POST" enctype="multipart/form-data" style="box-shadow:none;">
             
                     <fieldset>
                       <div class="columns">
                         <div class="item"style="display:none;">
-                          <label for="booktitle">Property Name<span>*</span></label>
+                          <label for="booktitle">Story Title<span>*</span></label>
                           <input id="booktitle" type="text" name="storytitle" value="<?php echo "{$row->storytitle}"; ?>" />
                         </div>
                         <div class="item"style="display:none;">
@@ -314,7 +314,7 @@ $total = $stmt->rowCount();
                     </fieldset>
                     <div class="item" style="display:none;">
                       <label for="information"> Information about The Property<span>*</span></label>
-                      <textarea name="productinfo" id="information"><?php echo "{$row->storyinfo}"; ?></textarea>
+                      <textarea name="storyinfo" id="information"><?php echo "{$row->storyinfo}"; ?></textarea>
                     </div>
                     
                     <div class="item">
@@ -348,12 +348,12 @@ $total = $stmt->rowCount();
                     </script>
 
                    <?php }?>
-                   <button type="submit" name="product" class="btn btn-primary">SAVE</button>
+                   <button type="submit" name="story" class="btn btn-primary">SAVE</button>
                   </form>
                 <!-- end adding to gallery -->
             
           
-          
+          <!-- Update story -->
           <?php
             require_once '../includes/config.php';
             $sql="SELECT * FROM stories where code = '" .$_GET["story"] . "' LIMIT 1  ";
@@ -362,7 +362,7 @@ $total = $stmt->rowCount();
             while($row = $stmt->fetchObject()) {
             
           ?>
-                  <form action="deleteproducts.php" method="POST" enctype="multipart/form-data" style="box-shadow:none;">
+                  <form action="deleteproducts.php" target="votar" onsubmit="showMsg()"  method="POST" enctype="multipart/form-data" style="box-shadow:none;">
             
                     <fieldset>
                       <div class="columns">
@@ -393,7 +393,7 @@ $total = $stmt->rowCount();
             
             <div class="modal-footer">
               <button type="button" class="btn" data-bs-dismiss="modal"  onclick="$('#staticBackdrop').modal('hide')">Cancel</button>
-              <button type="submit" name="updateproduct" class="btn btn-primary">SAVE</button>
+              <button type="submit" name="updatestory" class="btn btn-primary">SAVE</button>
             </div>
           </form>
           <?php }?>

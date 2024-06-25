@@ -81,6 +81,8 @@ $total = $stmt->rowCount();
       
     }
   }
+  echo "<script>alert('Story added Successfully')</script>
+		  <script>window.location = 'stories.php'</script>";
     //uploading image
     /*if (move_uploaded_file($_FILES['productimage']['tmp_name'], $target)) {
       $msg = "property uploaded successfully";
