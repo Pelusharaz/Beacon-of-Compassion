@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 25, 2024 at 02:10 PM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.0.32
+-- Generation Time: Jun 27, 2024 at 08:22 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -196,19 +195,23 @@ CREATE TABLE `stories` (
 --
 
 INSERT INTO `stories` (`id`, `storytitle`, `category`, `storyinfo`, `code`, `productimage`, `ext`, `Date`, `Time`) VALUES
-(14, 'Test story4', 'International', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'donations.jpg', 'jpg', '2024-06-24', '15:10:48.0'),
-(15, 'Test story4', 'International', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'icon-delete.png', 'png', '2024-06-24', '15:10:48.0'),
-(17, 'Test', 'Local', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri ', 'pr66797351c0ead', 'customer-care.jpg', 'jpg', '2024-06-24', '16:23:52.0'),
-(19, 'Test', 'Local', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri ', 'pr66797351c0ead', 'kid2.jpg', 'jpg', '2024-06-25', '14:35:56.0'),
-(22, 'Test', 'Local', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri ', 'pr66797351c0ead', 'admin.jpg', 'jpg', '2024-06-25', '14:36:23.0'),
-(23, 'Test', 'Local', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri ', 'pr66797351c0ead', 'Bof-logo2.png', 'png', '2024-06-25', '14:36:23.0'),
-(24, 'Test', 'Local', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri ', 'pr66797351c0ead', 'climate-crisis.jpg', 'jpg', '2024-06-25', '14:36:24.0'),
-(25, 'Test story4', 'International', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'admin.jpg', 'jpg', '2024-06-25', '14:36:44.0'),
-(26, 'Test story4', 'International', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'blogs5.jpg', 'jpg', '2024-06-25', '14:36:44.0'),
-(27, 'Test story4', 'International', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'donations.jpg', 'jpg', '2024-06-25', '14:36:44.0'),
-(34, 'Test story', 'Local', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri', 'pr667ab30e017d7', 'climate-crisis.jpg', 'jpg', '2024-06-25', '15:08:12.0'),
-(35, 'Test story', 'Local', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri', 'pr667ab30e017d7', 'customer-care.jpg', 'jpg', '2024-06-25', '15:08:12.0'),
-(36, 'Test story', 'Local', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri', 'pr667ab30e017d7', 'donations.jpg', 'jpg', '2024-06-25', '15:08:12.0');
+(14, 'Test story4', 'Featured', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'donations.jpg', 'jpg', '2024-06-24', '15:10:48.0'),
+(15, 'Test story4', 'Featured', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'icon-delete.png', 'png', '2024-06-24', '15:10:48.0'),
+(17, 'Test', 'Featured', 'Test', 'pr66797351c0ead', 'customer-care.jpg', 'jpg', '2024-06-24', '16:23:52.0'),
+(19, 'Test', 'Featured', 'Test', 'pr66797351c0ead', 'kid2.jpg', 'jpg', '2024-06-25', '14:35:56.0'),
+(22, 'Test', 'Featured', 'Test', 'pr66797351c0ead', 'admin.jpg', 'jpg', '2024-06-25', '14:36:23.0'),
+(23, 'Test', 'Featured', 'Test', 'pr66797351c0ead', 'Bof-logo2.png', 'png', '2024-06-25', '14:36:23.0'),
+(24, 'Test', 'Featured', 'Test', 'pr66797351c0ead', 'climate-crisis.jpg', 'jpg', '2024-06-25', '14:36:24.0'),
+(25, 'Test story4', 'Featured', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'admin.jpg', 'jpg', '2024-06-25', '14:36:44.0'),
+(26, 'Test story4', 'Featured', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'blogs5.jpg', 'jpg', '2024-06-25', '14:36:44.0'),
+(27, 'Test story4', 'Featured', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'donations.jpg', 'jpg', '2024-06-25', '14:36:44.0'),
+(34, 'Test story', 'Featured', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri', 'pr667ab30e017d7', 'climate-crisis.jpg', 'jpg', '2024-06-25', '15:08:12.0'),
+(35, 'Test story', 'Featured', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri', 'pr667ab30e017d7', 'customer-care.jpg', 'jpg', '2024-06-25', '15:08:12.0'),
+(36, 'Test story', 'Featured', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri', 'pr667ab30e017d7', 'donations.jpg', 'jpg', '2024-06-25', '15:08:12.0'),
+(37, 'Featured test', 'Featured', 'test', 'pr667d8aa3e3ad2', 'kid2.jpg', 'jpg', '2024-06-27', '18:53:25.0'),
+(38, 'Featured test', 'Featured', 'test', 'pr667d8aa3e3ad2', 'kid-security.jpg', 'jpg', '2024-06-27', '18:53:28.0'),
+(39, 'Featured test', 'Featured', 'test', 'pr667d8aa3e3ad2', 'climate-crisis.jpg', 'jpg', '2024-06-27', '18:54:52.0'),
+(40, 'Featured test', 'Featured', 'test', 'pr667d8aa3e3ad2', 'learning.jpg', 'jpg', '2024-06-27', '18:54:52.0');
 
 -- --------------------------------------------------------
 
@@ -370,7 +373,7 @@ ALTER TABLE `partners`
 -- AUTO_INCREMENT for table `stories`
 --
 ALTER TABLE `stories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `users`

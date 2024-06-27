@@ -326,7 +326,7 @@ if (isset($_POST['contactmsg'])) {
     <br>
 
     <div class="heading" style="margin-left:auto;margin-right:auto;display:block;text-align:center;">
-      <h4 style="font-weight:bolder;color:black;">STORIES OF TOUCHED LIVES</h4>
+      <h4 style="font-weight:bold;color:black;">STORIES OF TOUCHED LIVES</h4>
     </div>
     <div class="alertMsg" id="alertMsg">Read stories that touched lives</div>
     <br>
