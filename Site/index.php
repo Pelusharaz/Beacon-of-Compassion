@@ -326,7 +326,7 @@ if (isset($_POST['contactmsg'])) {
     <br>
 
     <div class="heading" style="margin-left:auto;margin-right:auto;display:block;text-align:center;">
-      <h4 style="font-weight:bold;color:black;">STORIES OF TOUCHED LIVES</h4>
+      <h5 style="font-weight:bold;color:black;">STORIES OF TOUCHED LIVES</h5>
     </div>
     <div class="alertMsg" id="alertMsg">Read stories that touched lives</div>
     <br>
@@ -390,7 +390,7 @@ if (isset($_POST['contactmsg'])) {
                   <div class="product-item card" style="width:250px;height:450px;">
                     <iframe name="votar" style="display:none;"></iframe>
                     <form method="post" target="votar" action="sharazstore.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>" onsubmit="showMsg()" style="box-shadow:none;">
-                    <div class="btn-warning" style="position:absolute;padding:10px 20px;margin-left:-2px;transform: skew(-20deg);"><?php echo $product_array[$key]["category"]; ?></div>
+                    <div class="btn-warning" style="background-color:rgb(238, 81, 8);position:absolute;padding:10px 20px;margin-left:-2px;transform: skew(-20deg);"><?php echo $product_array[$key]["category"]; ?></div>
                       <div class="product-image">
                         <?php if ($product_array[$key]['ext'] == 'mp4') { ?>
                           <video style="width:250px; height:310px;margin-top:-70px;" controls>
