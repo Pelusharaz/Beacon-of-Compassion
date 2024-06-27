@@ -288,6 +288,16 @@ if (isset($_POST['contactmsg'])) {
             .img{
               width:50%;
             }
+            .alertMsg {
+              display: none;
+              padding: 10px 6px;
+              border: 1 px solid;
+              background: lightgreen;
+              bottom: 300px;
+              position: fixed;
+              z-index: 1;
+              border-radius: 20px;
+            }
             @media only screen and (max-width: 800px) {
               .small-screen{
                 display:none;
@@ -315,44 +325,91 @@ if (isset($_POST['contactmsg'])) {
     <p style="text-align:center; margin-top:-50px;color:white;">Join us as we save a life day by day <a style="color:rgb(238, 81, 8);text-decoration:underline;" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Be a part of the journey</a></p>
     <br>
 
-    <h5 style="text-align:center;color:black;margin-bottom:-60px;">STORIES OF TOUCHED LIVES</h5><br><br>
-    <div class="properties container" id="impact">
+    <div class="heading" style="margin-left:auto;margin-right:auto;display:block;text-align:center;">
+      <h4 style="font-weight:bolder;color:black;">STORIES OF TOUCHED LIVES</h4>
+    </div>
+    <div class="alertMsg" id="alertMsg">Read stories that touched lives</div>
+    <br>
+    </div>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4 container">
+        <div class="container-fluid">
+          <a class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <strong class="text-dark mr-2">stories of touched lives:</strong>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <form action=" " method="POST" style="box-shadow:none;background-color:transparent;">
+                  <input type="text" name="search" value="" style="display:none;">
+                  <button class="nav-link active" type="submit" name="submit" style="background-color:transparent;border:none;color:white;">All</button>
+                </form>
+              </li>
+              <li class="nav-item">
+                <form action=" " method="POST" style="box-shadow:none;background-color:transparent;">
+                  <input type="text" name="search" value="Featured" style="display:none;">
+                  <button class="nav-link" type="submit" name="submit" style="background-color:transparent;border:none;">Featured</button>
+                </form>
+              </li>
+              <li class="nav-item">
+                <form action=" " method="POST" style="box-shadow:none;background-color:transparent;">
+                  <input type="text" name="search" value="Local" style="display:none;">
+                  <button class="nav-link" type="submit" name="submit" style="background-color:transparent;border:none;">Local</button>
+                </form>
+              </li>
+              <li class="nav-item">
+                <form action=" " method="POST" style="box-shadow:none;background-color:transparent;">
+                  <input type="text" name="search" value="International" style="display:none;">
+                  <button class="nav-link" type="submit" name="submit" style="background-color:transparent;border:none;">International</button>
+                </form>
+              </li>
+            </ul>
+            <form class="d-flex input-group w-auto" action=" " method="POST" style="box-shadow:none;background-color:transparent;">
+              <input type="text" class="form-control dt-properties-form" placeholder="Search for stories" aria-label="Search" name="search" />
+              <button style="margin-bottom:10px;" class="btn btn-outline-primary" type="submit" name="submit" data-mdb-ripple-color="dark">Go
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="properties container" id="impact">
       <!--- database property -->
-      <section class="text-center mb-4" style="margin-left:auto;margin-right:auto;display:block; overflow:scroll; height:600px;" id="store">
+      <section class="text-center mb-4" style="margin-left:auto;margin-right:auto;display:block; margin-top:-30px;" id="store">
         <div class="row">
           <div id="product-grid">
             <?php
             if (isset($_POST['submit'])) {
               $search = $_POST['search'];
-              $product_array = $db_handle->runQuery("SELECT * FROM stories where (category LIKE '%" . $_POST["search"] . "%') OR (productname LIKE '%" . $_POST["search"] . "%') OR (productinfo LIKE '%" . $_POST["search"] . "%')OR (price LIKE '%" . $_POST["search"] . "%') OR (products LIKE '%" . $_POST["search"] . "%') GROUP BY code");
+              $product_array = $db_handle->runQuery("SELECT * FROM stories where (category LIKE '%" . $_POST["search"] . "%') OR (storytitle LIKE '%" . $_POST["search"] . "%') OR (storyinfo LIKE '%" . $_POST["search"] . "%') GROUP BY code");
               if (!empty($product_array)) {
                 foreach ($product_array as $key => $value) {
             ?>
-                <a style="color:black;" title="see details of property" href="services/property.php?property=<?php echo $product_array[$key]["code"]; ?>">
-                  <div class="product-item card" style="width:270px;height:450px;">
+                <a style="color:black;" title="see details of the story" href="services/story.php?story=<?php echo $product_array[$key]["code"]; ?>">
+                  <div class="product-item card" style="width:250px;height:450px;">
                     <iframe name="votar" style="display:none;"></iframe>
                     <form method="post" target="votar" action="sharazstore.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>" onsubmit="showMsg()" style="box-shadow:none;">
                     <div class="btn-warning" style="position:absolute;padding:10px 20px;margin-left:-2px;transform: skew(-20deg);"><?php echo $product_array[$key]["category"]; ?></div>
                       <div class="product-image">
                         <?php if ($product_array[$key]['ext'] == 'mp4') { ?>
-                          <video style="width:300px; height:310px;margin-top:-70px;" controls>
-                            <source src="<?php echo "php/Admin/products/" . $product_array[$key]['productimage']; ?>" style="max-width:250px; height:200px;margin-left:auto;margin-right:auto;display:block;">
+                          <video style="width:250px; height:310px;margin-top:-70px;" controls>
+                            <source src="<?php echo "php/Admin/stories/" . $product_array[$key]['productimage']; ?>" style="max-width:250px; height:200px;margin-left:auto;margin-right:auto;display:block;">
                           </video>
                         <?php } else { ?>
-                          <img src="<?php echo "php/Admin/products/" . $product_array[$key]['productimage']; ?>" style="width:300px; height:250px;margin-left:auto;margin-right:auto;display:block;">
+                          <img src="<?php echo "php/Admin/stories/" . $product_array[$key]['productimage']; ?>" style="width:250px; height:250px;margin-left:auto;margin-right:auto;display:block;">
                         <?php } ?>
                       </div>
                       <div class="product-tile-footer"><br><br><br><br>
                         <div class="product-title">
-                          <h5><?php echo $product_array[$key]["productname"]; ?></h5>
+                          <h5><?php echo $product_array[$key]["storytitle"]; ?></h5>
                           <span class="fa fa-star checked"></span>
                           <span class="fa fa-star checked"></span>
                           <span class="fa fa-star checked"></span>
                           <span class="fa fa-star checked"></span>
                           <span class="fa fa-star checked"></span>
-                          <h6>Kes <?php echo number_format($product_array[$key]["price"]); ?>/=</h6>
                           <p class="card-text show-read-more">
-                            <?php echo $product_array[$key]["productinfo"]; ?>
+                            <?php echo $product_array[$key]["storyinfo"]; ?>
                           </p>
                           <script>
                             $(document).ready(function() {
@@ -389,11 +446,11 @@ if (isset($_POST['contactmsg'])) {
                           while ($row = $stmt->fetchObject()) {
                         ?>
                             <!-- <a class="btn btn-danger" style="cursor: no-drop;">Property Sold Out</a> -->
-                            <a class="btn btn-danger" href="services/property.php?property=<?php echo $product_array[$key]["code"]; ?>">Property Sold Out</a>
+                            <a class="btn btn-danger" href="services/story.php?story=<?php echo $product_array[$key]["code"]; ?>">Done</a>
                           <?php }
                         } else { ?>
                           <!-- <button class="viewbtn" onclick="showMsg()">View Property</button> -->
-                          <a class="btn viewbtn" href="services/property.php?property=<?php echo $product_array[$key]["code"]; ?>">View Property</a>
+                          <a class="btn viewbtn" href="services/story.php?story=<?php echo $product_array[$key]["code"]; ?>">Upcoming</a>
                         <?php } ?>
 
                       </div>
@@ -414,22 +471,22 @@ if (isset($_POST['contactmsg'])) {
                 }
               }
             } else {
-              $product_array = $db_handle->runQuery("SELECT * FROM stories  GROUP BY code ORDER BY id ASC ");
+              $product_array = $db_handle->runQuery("SELECT * FROM stories WHERE category = 'featured' GROUP BY code ORDER BY id ASC ");
               if (!empty($product_array)) {
                 foreach ($product_array as $key => $value) {
                 ?>
-                  <a style="color:black;" title="see details of property" href="services/property.php?property=<?php echo $product_array[$key]["code"]; ?>">
-                  <div class="product-item card" style="width:270px;height:450px;box-shadow:none;">
+                  <a style="color:black;" title="see details of the story" href="services/story.php?story=<?php echo $product_array[$key]["code"]; ?>">
+                  <div class="product-item card" style="width:250px;height:450px;box-shadow:none;">
                     <iframe name="votar" style="display:none;"></iframe>
                     <form method="post" target="votar" action="sharazstore.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>" onsubmit="showMsg()" style="box-shadow:none;">
-                      <div class="btn-warning" style="position:absolute;padding:10px 20px;margin-left:-2px;transform: skew(-20deg);"><?php echo $product_array[$key]["category"]; ?></div>
+                      <div class="btn-warning" style="background-color:rgb(238, 81, 8);position:absolute;padding:10px 20px;margin-left:-2px;transform: skew(-20deg);"><?php echo $product_array[$key]["category"]; ?></div>
                       <div class="product-image">
                         <?php if ($product_array[$key]['ext'] == 'mp4') { ?>
-                          <video style="width:300px; height:310px;margin-top:-70px;" controls>
+                          <video style="width:250px; height:310px;margin-top:-70px;" controls>
                             <source src="<?php echo "php/Admin/stories/" . $product_array[$key]['productimage']; ?>" style="max-width:250px; height:200px;margin-left:auto;margin-right:auto;display:block;">
                           </video>
                         <?php } else { ?>
-                          <img src="<?php echo "php/Admin/stories/" . $product_array[$key]['productimage']; ?>" style="width:300px; height:250px;margin-left:auto;margin-right:auto;display:block;">
+                          <img src="<?php echo "php/Admin/stories/" . $product_array[$key]['productimage']; ?>" style="width:250px; height:250px;margin-left:auto;margin-right:auto;display:block;">
                         <?php } ?>
                       </div>
                       <div class="product-tile-footer"><br><br><br><br>
@@ -479,11 +536,11 @@ if (isset($_POST['contactmsg'])) {
                           while ($row = $stmt->fetchObject()) {
                         ?>
                             <!-- <a class="btn btn-danger" style="cursor: no-drop;">Property Sold Out</a> -->
-                            <a class="btn btn-danger" href="services/property.php?property=<?php echo $product_array[$key]["code"]; ?>">Property Sold Out</a>
+                            <a class="btn btn-danger" href="services/story.php?story=<?php echo $product_array[$key]["code"]; ?>">Done</a>
                           <?php }
                         } else { ?>
                            <!-- <button class="viewbtn" onclick="showMsg()">View Property</button> -->
-                           <a class="btn viewbtn" href="services/property.php?property=<?php echo $product_array[$key]["code"]; ?>">View Property</a> 
+                           <a class="btn viewbtn" href="services/story.php?story=<?php echo $product_array[$key]["code"]; ?>">Upcoming</a> 
                         <?php } ?>
 
 
@@ -511,6 +568,7 @@ if (isset($_POST['contactmsg'])) {
        </section>
      <!-- end --->
     </div>
+      
 
     <h5 style="text-align:center;color:black;">STORIES OF TOUCHED LIVES</h5><br><br>
     <div class="comprehensive-services container" id="impact2">
@@ -655,15 +713,15 @@ if (isset($_POST['contactmsg'])) {
              ?>
             
              <div class="col-lg-6 blog">
-               <div class="card" style="width:200px;height:550px;margin:0px -10px 10px -10px; background-color:transparent;box-shadow:none;color:black;padding:0px;" >
+               <div class="card" style="width:330px;height:550px;margin:0px -10px 10px -10px; background-color:transparent;box-shadow:none;color:black;padding:0px;" >
                 <div class="blog-img" style="margin:10px;">
                   <?php if($row->ext == 'mp4'){ ?>
-                  <video style="width:350px; height:200px;" controls>
+                  <video style="width:330px; height:200px;" controls>
                    <source src="<?php echo "php/Admin/blogs/". "{$row->blogimage}";?>">
                   </video>
                   <?php }else{?>
                       <img src="<?php echo "php/Admin/blogs/". "{$row->blogimage}";?>"
-                      class="img-fluid" style="width:350px; height:200px;" />
+                      class="img-fluid" style="width:330px; height:200px;" />
                   <?php }?>
                 </div>
                 <div class="card-body">
@@ -739,10 +797,10 @@ if (isset($_POST['contactmsg'])) {
              ?>
             
              <div class="col-lg-6 blog">
-               <div class="card" style="width:350px;height:550px;margin:0px 10px 20px 5px; background-color:#f1f1f1;color:black;padding:0px;" >
+               <div class="card" style="width:330px;height:550px;margin:0px 10px 20px 5px; background-color:#f1f1f1;color:black;padding:0px;" >
                 <div class="blog-img" style="margin:10px;">
                   <?php if($row->ext == 'mp4'){ ?>
-                  <video style="width:330px; height:200px;" controls>
+                  <video style="width:300px; height:200px;" controls>
                    <source src="<?php echo "php/Admin/blogs/". "{$row->blogimage}";?>">
                   </video>
                   <?php }else{?>

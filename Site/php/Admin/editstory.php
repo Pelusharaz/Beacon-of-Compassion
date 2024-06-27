@@ -302,6 +302,7 @@ $total = $stmt->rowCount();
                         <label for="information"> Category <span>*</span></label>
                           <select name="category" value="<?php echo "{$row->category}"; ?>" >
                            <option value="<?php echo "{$row->category}"; ?>"><?php echo "{$row->category}"; ?></option>
+                           <option value="Featured" >Featured</option>
                            <option value="International" >International</option>
                            <option value="Local">Local</option>
                           </select>
@@ -374,6 +375,7 @@ $total = $stmt->rowCount();
                         <label for="information"> Category <span>*</span></label>
                           <select name="category" value="<?php echo "{$row->category}"; ?>" style="padding-top:8px; padding-bottom:8px;width:100%;" >
                            <option value="<?php echo "{$row->category}"; ?>"><?php echo "{$row->category}"; ?></option>
+                           <option value="Featured" >Featured</option>
                            <option value="International" >International</option>
                            <option value="Local">Local</option>
                           </select>

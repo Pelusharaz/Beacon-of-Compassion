@@ -254,6 +254,12 @@ $total = $stmt->rowCount();
                 </li>
                 <li class="nav-item">
                   <form action=" " method="POST" style="box-shadow:none;">
+                    <input type="text" name="search" value="Featured" style="display:none;">
+                    <button class="nav-link" type="submit" name="submit"style="background-color:white;border:none;">Featured</button>
+                  </form>
+                </li>
+                <li class="nav-item">
+                  <form action=" " method="POST" style="box-shadow:none;">
                     <input type="text" name="search" value="International" style="display:none;">
                     <button class="nav-link" type="submit" name="submit"style="background-color:white;border:none;">International</button>
                   </form>
@@ -301,6 +307,7 @@ $total = $stmt->rowCount();
           <div class="item">
             <select name="category" style="padding-top:8px; padding-bottom:8px;margin:15px 0px 0px 8px;width:100%;">
              <option value="" disabled selected>Select Category</option>
+             <option value="Featured" >Featured</option>
              <option value="International" >International</option>
              <option value="Local">Local</option>
             </select>
