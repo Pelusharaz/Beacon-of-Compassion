@@ -731,3 +731,10 @@ form, input, select, textarea, label {
 .payment-methods{
   display: flex;
 }
+
+/* homepage */
+@media screen and (max-width: 600px) {
+  .product-grid {
+    width: 300px;
+  }
+}

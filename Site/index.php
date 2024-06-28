@@ -94,7 +94,7 @@ if (isset($_POST['contactmsg'])) {
     <link href="css/cart.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/extrastyles.css" />
-    <link rel="stylesheet" href="css/modified-styles.css" />
+    <link rel="stylesheet" href="css/modifiedstyles.css" />
   </head>
   <body style="overflow-x:hidden;">
     <!-- Navbar -->
@@ -378,7 +378,7 @@ if (isset($_POST['contactmsg'])) {
       <!--- database property -->
       <section class="text-center mb-4" style="margin-left:auto;margin-right:auto;display:block; margin-top:-30px;" id="store">
         <div class="row">
-          <div id="product-grid">
+          <div id="product-grid" class="product-grid">
             <?php
             if (isset($_POST['submit'])) {
               $search = $_POST['search'];
@@ -387,7 +387,7 @@ if (isset($_POST['contactmsg'])) {
                 foreach ($product_array as $key => $value) {
             ?>
                 <a style="color:black;" title="see details of the story" href="services/story.php?story=<?php echo $product_array[$key]["code"]; ?>">
-                  <div class="product-item card" style="width:250px;height:450px;">
+                  <div class="product-item card" style="width:280px;height:500px;">
                     <iframe name="votar" style="display:none;"></iframe>
                     <form method="post" target="votar" action="sharazstore.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>" onsubmit="showMsg()" style="box-shadow:none;">
                     <div class="btn-warning" style="background-color:rgb(238, 81, 8);position:absolute;padding:10px 20px;margin-left:-2px;transform: skew(-20deg);"><?php echo $product_array[$key]["category"]; ?></div>
@@ -476,7 +476,7 @@ if (isset($_POST['contactmsg'])) {
                 foreach ($product_array as $key => $value) {
                 ?>
                   <a style="color:black;" title="see details of the story" href="services/story.php?story=<?php echo $product_array[$key]["code"]; ?>">
-                  <div class="product-item card" style="width:250px;height:450px;box-shadow:none;">
+                  <div class="product-item card" style="width:280px;height:500px;box-shadow:none;">
                     <iframe name="votar" style="display:none;"></iframe>
                     <form method="post" target="votar" action="sharazstore.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>" onsubmit="showMsg()" style="box-shadow:none;">
                       <div class="btn-warning" style="background-color:rgb(238, 81, 8);position:absolute;padding:10px 20px;margin-left:-2px;transform: skew(-20deg);"><?php echo $product_array[$key]["category"]; ?></div>
@@ -540,7 +540,7 @@ if (isset($_POST['contactmsg'])) {
                           <?php }
                         } else { ?>
                            <!-- <button class="viewbtn" onclick="showMsg()">View Property</button> -->
-                           <a class="btn viewbtn" href="services/story.php?story=<?php echo $product_array[$key]["code"]; ?>">Upcoming</a> 
+                           <a class="btn viewbtno" href="services/story.php?story=<?php echo $product_array[$key]["code"]; ?>">Upcoming</a> 
                         <?php } ?>
 
 
@@ -570,11 +570,11 @@ if (isset($_POST['contactmsg'])) {
     </div>
       
 
-    <h5 style="text-align:center;color:black;">STORIES OF TOUCHED LIVES</h5><br><br>
+    <!-- <h5 style="text-align:center;color:black;">STORIES OF TOUCHED LIVES</h5><br><br>
     <div class="comprehensive-services container" id="impact2">
 
       <div class="services-img-containter"style="margin-left:20px;">
-        <!-- Photo Grid -->
+        
         <div class="row"> 
           <div class="column">
             <div class="image-container bg-image" style="background-image: url('img/top-kids.jpg'); height: 200px;">
@@ -652,7 +652,7 @@ if (isset($_POST['contactmsg'])) {
           
         </div>
       </div>
-     </div>
+     </div> -->
      <br>
 
      <div class="company-profile">
@@ -713,15 +713,15 @@ if (isset($_POST['contactmsg'])) {
              ?>
             
              <div class="col-lg-6 blog">
-               <div class="card" style="width:330px;height:550px;margin:0px -10px 10px -10px; background-color:transparent;box-shadow:none;color:black;padding:0px;" >
+               <div class="card" style="width:300px;height:550px;margin:0px -10px 10px -10px; background-color:transparent;box-shadow:none;color:black;padding:0px;" >
                 <div class="blog-img" style="margin:10px;">
                   <?php if($row->ext == 'mp4'){ ?>
-                  <video style="width:330px; height:200px;" controls>
+                  <video style="width:280px; height:200px;" controls>
                    <source src="<?php echo "php/Admin/blogs/". "{$row->blogimage}";?>">
                   </video>
                   <?php }else{?>
                       <img src="<?php echo "php/Admin/blogs/". "{$row->blogimage}";?>"
-                      class="img-fluid" style="width:330px; height:200px;" />
+                      class="img-fluid" style="width:300px; height:200px;" />
                   <?php }?>
                 </div>
                 <div class="card-body">
@@ -797,15 +797,15 @@ if (isset($_POST['contactmsg'])) {
              ?>
             
              <div class="col-lg-6 blog">
-               <div class="card" style="width:330px;height:550px;margin:0px 10px 20px 5px; background-color:#f1f1f1;color:black;padding:0px;" >
+               <div class="card" style="width:300px;height:550px;margin:0px 10px 20px 5px; background-color:#f1f1f1;color:black;padding:0px;" >
                 <div class="blog-img" style="margin:10px;">
                   <?php if($row->ext == 'mp4'){ ?>
-                  <video style="width:300px; height:200px;" controls>
+                  <video style="width:280px; height:200px;" controls>
                    <source src="<?php echo "php/Admin/blogs/". "{$row->blogimage}";?>">
                   </video>
                   <?php }else{?>
                       <img src="<?php echo "php/Admin/blogs/". "{$row->blogimage}";?>"
-                      class="img-fluid" style="width:330px; height:200px;" />
+                      class="img-fluid" style="width:300px; height:200px;" />
                   <?php }?>
                 </div>
                 <div class="card-body">
