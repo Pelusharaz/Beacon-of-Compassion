@@ -94,7 +94,7 @@ if (isset($_POST['contactmsg'])) {
     <link href="css/cart.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/extrastyles.css" />
-    <link rel="stylesheet" href="css/modifiedstyles.css" />
+    <link rel="stylesheet" href="css/modified-styles.css" />
   </head>
   <body style="overflow-x:hidden;">
     <!-- Navbar -->
@@ -653,7 +653,7 @@ if (isset($_POST['contactmsg'])) {
         </div>
       </div>
      </div> -->
-     <br>
+     
 
      <div class="company-profile">
       <div class="profile-text">

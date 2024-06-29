@@ -272,7 +272,7 @@
   display: flex;
   border-radius: 10px;
   padding: 30px;
-  margin: 0px 60px 0px 40px;
+  margin: -60px 60px 0px 40px;
 }
 .profile-text{
   color:white; 

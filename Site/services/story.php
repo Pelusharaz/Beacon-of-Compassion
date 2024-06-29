@@ -1,30 +1,3 @@
-<!-- Site Visits -->
-<?php
- require_once '../php/includes/config.php';
- if (isset($_POST['sitevisits'])){
-
-  $name = $_POST['name'];
-  $phone = $_POST['phone'];
-  $email = $_POST['email'];
-  $location = $_POST['location'];
-  $preferreddate = $_POST['preferreddate'];
-  $message = $_POST['message'];
-  $checkbox = $_POST['checkbox'];
- 
-  try {
-    //code...
-    $sql = 'INSERT INTO bookings(name,phone,email,location,preferreddate,message,checkbox,Date,Time ) VALUES(?,?,?,?,?,?,?,Now(),Now() )';
-    $sth = $DBH->prepare($sql);
-    $sth->execute(array($name,$phone,$email,$location,$preferreddate,$message,$checkbox ));
-    $_SESSION['success'] = "message sent successfully.";
-  } catch (PDOException $e) {
-    //throw $th;
-    echo $e->getMessage();
-  }
-  echo "<script>alert('Booking was successfully. We will get back to you shortly')</script>";
- }
- 
- ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,9 +8,9 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Golden chance | News and Blogs</title>
+    <title>BOC | Story</title>
     <!-- Tees Icon -->
-    <link rel="icon" href="../img/Golden chance logo.png"/>
+    <link rel="icon" href="../img/bof-logo.png"/>
     <!-- Badge Icons from Font Awesome -->
     <link
       rel="stylesheet"
@@ -53,24 +26,18 @@
     <link href="../css/cart.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/extrastyles.css" />
+    <link rel="stylesheet" href="../css/modified-styles.css" />
     <link rel="stylesheet" href="../php/Admin/css/admin.css" />
 
     <!--date picker--->
     <!-- Importing jquery cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"crossorigin="anonymous"></script>
   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"integrity=
-        "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"crossorigin="anonymous">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"crossorigin="anonymous"></script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous">
-    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"crossorigin="anonymous"></script>
     <!-- Importing datepicker cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <style>
@@ -100,8 +67,8 @@
   </head>
   <body>
     <header>
-      <!-- Navbar -->
-      <?php require_once '../php/includes/header2.php'; ?>
+       <!-- Navbar -->
+       <?php require_once '../php/includes/header3.php'; ?>
       
       <style>
         #video-background{
@@ -118,164 +85,7 @@
         
       </style>
       
-<!-- Modal for enquiries -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <legend class="modal-title " id="staticBackdropLabel" style="border-radius:20px;"> We Value Your Feedback</legend>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-    
-      <form action="../index.php" method="POST" enctype="multipart/form-data" style="box-shadow:none;">
-      <div class="modal-body">
-      <fieldset>
-        
-        <div class="columns">
-          <div class="item">
-            <label for="booktitle">Name<span>*</span></label>
-            <input id="booktitle" type="text" name="name" required/>
-          </div>
-          <div class="item">
-            <label for="information"> Phone<span>*</span></label>
-            <input id="information" type="tel" name="phone" required />
-          </div>
-          <div class="item">
-            <label for="information"> Email<span>*</span></label>
-            <input id="information" type="email" name="email" required/>
-          </div>
-          <div class="item">
-            <select style="padding-top:8px; padding-bottom:8px;margin-top:20px;" name="type" required>
-             <option value="" disabled selected>Select Type of Enquiry</option>
-             <option value="Compliment">Compliment</option>
-             <option value="Complaint" >Complaint</option>
-             <option value="Interest" >Interest</option>
-             <option value="Follow up" >Follow up</option>
-            </select>
-          </div>
-          
-        </div>
-        <div class="item">
-            <label for="cover">Describe Your Enquiry<span>*</span></label>
-            <textarea type="text" name="information" required></textarea>
-        </div>
-        
-          <div class="item" style="display:flex;">
-            <input id="information" type="checkbox" name="checkbox" required/>
-            <label for="booktitle">I agree with Terms and conditions<span>*</span></label>
-            <style>
-              input[type=checkbox]{ 
-              display: inline;
-              margin-top:5px;
-              width:8%;
-            }
-            </style>
-         </div>
-         <a href="policies.php">Terms and conditions</a>  
-      </fieldset>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn" data-bs-dismiss="modal">Cancel</button>
-        <button type="submit" name="enquiries" class="btn btn-primary">Send</button>
-      </div>
-    </form>
 
-  </div>
-  </div>
-</div>
-
-<!-- Modal For Booking site visits -->
-<div class="modal fade" id="bookings" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <legend class="modal-title btn-primary" id="staticBackdropLabel" style="border-radius:20px;">Book a site visit</legend>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-    
-    <form action=" " method="POST" enctype="multipart/form-data" style="box-shadow:none;">
-      <div class="modal-body">
-      <fieldset>
-        
-        <div class="columns">
-          <div class="item">
-            <label for="booktitle">Name<span>*</span></label>
-            <input id="booktitle" type="text" name="name" required/>
-          </div>
-          <div class="item">
-            <label for="information"> Phone<span>*</span></label>
-            <input id="information" type="tel" name="phone" required />
-          </div>
-          <div class="item">
-            <label for="information"> Email<span>*</span></label>
-            <input id="information" type="email" name="email" required/>
-          </div>
-          <div class="item">
-            <select style="padding-top:8px; padding-bottom:8px;margin-top:17px;" name="location" required>
-             <option value="" disabled selected>Location <span>*</span></option>
-             <option value="Mombasa Road" >Mombasa Road</option>
-             <option value="Matuu" >Matuu</option>
-             <option value="Gil Gil Nakuru">Gil Gil Nakuru</option>
-             <option value="Ruiru">Ruiru</option>
-             <option value="Nyandarua">Nyandarua</option>
-             <option value="Juja<">Juja</option>
-            </select>
-          </div>
-            <div class="form-group m-1">
-             <label for="information"> Date<span>*</span></label>
-              <div class="d-flex input-group w-auto" >
-                <span style="margin-bottom:9px;"
-                 class="btn btn-outline-primary "
-                  type=" "
-                  name="submit"
-                  data-mdb-ripple-color="dark">
-                  <i class="fa fa-calendar" 
-                     onclick="setDatepicker(this)">
-                  </i>
-                </span>
-                <input style="padding:10px;" type="text"
-                  class="form-control"
-                  placeholder=" "
-                  aria-label="Search"
-                  name="preferreddate"
-                  id="dob"
-                  value="" required/>
-              </div>
-            </div>
-        </div>
-          <div class="item">
-            <label for="message"> Additional Message<span>*</span></label>
-            <textarea name="message" id="" cols="30" rows="5"></textarea>
-          </div>
-          <div class="item" style="display:flex;">
-            <input id="information" type="checkbox" name="checkbox" required/>
-            <label for="booktitle">I agree with Terms and conditions<span>*</span></label>
-            <style>
-              input[type=checkbox]{ 
-              display: inline;
-              margin-top:5px;
-              width:8%;
-            }
-            </style>
-         </div>
-         <a href="policies.php">Terms and conditions</a>  
-      </fieldset>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn" data-bs-dismiss="modal">Cancel</button>
-        <button type="submit" name="sitevisits" class="btn btn-primary">Book Now!</button>
-      </div>
-    </form>
-
-  </div>
-  </div>
-</div>
-
-      <div style="text-align:center"style="display:none;">
-          <span class="dot"style="display:none;"></span> 
-          <span class="dot"style="display:none;"></span> 
-          <span class="dot"style="display:none;"></span> 
-        </div>
         <style>
         /* The dots/bullets/indicators */
         .dot {
@@ -343,10 +153,12 @@
 
 
     </header>
+    <!-- payment modal -->
+    <?php require_once '../php/includes/payment.php'; ?>
     
     <main class="mt-5">
 
-    <div class="alertMsg" id="alertMsg">Thank you for showing interest in our properties</div>
+    <div class="alertMsg" id="alertMsg">Thank you for showing interest in our stories</div>
     <br>
 
       <div class="grid-gallery" style="margin-top:-80px;overflow-x:hidden;">
@@ -355,7 +167,7 @@
           <div class="mainpic">
           <?php
               require_once '../php/includes/config.php';
-              $sql="SELECT * FROM products where code = '" .$_GET["property"] . "' LIMIT 1";
+              $sql="SELECT * FROM stories where code = '" .$_GET["story"] . "' LIMIT 1";
               $stmt = $DBH->prepare($sql);
               $stmt->execute();
               while($row = $stmt->fetchObject()) {
@@ -365,10 +177,10 @@
             <div class=" ">
               <?php if($row->ext == 'mp4'){ ?>
                  <video style="width:100%; height:465px;margin-top:-65px;" controls>
-                   <source src="<?php echo "../php/Admin/products/". "{$row->productimage}";?>" style="max-width:250px;margin-left:auto;margin-right:auto;display:block;">
+                   <source src="<?php echo "../php/Admin/stories/". "{$row->productimage}";?>" style="max-width:250px;margin-left:auto;margin-right:auto;display:block;">
                  </video>
                 <?php }else{?>
-                    <img src="<?php echo "../php/Admin/products/". "{$row->productimage}";?>" style="width:100%;height:400px;margin-left:auto;margin-right:auto;display:block;">
+                    <img src="<?php echo "../php/Admin/stories/". "{$row->productimage}";?>" style="width:100%;height:400px;margin-left:auto;margin-right:auto;display:block;">
               <?php }?>
               <!-- <img src="../img/land 1.jpg" style="width:100%; height:50%;"> -->
             </div>
@@ -379,7 +191,7 @@
           <div class="flexbox">
           <?php
               require_once '../php/includes/config.php';
-              $sql="SELECT  * FROM products where code = '" .$_GET["property"] . "' ORDER BY id DESC LIMIT 4";
+              $sql="SELECT  * FROM stories where code = '" .$_GET["story"] . "' ORDER BY id DESC LIMIT 4";
               $stmt = $DBH->prepare($sql);
               $stmt->execute();
               while($row = $stmt->fetchObject()) {
@@ -389,10 +201,10 @@
             
               <?php if($row->ext == 'mp4'){ ?>
                  <video style="width:100%; height:210px;margin-top:-10px;" controls>
-                   <source src="<?php echo "../php/Admin/products/". "{$row->productimage}";?>" style="max-width:250px;margin-left:auto;margin-right:auto;display:block;">
+                   <source src="<?php echo "../php/Admin/stories/". "{$row->productimage}";?>" style="max-width:250px;margin-left:auto;margin-right:auto;display:block;">
                  </video>
                 <?php }else{?>
-                    <img src="<?php echo "../php/Admin/products/". "{$row->productimage}";?>" style="width:100%;height:190px;margin-left:auto;margin-right:auto;display:block;">
+                    <img src="<?php echo "../php/Admin/stories/". "{$row->productimage}";?>" style="width:100%;height:190px;margin-left:auto;margin-right:auto;display:block;">
               <?php }?>
               <!-- <img src="../img/land 1.jpg" style="width:100%; height:50%;"> -->
             </div>
@@ -435,7 +247,7 @@
 
         <?php
             require_once '../php/includes/config.php';
-            $sql="SELECT * FROM products where code = '" .$_GET["property"] . "' LIMIT 1 ";
+            $sql="SELECT * FROM stories where code = '" .$_GET["story"] . "' LIMIT 1 ";
             $stmt = $DBH->prepare($sql);
             $stmt->execute();
             while($row = $stmt->fetchObject()) {
@@ -446,22 +258,22 @@
             <div class="available"style="margin-left:10px;">
             <?php
                 require_once '../php/includes/config.php';
-                $sql = "SELECT * FROM soldout WHERE propertyId = '$row->code' ";
+                $sql = "SELECT * FROM events WHERE storyId = '$row->code' ";
                 $stmt = $DBH->prepare($sql);
                 $stmt->execute();
                 if ($stmt->rowCount() == 1) {
                     while ($row1 = $stmt->fetchObject()) {
                 ?>
-                <button class="btn viewbtn" style="cursor: no-drop; background-color:red;text-transform:lowercase;">Sold out</button>
+                <button class="btn viewbtn" style="cursor: no-drop; background-color:red;text-transform:lowercase;">Done</button>
                 <?php }
                     } else { ?>
-                <button class="viewbtn" onclick="showMsg()">Available</button>
+                <button class="viewbtn" onclick="showMsg()">Upcoming</button>
             <?php } ?>
             </div>
-            <h4 style="color:black; font-weight:bolder;margin-right:10px;"></h4><h5 style="color:black; font-weight:bold;">Kes <?php echo number_format($row->price)?>/=</h5>
+            
           </div>
-          <h4 style="color:blue; font-weight:bolder;margin-left:10px;"><?php echo $row->productname ?></h4>
-          <a href="tel:0740027027"><i class="fa-map-marker fa"></i> <?php echo $row->location ?></a><br><br><br>
+          <h4 style="color:blue; font-weight:bolder;margin-left:10px;"><?php echo $row->storytitle ?></h4>
+          <br><br>
 
           <div class="row row-blog">
             
@@ -470,29 +282,28 @@
               <div class="blog-img" style="margin:10px;">
               <?php if($row->ext == 'mp4'){ ?>
                  <video style="width:250px; height:250px;margin-top:-50px;" controls>
-                   <source src="<?php echo "../php/Admin/products/". "{$row->productimage}";?>" style="max-width:250px; height:200px;margin-left:auto;margin-right:auto;display:block;">
+                   <source src="<?php echo "../php/Admin/stories/". "{$row->productimage}";?>" style="max-width:250px; height:200px;margin-left:auto;margin-right:auto;display:block;">
                  </video>
                 <?php }else{?>
-                    <img src="<?php echo "../php/Admin/products/". "{$row->productimage}";?>" style="width:250px; height:250px;margin-left:auto;margin-right:auto;display:block;">
+                    <img src="<?php echo "../php/Admin/stories/". "{$row->productimage}";?>" style="width:250px; height:250px;margin-left:auto;margin-right:auto;display:block;">
               <?php }?>
               </div>
               
               <div class="information">
-                  <h6 style="font-weight: bolder;">Amenities </h6>
-                  <p><?php echo $row->productinfo ?></p>
-                  <span style="display:flex;"><h6 style="font-weight:bolder;margin-right:5px;">Size : </h6><p> <?php echo $row->size ?></p></span>
+                  <h6 style="font-weight: bolder;">About </h6>
+                  <p><?php echo $row->storyinfo ?></p>
                   <span style="display:flex;"><h6 style="font-weight:bolder;margin-right:5px;">Category :</h6> <p><?php echo $row->category ?></p></span>
-                  <button type="submit" name="submit" data-bs-toggle="modal" data-bs-target="#bookings" role="button"> <a style="color:white;">Book Site Visit</a> </button>
+                  <button type="submit" name="submit" role="button"> <a style="color:white;" href="../stories.php">View Others</a> </button>
               </div>
 
 
               <?php }?>
 
               <div class="more-properties">
-                  <h5 style="color:black; font-weight:bold;">MORE PROPERTIES</h5>
+                  <h5 style="color:black; font-weight:bold;">MORE STORIES</h5>
                   <?php
                     require_once '../php/includes/config.php';
-                    $sql="SELECT * FROM products GROUP BY code order by RAND() LIMIT 2";
+                    $sql="SELECT * FROM stories GROUP BY code order by RAND() LIMIT 2";
                     $stmt = $DBH->prepare($sql);
                     $stmt->execute();
                     while($row = $stmt->fetchObject()) {
@@ -502,15 +313,14 @@
                       <div class="property-img" style="margin:10px;">
                        <?php if($row->ext == 'mp4'){ ?>
                         <video style="width:150px; height:200px;margin-top:-50px;" controls>
-                         <source src="<?php echo "../php/Admin/products/". "{$row->productimage}";?>" style="max-width:250px; height:200px;margin-left:auto;margin-right:auto;display:block;">
+                         <source src="<?php echo "../php/Admin/stories/". "{$row->productimage}";?>" style="max-width:250px; height:200px;margin-left:auto;margin-right:auto;display:block;">
                         </video>
                        <?php }else{?>
-                        <img src="<?php echo "../php/Admin/products/". "{$row->productimage}";?>" style="width:150px; height:150px;margin-left:auto;margin-right:auto;display:block;">
+                        <img src="<?php echo "../php/Admin/stories/". "{$row->productimage}";?>" style="width:150px; height:150px;margin-left:auto;margin-right:auto;display:block;">
                        <?php }?>
                       </div>
                       <div class="property-info">
-                        <h6 style="font-weight: bolder;"><?php echo $row->productname ?> </h6>
-                        <p><i class="fa-map-marker fa"></i> <?php echo $row->location ?></p>
+                        <h6 style="font-weight: bolder;"><?php echo $row->storytitle ?> </h6>
                         <a href="property.php?property=<?php echo $row->code ?>">see details</a>
                         
                       </div>
@@ -529,7 +339,7 @@
       {
       $("#alertMsg").fadeIn('slow', function () {
       $(this).delay(1000).fadeOut('slow');
-      window.location = '../properties.php'
+      window.location = '../stories.php'
       });
     }
     </script>
