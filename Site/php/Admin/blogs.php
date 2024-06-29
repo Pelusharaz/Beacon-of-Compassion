@@ -1,5 +1,5 @@
 <?php session_start();
-if($_SESSION['role']!=='super admin' && $_SESSION['role']!=='Advert Manager' && $_SESSION['role']!=='Maintainance'){
+if($_SESSION['role']!=='super admin' && $_SESSION['role']!=='Content Manager' && $_SESSION['role']!=='Maintainance'){
   echo "<script>alert('Access Denied !')</script>
   <script>window.location = '../includes/logout.php'</script>";
 }

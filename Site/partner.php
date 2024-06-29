@@ -231,15 +231,18 @@ if (isset($_POST['partnermsg'])) {
       <div class="row">
         <div class="column">
 
-          <div class="blog" style="margin:10px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
-          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/staff/Robert-mogesi.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+         <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/staff/Sean-Isaac.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
            <br>
-           <div class="Blog-title"><h4>Joseph Mogesi Robert</h4></div>
+           <div class="Blog-title"><h4>Isaac Sean</h4></div>
            <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">FOUNDER AND CHAIRPERSON</h6></div>
            <div class="info"style="margin-left:0px;width:100%;">
              <p>
-               Robert is holds a bachelor of science in health systems management and an MBA in accounting and 
-               finance.He's focused to seeing an equitable society
+                He holds a Bachelor's in Procurement and Chain Supply Management 
+                He brings expertise in procurement and supply chain management to the foundation. 
+                With a strong passion for creating opportunities for the marginalized, Isaac is a dedicated
+                leader committed to making a positive impact in the community through collaborative efforts 
+                and strategic initiatives
              </p>
              <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
            </div>
@@ -251,10 +254,60 @@ if (isset($_POST['partnermsg'])) {
              <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
              <!-- whatsapp -->
              <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
-          </div>
+            </div>
+
+          <!-- <div class="blog" style="margin:10px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/staff/Robert-mogesi.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+           <br>
+           <div class="Blog-title"><h4>Joseph Mogesi Robert</h4></div>
+           <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">FOUNDER AND CHAIRPERSON</h6></div>
+           <div class="info"style="margin-left:0px;width:100%;">
+             <p>
+               Robert is holds a bachelor of science in health systems management and an MBA in accounting and 
+               finance.He's focused to seeing an equitable society
+             </p>
+             <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
+           </div>
+            
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100064267020188" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
+           
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
+             
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
+            
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
+          </div> -->
+
+          
+
+        </div>
+        <div class="column">
+
+         <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/staff/Damiana-indoshi.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+           <br>
+           <div class="Blog-title"><h4>Damiana Indoshi Amwayi</h4></div>
+           <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">FOUNDER AND DEPUTY CHAIRPERSON</h6></div>
+           <div class="info"style="margin-left:0px;width:100%;">
+             <p>
+               She holds a Bachelor's in Food Nutrition and Dietetics 
+               Dedicated to serve and contribute to the society in ways that can help save life and 
+               needs of  people ..
+             </p>
+             <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
+           </div>
+             <!-- Facebook -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100064267020188" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
+             <!-- Twitter -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
+             <!-- Instagram -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
+             <!-- whatsapp -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
+            </div>
 
           <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
-          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/staff/Steve-odongo.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/staff/Steve-odongo-editted.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
            <br>
            <div class="Blog-title"><h4>Steve Odongo</h4></div>
            <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">FOUNDER AND FINANCE DIRECTOR</h6></div>
@@ -277,56 +330,7 @@ if (isset($_POST['partnermsg'])) {
              <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
             </div>
 
-        </div>
-        <div class="column">
-
-         <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
-          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/staff/Damiana-indoshi.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
-           <br>
-           <div class="Blog-title"><h4>Damiana Indoshi Amwayi</h4></div>
-           <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">DEPUTY CHAIRPERSON</h6></div>
-           <div class="info"style="margin-left:0px;width:100%;">
-             <p>
-               She holds a Bachelor's in Food Nutrition and Dietetics 
-               Dedicated to serve and contribute to the society in ways that can help save life and 
-               needs of  people ..
-             </p>
-             <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
-           </div>
-             <!-- Facebook -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100064267020188" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
-             <!-- Twitter -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
-             <!-- Instagram -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
-             <!-- whatsapp -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
-            </div>
-
-         <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
-          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/staff/Sean-Isaac.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
-           <br>
-           <div class="Blog-title"><h4>Isaac Sean</h4></div>
-           <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">FOUNDER AND SECRETARY GENERAL</h6></div>
-           <div class="info"style="margin-left:0px;width:100%;">
-             <p>
-                He holds a Bachelor's in Procurement and Chain Supply Management 
-                He brings expertise in procurement and supply chain management to the foundation. 
-                With a strong passion for creating opportunities for the marginalized, Isaac is a dedicated
-                leader committed to making a positive impact in the community through collaborative efforts 
-                and strategic initiatives
-             </p>
-             <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
-           </div>
-             <!-- Facebook -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100064267020188" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
-             <!-- Twitter -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
-             <!-- Instagram -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
-             <!-- whatsapp -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
-            </div>
+         
 
         </div>
 
@@ -336,7 +340,7 @@ if (isset($_POST['partnermsg'])) {
           <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/staff/Billia Chenamba.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
            <br>
            <div class="Blog-title"><h4> Billia Chenamba Pusikwang</h4></div>
-           <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">DEPUTY SECRETARY</h6></div>
+           <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">FOUNDER AND SECRETARY</h6></div>
            <div class="info"style="margin-left:0px;width:100%;">
              <p>
                She holds a Bachelor of science in Agricultural Education and Extension
