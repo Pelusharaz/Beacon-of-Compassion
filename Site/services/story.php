@@ -321,7 +321,7 @@
                       </div>
                       <div class="property-info">
                         <h6 style="font-weight: bolder;"><?php echo $row->storytitle ?> </h6>
-                        <a href="property.php?property=<?php echo $row->code ?>">see details</a>
+                        <a href="story.php?story=<?php echo $row->code ?>">see details</a>
                         
                       </div>
                     </div>
