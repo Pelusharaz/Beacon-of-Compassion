@@ -147,7 +147,7 @@ if (isset($_POST['donate'])) {
                   <li> Please mail your check to:</li>
                 </ol>
                 Beacon of compassion Foundation <br>
-                PO BOX 75517-00200 <br>
+                PO BOX 925-0502 Karen<br>
                 Nairobi, Kenya <br>
 
                 All contributions will be gratefully acknowledged and are tax deductible. Thank you
@@ -156,7 +156,7 @@ if (isset($_POST['donate'])) {
                   <input id="information" type="checkbox" name="termscheckbox" required />
                   <label for="booktitle" style="font-weight:bold; font-size:15px;" >I agree with Terms and conditions<span>*</span></label>
                 </div>
-                <a href="policies.php">Terms and conditions</a>
+                <a href="img/Terms and Conditions for Donations and Finance for.docx">Terms and conditions</a>
               </fieldset>
             </div>
             <div class="modal-footer">

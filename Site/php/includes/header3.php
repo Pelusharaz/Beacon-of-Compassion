@@ -1,16 +1,16 @@
 <div class="header-top">
       <div class="header-contacts">
-        <a class="nav-link links" href="mailto:beaconofcompassion07@gmail.com">
+        <a class="nav-link links" href="mailto:beaconcompassion07@gmail.com">
           <span class="badge badge-pill bg-danger"></span>
-          <span class="socials-header"><i class="fa fa-envelope fa fa-flip-horizontal"></i> <div class="header-text">beaconofcompassion07@gmail.com</div></span>
+          <span class="socials-header"><i class="fa fa-envelope fa fa-flip-horizontal"></i> <div class="header-text">beaconcompassion07@gmail.com</div></span>
         </a>
-        <a class="nav-link links" href="tel:0719411322">
+        <a class="nav-link links" href="tel:0111628390">
           <span class="badge badge-pill bg-danger"></span>
-          <span class="socials-header"><i class="fa fa-phone fa fa-flip-horizontal"></i> <div class="header-text">0719411322</div> </span>
+          <span class="socials-header"><i class="fa fa-phone fa fa-flip-horizontal"></i> <div class="header-text">0111628390</div> </span>
         </a>
         <a class="nav-link links" href=" ">
           <span class="badge badge-pill bg-danger"></span>
-          <span class="socials-header"><i class="fa fa-map-marker"> <div class="header-text"  style="margin-top:-16px;margin-left:20px;">Ruiru,Kiambu</div></i></span>
+          <span class="socials-header"><i class="fa fa-map-marker"> <div class="header-text"  style="margin-top:-16px;margin-left:20px;">925-0502 Karen, Nairobi, Kenya</div></i></span>
         </a>
       </div>
       <style>
@@ -23,16 +23,16 @@
       </style>
       <div class="header-socials">
         <!-- Facebook -->
-        <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100064267020188" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
 
         <!-- Twitter -->
-        <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+        <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/BeaconComp94413/" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
 
         <!-- Instagram -->
-        <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+        <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
 
         <!-- whats app -->
-        <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-whatsapp"></i></a>
+        <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254111628390" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
     <div class="sticky">

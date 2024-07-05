@@ -8,9 +8,9 @@
         </p>
         <br>
         <h5 style="color:rgb(238, 81, 8); font-weight:bolder;">Our Mission</h5>
-        <p>To transform lives and maximize potential to the marginalized communities in Kenya through 
-           access to education, healthcare, and sustainable livelihood opportunities, guided by principles
-           of compassion and social justice.
+        <p>Our mission is to be a guiding light in providing support, resources, and
+           empowerment to those in need, spreading compassion and hope to create a
+           brighter future for all.
         </p>
       </div>
       <div class="core-values">
@@ -33,15 +33,15 @@
         <ul class="reach-us">
           <h5 style="color:rgb(238, 81, 8); font-weight:bolder;">We would Love to Hear From You</h5>
           <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link links" href="tel:0719411322">
+            <a class="nav-link links" href="tel:01116283902">
               <span class="badge badge-pill bg-danger"></span>
-              <span><i class="fa fa-phone fa fa-flip-horizontal"></i> 0719411322</span>
+              <span><i class="fa fa-phone fa fa-flip-horizontal"></i> 0111628390</span>
             </a>
           </li>
           <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link links" href="mailto:beaconofcompassion07@gmail.com">
+            <a class="nav-link links" href="mailto:beaconcompassion07@gmail.com">
               <span class="badge badge-pill bg-danger"></span>
-              <span><i class="fa fa-envelope fa fa-flip-horizontal"></i> beaconofcompassion07@gmail.com</span>
+              <span><i class="fa fa-envelope fa fa-flip-horizontal"></i> beaconcompassion07@gmail.com</span>
             </a>
           </li>
           <!-- <li class="nav-item me-3 me-lg-0">
@@ -53,7 +53,7 @@
           <li class="nav-item me-3 me-lg-0">
             <a class="nav-link links" href=" ">
               <span class="badge badge-pill bg-danger"></span>
-              <span><i class="fa fa-map-marker"> Ruiru, Kiambu</i></span>
+              <span><i class="fa fa-map-marker"> 925-0502 Karen, Nairobi</i></span>
             </a>
           </li>
 
@@ -64,25 +64,25 @@
             <!-- Section: Social media -->
             <section class="mb-4">
                <!-- Facebook -->
-               <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100064267020188" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+               <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
 
               <!-- Twitter -->
-              <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+              <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/BeaconComp94413" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
 
               <!-- Google
               <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a> -->
 
               <!-- Instagram -->
-              <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+              <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
 
               <!-- Linkedin
               <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a> -->
 
               <!-- whats app -->
-              <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-whatsapp"></i></a>
+              <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254111628390" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-whatsapp"></i></a>
 
               <!-- Github -->
-              <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.youtube.com/@GoldenChanceRealEstate" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+              <!-- <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.youtube.com/@GoldenChanceRealEstate" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a> -->
 
             </section>
           </div>

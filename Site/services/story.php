@@ -27,7 +27,6 @@
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/extrastyles.css" />
     <link rel="stylesheet" href="../css/modified-styles.css" />
-    <link rel="stylesheet" href="../php/Admin/css/admin.css" />
 
     <!--date picker--->
     <!-- Importing jquery cdn -->
@@ -293,7 +292,7 @@
                   <h6 style="font-weight: bolder;">About </h6>
                   <p><?php echo $row->storyinfo ?></p>
                   <span style="display:flex;"><h6 style="font-weight:bolder;margin-right:5px;">Category :</h6> <p><?php echo $row->category ?></p></span>
-                  <button type="submit" name="submit" role="button"> <a style="color:white;" href="../stories.php">View Others</a> </button>
+                  <button type="submit" name="submit" class="form-button"> <a style="color:white;" href="../stories.php">View Others</a> </button>
               </div>
 
 

@@ -662,7 +662,7 @@ if (isset($_POST['contactmsg'])) {
       </div>
 
       <div class="profile-button">
-        <a class="btn btn-outline-mask" href="img/BCF-Foundation.docx" role="button"><i class="fa fa-arrow-circle-right fa-lg" style="margin-right:10px;"></i>View Profile</a>
+        <a class="btn btn-outline-mask" target="blank" href="img/profile.pdf" role="button"><i class="fa fa-arrow-circle-right fa-lg" style="margin-right:10px;"></i>View Profile</a>
       </div>
      </div>
 
