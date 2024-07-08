@@ -53,7 +53,7 @@
                 <a class="nav-link" style="color:black;" aria-current="page" href="aboutus.php">What we Do</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" style="color:black; cursor:pointer;" aria-current="page" onclick="impacts()">Impacts</a>
+                <a class="nav-link" style="color:black; cursor:pointer;" aria-current="page" onclick="impacts()" href="stories.php">Impacts</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" style="color:black; cursor:pointer;"aria-current="page" href="volunteer.php">Volunteer</a>
@@ -120,7 +120,7 @@
                   </li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
-                    <a class="dropdown-item" href="cart.php" style="color:red;"> <i class="fa fa-heart">Touch a heart</i> </a>
+                    <a class="dropdown-item" href="cart.php" style="color:red;" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fa fa-heart">Touch a heart</i> </a>
                   </li>
                 </ul>
               </li>

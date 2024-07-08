@@ -244,16 +244,16 @@ if (isset($_POST['partnermsg'])) {
                 leader committed to making a positive impact in the community through collaborative efforts 
                 and strategic initiatives
              </p>
-             <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
+             <a class="btn blogbtn" role="button" href="tel:+254719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
            </div>
              <!-- Facebook -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100064267020188" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=61561621183867" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
              <!-- Twitter -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/Isaac_sean64380/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
              <!-- Instagram -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/bulldog_tail/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
              <!-- whatsapp -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254111628390" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
             </div>
 
           <!-- <div class="blog" style="margin:10px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
@@ -294,16 +294,16 @@ if (isset($_POST['partnermsg'])) {
                Dedicated to serve and contribute to the society in ways that can help save life and 
                needs of  people ..
              </p>
-             <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
+             <a class="btn blogbtn" role="button" href="tel:+254702691884"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
            </div>
-             <!-- Facebook -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100064267020188" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
-             <!-- Twitter -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
-             <!-- Instagram -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
+             <!-- Mail -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="mailto:damianamwayi@gmail.com" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i style="margin-top:15px;" class="fa fa-envelope fa fa-flip-horizontal"></i></a>
+             <!-- phone -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="tel:+254702691884" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i style="margin-top:15px;" class="fa fa-phone fa fa-flip-horizontal"></i></a>
+             <!-- Instagram
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a> -->
              <!-- whatsapp -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254702691884" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
             </div>
 
           <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
@@ -318,16 +318,16 @@ if (isset($_POST['partnermsg'])) {
                 complex legal and financial landscapes.Steve's commitment to both fields demonstrates his 
                 versatility and dedication, making him a valuable asset in any professional setting.
              </p>
-             <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
+             <a class="btn blogbtn" role="button" href="tel:+254794705632"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
            </div>
              <!-- Facebook -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100064267020188" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100085195873075" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
              <!-- Twitter -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://x.com/SteveOdongo3905?t=G_tH93n9vsRtnQMdvSf19g&s=09" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
              <!-- Instagram -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/odongosteve3537?utm_source=qr&igsh=MTVucTJ3cnIxcnc2eg==" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
              <!-- whatsapp -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254794705632" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
             </div>
 
          
@@ -346,16 +346,16 @@ if (isset($_POST['partnermsg'])) {
                She holds a Bachelor of science in Agricultural Education and Extension
                Devoted to Initiate a smile on a face
              </p>
-             <a class="btn blogbtn" role="button" href="tel: 0719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
+             <a class="btn blogbtn" role="button" href="tel:+254703570886"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
            </div>
-             <!-- Facebook -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=100064267020188" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
-             <!-- Twitter -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/GoldenchanceLtd" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
-             <!-- Instagram -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
+             <!-- Mail -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="mailto:billiachenamba@gmail.com" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i style="margin-top:15px;" class="fa fa-envelope fa fa-flip-horizontal"></i></a>
+             <!-- phone -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="tel:+254703570886" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i style="margin-top:15px;" class="fa fa-phone fa fa-flip-horizontal"></i></a>
+             <!-- Instagram
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a> -->
              <!-- whatsapp -->
-             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254796526231" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254703570886" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
             </div>
 
           <!-- <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
@@ -389,10 +389,10 @@ if (isset($_POST['partnermsg'])) {
         <h4 style="font-weight:bold;color:black;">OUR TRUSTED PARTNERS</h4>
       </div><br>
       <div class="partners-logos container">
-        <div class="partner-profile"><img class="partner-logo" src="img/top-kids2.jpg" alt="profile"></div>
-        <div class="partner-profile"><img class="partner-logo" src="img/top-kids2.jpg" alt="profile"></div>
-        <div class="partner-profile"><img class="partner-logo" src="img/top-kids2.jpg" alt="profile"></div>
-        <div class="partner-profile"><img class="partner-logo" src="img/top-kids2.jpg" alt="profile"></div>
+        <div class="partner-profile"><img class="partner-logo" src="img/icons/person.webp" alt="profile"></div>
+        <div class="partner-profile"><img class="partner-logo" src="img/icons/person.webp" alt="profile"></div>
+        <div class="partner-profile"><img class="partner-logo" src="img/icons/person.webp" alt="profile"></div>
+        <div class="partner-profile"><img class="partner-logo" src="img/icons/person.webp" alt="profile"></div>
       </div>
       
     

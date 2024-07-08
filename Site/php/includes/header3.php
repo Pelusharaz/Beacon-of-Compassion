@@ -61,7 +61,7 @@
                 <a class="nav-link" style="color:black;" aria-current="page" href="../aboutus.php">What we Do</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" style="color:black; cursor:pointer;" aria-current="page" onclick="impacts()">Impacts</a>
+                <a class="nav-link" style="color:black; cursor:pointer;" aria-current="page" href="../stories.php">Impacts</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" style="color:black; cursor:pointer;"aria-current="page" href="../volunteer.php">Volunteer</a>

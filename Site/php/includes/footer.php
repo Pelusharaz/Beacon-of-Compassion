@@ -22,11 +22,11 @@
         </div>
         <ul class="values">
           <h5 style="color:rgb(238, 81, 8); font-weight:bolder;">How to volunteer</h5>
-          <li><a href="">Cloth bank</a></li>
-          <li><a href=""> Food network</a></li>
-          <li><a href="">Medic kits</a></li>
+          <li><a href="volunteer.php">Cloth bank</a></li>
+          <li><a href="volunteer.php"> Food network</a></li>
+          <li><a href="volunteer.php">Medic kits</a></li>
           <hr class="dropdown-divider" />
-          <a href="" style="color:red;"><i class="fa fa-heart"></i> Touch a Heart Today</a>
+          <a href="" style="color:red;" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-heart"></i> Touch a Heart Today</a>
         </ul>
       </div>
       <div class="contacts">
@@ -125,7 +125,7 @@
     <div class="text-center text-dark p-3" style="background-color: blue;">
       <p style="color:white;"> &copy; Copyright <?php $year = date("Y"); echo $year; ?>
         Beacon of Compassion Foundation || 
-       <a class="text-white" target="blank" href="../../../../sharaztechs.66ghz.com">Developed by Sharaz Technologies</a>
+       <a class="text-white" target="blank" href="http://sharaztechs.66ghz.com/?i=1">Developed by Sharaz Technologies</a>
       </p>
     </div>
     <!-- Copyright -->

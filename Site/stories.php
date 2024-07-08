@@ -60,22 +60,31 @@ session_start();
     <!-- Badge Icons from Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"/>
 
-    <!-- length of properties -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
     <!-- Fonts from Google-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"/>
+
+    <!-- services scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"crossorigin="anonymous"></script>
     <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="css/cart.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/extrastyles.css" />
-    <link rel="stylesheet" href="php/Admin/css/admin.css" />
     <link rel="stylesheet" href="css/modified-styles.css" />
-  </head>
   <body>
     <header>
       <!-- Navbar -->
       <?php require_once 'php/includes/header.php'; ?>
+      <style>
+        .socials-header {
+         color: white;
+        }
+       .socials-header:hover{
+         color:rgb(238, 81, 8);
+        }
+      </style>
       
       <style>
         #video-background{
@@ -103,7 +112,7 @@ session_start();
               <h5 class="mb-3">
                 Building a brighter future
               </h4>
-              <a class="btn btn-outline-light btn-lg" href="mailto:sharaztechs@gmail.com"  role="button">Touch a Heart !</a>
+              <a class="link" href="index.php">Home</a> > <a class="link quick-link" href="stories.php">Impacts</a>
             </div>
           </div>
         </div>
@@ -118,7 +127,7 @@ session_start();
               <h5 class="mb-3">
                 Creating a world where compassion and generosity prevail
               </h4>
-              <a class="btn btn-outline-light btn-lg" href="mailto:sharaztechs@gmail.com"  role="button">Touch a Heart !</a>
+              <a class="link" href="index.php">Home</a> > <a class="link quick-link" href="stories.php">Impacts</a>
             </div>
           </div>
         </div>
@@ -133,7 +142,7 @@ session_start();
               <h5 class="mb-3">
                 Making a real and lasting impact on the lives of those in need.
               </h4>
-              <a class="btn btn-outline-light btn-lg" href="mailto:sharaztechs@gmail.com" role="button">Touch a Heart !</a>
+              <a class="link" href="index.php">Home</a> > <a class="link quick-link" href="stories.php">Impacts</a>
             </div>
           </div>
         </div>
@@ -149,20 +158,24 @@ session_start();
         <!-- payment modal -->
         <?php require_once 'php/includes/payment.php'; ?>
         <style>
-        /* The dots/bullets/indicators */
+        .slide-dots{
+          margin-top:-60px;
+          z-index: 2;
+          position: relative;
+        }
         .dot {
           height: 15px;
           width: 15px;
           bottom: 0px;
-          background-color: aqua;
+          background-color: white;
           border-radius: 50%;
           margin-top: -280px!important;
           display: inline-block;
           transition: background-color 0.6s ease;
           }
-
+         
         .active {
-           background-color: white;
+           background-color: rgb(238, 81, 8);
         }
         /*funcbtn*/
         .funcbtn{
@@ -187,6 +200,16 @@ session_start();
         }
         .viewbtn:hover{
           background:red;
+        }
+        .link {
+         color: white;
+        }
+        .link:hover{
+          color:rgb(238, 81, 8);
+        }
+        .quick-link{
+          color:grey;
+
         }
         </style>
         
@@ -281,7 +304,7 @@ session_start();
               if (!empty($product_array)) {
                 foreach ($product_array as $key => $value) {
             ?>
-                <a style="color:black;" title="see details of property" href="services/story.php?story=<?php echo $product_array[$key]["code"]; ?>">
+                <a style="color:black;" title="see details of the story" href="services/story.php?story=<?php echo $product_array[$key]["code"]; ?>">
                   <div class="product-item card" style="width:270px;height:450px;">
                     <iframe name="votar" style="display:none;"></iframe>
                     <form method="post" target="votar" action="sharazstore.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>" onsubmit="showMsg()" style="box-shadow:none;">
@@ -358,7 +381,7 @@ session_start();
       if (!empty($product_array)) {
         foreach ($product_array as $key => $value) {
         ?>
-          <a style="color:black;" title="see details of property" href="services/story.php?story=<?php echo $product_array[$key]["code"]; ?>">
+          <a style="color:black;" title="see details of the story" href="services/story.php?story=<?php echo $product_array[$key]["code"]; ?>">
           <div class="product-item card" style="width:270px;height:450px;box-shadow:none;">
             <iframe name="votar" style="display:none;"></iframe>
             <form method="post" target="votar" action="sharazstore.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>" onsubmit="showMsg()" style="box-shadow:none;">

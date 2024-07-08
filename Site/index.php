@@ -113,7 +113,7 @@ if (isset($_POST['contactmsg'])) {
               <h5 class="mb-3">
                 Building a brighter future
               </h4>
-              <a class="btn btn-outline-light btn-lg" href="mailto:sharaztechs@gmail.com"  role="button">Touch a Heart !</a>
+              <a class="btn btn-outline-light btn-lg" href="mailto:beaconcompassion07@gmail.com"  role="button">Touch a Heart !</a>
             </div>
           </div>
         </div>
@@ -128,7 +128,7 @@ if (isset($_POST['contactmsg'])) {
               <h5 class="mb-3">
                 Creating a world where compassion and generosity prevail
               </h4>
-              <a class="btn btn-outline-light btn-lg" href="mailto:sharaztechs@gmail.com"  role="button">Touch a Heart !</a>
+              <a class="btn btn-outline-light btn-lg" href="tel:0111628390"  role="button">Touch a Heart !</a>
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@ if (isset($_POST['contactmsg'])) {
               <h5 class="mb-3">
                 Making a real and lasting impact on the lives of those in need.
               </h4>
-              <a class="btn btn-outline-light btn-lg" href="mailto:sharaztechs@gmail.com" role="button">Touch a Heart !</a>
+              <a class="btn btn-outline-light btn-lg" href="mailto:beaconcompassion07@gmail.com" role="button">Touch a Heart !</a>
             </div>
           </div>
         </div>
