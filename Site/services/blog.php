@@ -94,7 +94,7 @@
               <h5 class="mb-3" style="color:rgb(238, 81, 8);">
                   Changing the world day by day
               </h4>
-              <a class="links" style="color:white;" href="index.php">Home</a> > <a class="links quick-link" style="color:grey;" href="volunteer.php">Volunteer with us</a>
+              <a class="links" style="color:white;" href="../index.php">Home</a> > <a class="links quick-link" style="color:grey;" href="../volunteer.php">Volunteer with us</a>
             </div>
           </div>
         </div>
