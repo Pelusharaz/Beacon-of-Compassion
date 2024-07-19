@@ -156,7 +156,7 @@ if (isset($_POST['donate'])) {
                   <input id="information" type="checkbox" name="termscheckbox" required />
                   <label for="booktitle" style="font-weight:bold; font-size:15px;" >I agree with Terms and conditions<span>*</span></label>
                 </div>
-                <a href="img/Terms and Conditions for Donations and Finance for.docx">Terms and conditions</a>
+                <a href="img/Beacon of compassion Finance T&C.pdf">Terms and conditions</a>
               </fieldset>
             </div>
             <div class="modal-footer">

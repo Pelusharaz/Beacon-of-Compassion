@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 27, 2024 at 08:22 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- Generation Time: Jul 19, 2024 at 03:08 PM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.0.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -63,17 +64,6 @@ CREATE TABLE `blogs` (
   `ext` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `blogs`
---
-
-INSERT INTO `blogs` (`id`, `blogtitle`, `dateposted`, `bloginfo`, `postedby`, `blogimage`, `ext`) VALUES
-(3, 'Test4', '2024-06-21', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae ', 'super admin', 'partner.webp', 'webp'),
-(4, 'Test4', '2024-06-22', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'super admin', 'blogs5.jpg', 'jpg'),
-(5, 'Test', '2024-06-22', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae ', 'super admin', 'customer-care.jpg', 'jpg'),
-(6, 'Test video', '2024-06-22', 'test', 'super admin', 'bgvideo2.mp4', 'mp4'),
-(7, 'row test', '2024-06-22', 'test', 'super admin', 'blogs.gif', 'gif');
-
 -- --------------------------------------------------------
 
 --
@@ -89,14 +79,6 @@ CREATE TABLE `contact` (
   `Date` date NOT NULL,
   `Time` time(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `contact`
---
-
-INSERT INTO `contact` (`id`, `name`, `email`, `message`, `referals`, `Date`, `Time`) VALUES
-(1, 'test', 'test@gmail.com', 'test', 'online', '2024-06-20', '22:20:46.0'),
-(2, 'test about', 'test@gmail.com', 'test', 'test', '2024-06-20', '22:23:00.0');
 
 -- --------------------------------------------------------
 
@@ -120,15 +102,6 @@ CREATE TABLE `donations` (
   `Time` time(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `donations`
---
-
-INSERT INTO `donations` (`id`, `paymentcheckbox`, `amount`, `freqcheckbox`, `frequency`, `name`, `phone`, `email`, `anonycheckbox`, `comment`, `termscheckbox`, `Date`, `Time`) VALUES
-(4, 'Mpesa', '100', 'on', 'Month', 'sharaz techs', '0796526231', 'sharaztech@gmail.com', 'on', 'test', 'on', '2024-06-22', '08:59:55.0'),
-(5, 'Mpesa', '100', 'on', 'Day', 'sharaz techs', '+254 791 386 752', 'sharaztech@gmail.com', 'on', 'test', 'on', '2024-06-22', '09:10:44.0'),
-(6, 'Online-Banking', '20', 'on', 'Just once', 'Pelu Jeremiah', '0796526231', 'pelunguta@gmail.com', 'on', 'test', 'on', '2024-06-22', '09:31:32.0');
-
 -- --------------------------------------------------------
 
 --
@@ -139,15 +112,6 @@ CREATE TABLE `events` (
   `id` int(20) NOT NULL,
   `storyId` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `events`
---
-
-INSERT INTO `events` (`id`, `storyId`) VALUES
-(1, 'pr66797351c0ead'),
-(2, 'pr66795f64912b3'),
-(3, 'pr667ab1c60c51a');
 
 -- --------------------------------------------------------
 
@@ -164,13 +128,6 @@ CREATE TABLE `partners` (
   `Date` date NOT NULL,
   `Time` time(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `partners`
---
-
-INSERT INTO `partners` (`id`, `name`, `email`, `message`, `referals`, `Date`, `Time`) VALUES
-(3, 'sharaz techs', 'sharaztech@gmail.com', 'test', 'website', '2024-06-20', '23:41:13.0');
 
 -- --------------------------------------------------------
 
@@ -190,29 +147,6 @@ CREATE TABLE `stories` (
   `Time` time(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `stories`
---
-
-INSERT INTO `stories` (`id`, `storytitle`, `category`, `storyinfo`, `code`, `productimage`, `ext`, `Date`, `Time`) VALUES
-(14, 'Test story4', 'Featured', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'donations.jpg', 'jpg', '2024-06-24', '15:10:48.0'),
-(15, 'Test story4', 'Featured', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'icon-delete.png', 'png', '2024-06-24', '15:10:48.0'),
-(17, 'Test', 'Featured', 'Test', 'pr66797351c0ead', 'customer-care.jpg', 'jpg', '2024-06-24', '16:23:52.0'),
-(19, 'Test', 'Featured', 'Test', 'pr66797351c0ead', 'kid2.jpg', 'jpg', '2024-06-25', '14:35:56.0'),
-(22, 'Test', 'Featured', 'Test', 'pr66797351c0ead', 'admin.jpg', 'jpg', '2024-06-25', '14:36:23.0'),
-(23, 'Test', 'Featured', 'Test', 'pr66797351c0ead', 'Bof-logo2.png', 'png', '2024-06-25', '14:36:23.0'),
-(24, 'Test', 'Featured', 'Test', 'pr66797351c0ead', 'climate-crisis.jpg', 'jpg', '2024-06-25', '14:36:24.0'),
-(25, 'Test story4', 'Featured', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'admin.jpg', 'jpg', '2024-06-25', '14:36:44.0'),
-(26, 'Test story4', 'Featured', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'blogs5.jpg', 'jpg', '2024-06-25', '14:36:44.0'),
-(27, 'Test story4', 'Featured', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. RepudiandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae', 'pr667962271b8e1', 'donations.jpg', 'jpg', '2024-06-25', '14:36:44.0'),
-(34, 'Test story', 'Featured', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri', 'pr667ab30e017d7', 'climate-crisis.jpg', 'jpg', '2024-06-25', '15:08:12.0'),
-(35, 'Test story', 'Featured', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri', 'pr667ab30e017d7', 'customer-care.jpg', 'jpg', '2024-06-25', '15:08:12.0'),
-(36, 'Test story', 'Featured', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veritatis. Repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tempore veri', 'pr667ab30e017d7', 'donations.jpg', 'jpg', '2024-06-25', '15:08:12.0'),
-(37, 'Featured test', 'Featured', 'test', 'pr667d8aa3e3ad2', 'kid2.jpg', 'jpg', '2024-06-27', '18:53:25.0'),
-(38, 'Featured test', 'Featured', 'test', 'pr667d8aa3e3ad2', 'kid-security.jpg', 'jpg', '2024-06-27', '18:53:28.0'),
-(39, 'Featured test', 'Featured', 'test', 'pr667d8aa3e3ad2', 'climate-crisis.jpg', 'jpg', '2024-06-27', '18:54:52.0'),
-(40, 'Featured test', 'Featured', 'test', 'pr667d8aa3e3ad2', 'learning.jpg', 'jpg', '2024-06-27', '18:54:52.0');
-
 -- --------------------------------------------------------
 
 --
@@ -230,13 +164,6 @@ CREATE TABLE `users` (
   `Date` date NOT NULL,
   `Time` time(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `username`, `email`, `question`, `answer`, `password`, `repeatpassword`, `Date`, `Time`) VALUES
-(1, 'user', 'user@gmail.com', '$2y$10$/e2mwAxGQQeeZCkykXgQR.RVlbEuufFlvpL3aH8JLxYtWVi/GN.sy', 'Black', '$2y$10$uxGwh4XjpuI7GEn0IwNbRuild/1BNlYNRO4McXUgJxIj57el5MSHa', '$2y$10$ndEgTRmERLOfHuc3Z9NbeeXB/IMBkSISOSOjHXlT0pN.SRVXSlE66', '2024-06-20', '21:37:56.0');
 
 -- --------------------------------------------------------
 
@@ -262,14 +189,6 @@ CREATE TABLE `volunteer` (
   `Date` date NOT NULL,
   `Time` time(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `volunteer`
---
-
-INSERT INTO `volunteer` (`id`, `name`, `gender`, `address`, `phone`, `email`, `ename`, `ephone`, `eemail`, `days`, `vtime`, `referals`, `bcheckbox`, `lcheckbox`, `Date`, `Time`) VALUES
-(1, 'test', 'male', '141', '0796526231', 'test@gmail.com', 'Test', '0796526231', 'test@gmail.com', 'Mon', '00:00:00.0', 'online', 'on', 'on', '2024-06-21', '16:39:52.0'),
-(4, 'Pelu Jeremiah', 'male', 'Ruiru,Kiambu', '0796526231', 'pelunguta@gmail.com', 'Test', '0796526231', 'test@gmail.com', 'Tuesdays and Thursday', 'Afternoon', 'online website', 'on', 'on', '2024-06-21', '22:37:33.0');
 
 --
 -- Indexes for dumped tables
@@ -337,55 +256,55 @@ ALTER TABLE `volunteer`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `blogs`
 --
 ALTER TABLE `blogs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `donations`
 --
 ALTER TABLE `donations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `partners`
 --
 ALTER TABLE `partners`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `stories`
 --
 ALTER TABLE `stories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `volunteer`
 --
 ALTER TABLE `volunteer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
