@@ -110,18 +110,21 @@
   background-color:blue;
   display:flex;
   /* position: relative; */
+  justify-content: space-between;
   top:0px;
   margin-bottom: 0;
   z-index: 2;
 }
 .header-contacts{
+  align-items: flex-start;
   display:flex;
   margin-top:7px;
   /* margin-right:-80px; */
 }
 .header-socials{
+  align-items: flex-end;
   display:flex;
-  /* margin-left:600px; */
+  /* margin-left:300px; */
   /* margin-left:800px; */
 }
 .header-socials a{
