@@ -47,7 +47,7 @@ if (isset($_POST['partnermsg'])) {
     <link href="css/cart.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/extrastyles.css" />
-    <link rel="stylesheet" href="css/modified-styles.css" />
+    <link rel="stylesheet" href="css/new-styles.css" />
   </head>
   <body style="overflow-x:hidden;">
     <!-- Navbar -->
@@ -388,13 +388,94 @@ if (isset($_POST['partnermsg'])) {
       <div class="our-team" style="text-align: center;">
         <h4 style="font-weight:bold;color:black;">OUR TRUSTED PARTNERS</h4>
       </div><br>
-      <div class="partners-logos container">
+      <!-- <div class="partners-logos container">
         <div class="partner-profile"><img class="partner-logo" src="img/icons/person.webp" alt="profile"></div>
         <div class="partner-profile"><img class="partner-logo" src="img/icons/person.webp" alt="profile"></div>
         <div class="partner-profile"><img class="partner-logo" src="img/icons/person.webp" alt="profile"></div>
         <div class="partner-profile"><img class="partner-logo" src="img/icons/person.webp" alt="profile"></div>
+      </div> -->
+
+      <div class="container">
+      <div class="row">
+        <div class="column">
+
+         <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/sponsors/sponsor1.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+           <br>
+           <div class="Blog-title"><h4>Name</h4></div>
+           <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">FOUNDER AND SPONSOR</h6></div>
+           <div class="info"style="margin-left:0px;width:100%;">
+             <p>
+               
+             </p>
+             <a class="btn blogbtn" role="button" href="tel:+254702691884"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
+           </div>
+             <!-- Mail -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="mailto:damianamwayi@gmail.com" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i style="margin-top:15px;" class="fa fa-envelope fa fa-flip-horizontal"></i></a>
+             <!-- phone -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="tel:+254702691884" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i style="margin-top:15px;" class="fa fa-phone fa fa-flip-horizontal"></i></a>
+             <!-- Instagram
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a> -->
+             <!-- whatsapp -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254702691884" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            
+        </div>
+
+        <div class="column">
+
+          <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/icons/person.webp" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+           <br>
+           <div class="Blog-title"><h4>Name</h4></div>
+           <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">FOUNDER AND SPONSOR</h6></div>
+           <div class="info"style="margin-left:0px;width:100%;">
+             <p>
+               
+             </p>
+             <a class="btn blogbtn" role="button" href="tel:+254702691884"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
+           </div>
+             <!-- Mail -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="mailto:damianamwayi@gmail.com" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i style="margin-top:15px;" class="fa fa-envelope fa fa-flip-horizontal"></i></a>
+             <!-- phone -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="tel:+254702691884" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i style="margin-top:15px;" class="fa fa-phone fa fa-flip-horizontal"></i></a>
+             <!-- Instagram
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a> -->
+             <!-- whatsapp -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254702691884" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            
+        </div>
+
+        <div class="column">
+
+          <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/icons/person.webp" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+           <br>
+           <div class="Blog-title"><h4>Name</h4></div>
+           <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">FOUNDER AND SPONSOR</h6></div>
+           <div class="info"style="margin-left:0px;width:100%;">
+             <p>
+               
+             </p>
+             <a class="btn blogbtn" role="button" href="tel:+254702691884"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
+           </div>
+             <!-- Mail -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="mailto:damianamwayi@gmail.com" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i style="margin-top:15px;" class="fa fa-envelope fa fa-flip-horizontal"></i></a>
+             <!-- phone -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="tel:+254702691884" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i style="margin-top:15px;" class="fa fa-phone fa fa-flip-horizontal"></i></a>
+             <!-- Instagram
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/goldenchancerealestatelimited/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a> -->
+             <!-- whatsapp -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254702691884" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            
+        </div>
+
       </div>
-      
+      </div>
+      <!-- end partners -->
     
      <div class="contact-us">
       <div class="customer-care-img bg-image" style="background-image: url('img/partners.jpg');">

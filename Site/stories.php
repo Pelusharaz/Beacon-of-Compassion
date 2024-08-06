@@ -56,7 +56,7 @@ session_start();
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>BOC | Stories</title>
     <!-- Tees Icon -->
-    <link rel="icon" href="img/Golden chance logo.png"/>
+    <link rel="icon" href="img/bof-logo.png"/>
     <!-- Badge Icons from Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"/>
 
@@ -72,7 +72,7 @@ session_start();
     <link href="css/cart.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/extrastyles.css" />
-    <link rel="stylesheet" href="css/modified-styles.css" />
+    <link rel="stylesheet" href="css/new-styles.css" />
   <body>
     <header>
       <!-- Navbar -->
