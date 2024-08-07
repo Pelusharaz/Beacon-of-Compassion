@@ -256,6 +256,27 @@ if (isset($_POST['partnermsg'])) {
              <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254111628390" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
             </div>
 
+          <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/sponsors/sponsor1.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+           <br>
+           <div class="Blog-title"><h4>Name</h4></div>
+           <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">TRUSTEE</h6></div>
+           <div class="info"style="margin-left:0px;width:100%;">
+             <p>
+                
+             </p>
+             <a class="btn blogbtn" role="button" href="tel:+254719411322"><i class="fa fa-phone fa-flip-horizontal fa-lg" ></i> Call Now</a>
+           </div>
+             <!-- Facebook -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.facebook.com/profile.php?id=61561621183867" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-facebook-f"></i></a>
+             <!-- Twitter -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://twitter.com/Isaac_sean64380/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-twitter"></i></a>
+             <!-- Instagram -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://www.instagram.com/bulldog_tail/" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-instagram"></i></a>
+             <!-- whatsapp -->
+             <a class="btn btn-link btn-floating btn-lg m-1" href="https://wa.me/+254111628390" target="_blank" role="button" data-mdb-ripple-color="dark" style="color:white;"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
           <!-- <div class="blog" style="margin:10px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
           <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/staff/Robert-mogesi.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
            <br>
@@ -400,7 +421,7 @@ if (isset($_POST['partnermsg'])) {
         <div class="column">
 
          <div class="blog" style="margin:20px 10px 0px 10px;padding:30px;text-align:center;center;border-radius:20px;background-color:blue;color:white;">
-          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/sponsors/sponsor1.jpg" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
+          <div class="profile"style="border-radius:50%;width: 165px; height: 165px;background-color:white;margin-left:auto;margin-right:auto;display:block;"><img src="img/icons/person.webp" alt="profile" style="border-radius:50%;width: 150px; height: 150px;"></div>
            <br>
            <div class="Blog-title"><h4>Name</h4></div>
            <div class="Blog-title"><h6 style="color:rgb(238, 81, 8);">FOUNDER AND SPONSOR</h6></div>
