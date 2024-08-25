@@ -205,30 +205,61 @@ if (isset($_POST['contactmsg'])) {
                width:100%;
               }
             }
+
+            /* where we support*/
+            .inner-info{
+              display:none;
+            }
+            .image-container:hover .inner-info{
+              display:block;
+            }
+            .image-container:hover .outer-info{
+              display:none;
+            }
           </style>
 
      <div class="what-we-do container">
-      <h5 class="what-we-do-header">WHAT WE ENTAIL</h5>
-      <br>
-      <p class="what-we-do-info">The Beacon of compassion  is a newly established charitable organization 
-         founded in Kenya with a noble mission to make a positive impact on society. The inspiration to create
-         this foundation stemmed from the unwavering support and generosity of our esteemed sponsors, with Karola 
-         serving as our esteemed patron and Sr. Barbra as our dedicated guardian.
-         Fueled by a shared sense of compassion and dedication to making a difference, the Beacon of Compassion 
-         aims to uphold the values and principles exemplified by our sponsors. Their commitment to philanthropy 
-         and social responsibility serves as a guiding light for our foundation as we embark on our journey to create 
-         meaningful change in the community.With our recent registration in Kenya, we are now poised to fully realize 
-         our mission and vision. The foundation is driven by a deep sense of purpose to address critical social issues 
-         and contribute towards the betterment of society. Through strategic initiatives and collaborative efforts, we 
-         are determined to bring about sustainable solutions and foster a culture of empathy and kindness.
-         As we step into this new chapter, the Beacon of Compassion is dedicated to upholding transparency, integrity, and 
-         accountability in all our endeavors. With Karola's patronage and Sr. Barbra's guidance, we are confident in our 
-         ability to make a real and lasting impact on the lives of those in need.
-         Together, with our sponsors, volunteers, and supporters, we are committed to building a brighter future and 
-         creating a world where compassion and generosity prevail
+      <!--<h5 class="what-we-do-header">WHAT WE ENTAIL</h5>-->
+      <!--<br>-->
+      <!--<p class="what-we-do-info">The Beacon of compassion  is a newly established charitable organization -->
+      <!--   founded in Kenya with a noble mission to make a positive impact on society. The inspiration to create-->
+      <!--   this foundation stemmed from the unwavering support and generosity of our esteemed sponsors, with Karola -->
+      <!--   serving as our esteemed patron and Sr. Barbra as our dedicated guardian.-->
+      <!--   Fueled by a shared sense of compassion and dedication to making a difference, the Beacon of Compassion -->
+      <!--   aims to uphold the values and principles exemplified by our sponsors. Their commitment to philanthropy -->
+      <!--   and social responsibility serves as a guiding light for our foundation as we embark on our journey to create -->
+      <!--   meaningful change in the community.With our recent registration in Kenya, we are now poised to fully realize -->
+      <!--   our mission and vision. The foundation is driven by a deep sense of purpose to address critical social issues -->
+      <!--   and contribute towards the betterment of society. Through strategic initiatives and collaborative efforts, we -->
+      <!--   are determined to bring about sustainable solutions and foster a culture of empathy and kindness.-->
+      <!--   As we step into this new chapter, the Beacon of Compassion is dedicated to upholding transparency, integrity, and -->
+      <!--   accountability in all our endeavors. With Karola's patronage and Sr. Barbra's guidance, we are confident in our -->
+      <!--   ability to make a real and lasting impact on the lives of those in need.-->
+      <!--   Together, with our sponsors, volunteers, and supporters, we are committed to building a brighter future and -->
+      <!--   creating a world where compassion and generosity prevail-->
 
+      <!--</p>-->
+      
+      <h5 class="what-we-do-header">OUR HISTORY</h5>
+      <br>
+      <p class="what-we-do-info">Beacon of compassion Foundation began as a platform to bring the beneficiaries of
+         NeAs Hope [Foundation based in Europe] through the Fransiscan Sisters of Saint Joseph. Through Karola Teschler [the president of NeAs Hope] 
+         and Sr Barbra Adongo of Fransiscan Sisters of Saint Joseph, the first group was formed. At the formation the group mainly consisted of
+         beneficiaries who had completed education with   majority being those who are in the institution of higher learning. However the foundation is
+         expected to grow as we have several members who are still in high school and primary schools.
       </p>
       <br>
+      <h5 class="what-we-do-header">INSIPIRATION TO FORMING A NON PROFIT ORGANISATION</h5>
+      <br>
+      <p class="what-we-do-info">Inspired by the support they received from NeAs Hope through the Fransiscan Sisters of Saint Joseph, the members 
+         decided to form a non- profit organization as a way of giving back to the society. Behind these ideas are the directors of the organization; 
+         Sean Isaac [founding chairperson], Damiana Amwayi [founding vice chairperson], Billia Chenamba [Founding secretary] and Steve Odongo [founding 
+         finance director].With its leadership the foundation is determined to bring change in the society by pulling together to ensure that everyone in 
+         the society lives a better life. The foundation opens its doors to persons of goodwill to join them as they embark on a life transformation 
+         mission in the society. 
+      </p>
+      <br>
+      
       <button type="submit" class="donate-button" style="color:white;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">DONATE NOW TO SUPPORT OUR WORK</button>
      </div>
      <br><br>
@@ -240,14 +271,27 @@ if (isset($_POST['contactmsg'])) {
             <div class="image-container bg-image" style="background-image: url('img/kids.jpg'); height: 200px;">
               <div class="support-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
-                    <h4 class="mb-2">BASIC NECESSITIES</h4>
+                    <h4 class="mb-2 outer-info">BASIC NECESSITIES</h4>
+                    <div class="inner-info" style="margin-top:-40px; margin-left:-7px;width:100%;">
+                      <h4 class="mb-2">BASIC NECESSITIES</h4>
+                        <P>We aim at ensuring that the less privilege in the society are well taken care of by providing the basic 
+                          necessities in form of food,clothing  and help in putting up proper shelters
+                        </P>
+                    </div>
                   </div>
               </div>
             </div>
             <div class="image-container bg-image" style="background-image: url('img/learning.jpg'); height: 200px;">
               <div class="support-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
-                    <h4 class="mb-2">ACADEMIA</h4>
+                    <h4 class="mb-2 outer-info">EDUCATION</h4>
+                    <div class="inner-info" style="margin-top:-40px; margin-left:-7px;width:100%;">
+                      <h4 class="mb-2">EDUCATION</h4>
+                        <P>
+                          We believe education is the key to success and aim at emphasizing the role of 
+                          education in broadening perspectives and fostering personal growth.
+                        </P>
+                    </div>
                   </div>
               </div>
             </div>
@@ -258,14 +302,28 @@ if (isset($_POST['contactmsg'])) {
             <div class="image-container bg-image" style="background-image: url('img/kid-security.jpg'); height: 200px;">
               <div class="support-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
-                    <h4 class="mb-2">SECURITY</h4>
+                    <h4 class="mb-2 outer-info">SOCIAL JUSTICE</h4>
+                    <div class="inner-info" style="margin-top:-40px; margin-left:-7px;width:100%;">
+                      <h4 class="mb-2">SOCIAL JUSTICE</h4>
+                        <P>
+                           
+                        </P>
+                    </div>
                   </div>
               </div>
             </div>
             <div class="image-container bg-image" style="background-image: url('img/refugee camp.webp'); height: 200px;">
               <div class="support-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
-                    <h4 class="mb-2">EMERGENCIES</h4>
+                    <h4 class="mb-2 outer-info">EMERGENCIES</h4>
+                    <div class="inner-info" style="margin-top:-40px; margin-left:-7px;width:100%;">
+                      <h4 class="mb-2">EMERGENCIES</h4>
+                        <P>
+                          With our partners we aim at collaborating with governments, NGOs, and other 
+                          stakeholders to leverage collective expertise and resource to help during 
+                          emergency issues.
+                        </P>
+                    </div>
                   </div>
               </div>
             </div>
@@ -276,14 +334,28 @@ if (isset($_POST['contactmsg'])) {
             <div class="image-container bg-image" style="background-image: url('img/climate-crisis.jpg'); height: 200px;">
               <div class="support-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
-                    <h4 class="mb-2">CLIMATE CRISIS</h4>
+                    <h4 class="mb-2 outer-info">CLIMATE CRISIS</h4>
+                    <div class="inner-info" style="margin-top:-40px; margin-left:-7px;width:100%;">
+                      <h4 class="mb-2">CLIMATE CRISIS</h4>
+                        <P>
+                          Through community engagements and education we aim at raising awareness about 
+                          climate issues on sustainable practices and empower local initiatives that 
+                          contribute to environmental stewardship.
+                        </P>
+                    </div>
                   </div>
               </div>
             </div>
             <div class="image-container bg-image" style="background-image: url('img/hunger-crisis.webp'); height: 200px;">
               <div class="support-mask">
                   <div class="image-maskinfo"style="text-align: center;padding:15px; 0px 15px 0px;"><br><br>
-                    <h4 class="mb-2">HUNGER CRISIS</h4>
+                    <h4 class="mb-2 outer-info">HUNGER CRISIS</h4>
+                    <div class="inner-info" style="margin-top:-40px; margin-left:-7px;width:100%;">
+                      <h4 class="mb-2">HUNGER CRISIS</h4>
+                        <P>
+                           
+                        </P>
+                    </div>
                   </div>
               </div>
             </div>
