@@ -8,7 +8,7 @@ if($_SESSION['role']!=='super admin'){
 
 <?php
 require_once '../includes/config.php';
-$sql="SELECT * FROM admin where role='" . $_SESSION["role"] . "'";
+$sql="SELECT * FROM admin where role='" . $_SESSION["role"] . "' GROUP BY ROLE";
 $stmt = $DBH->prepare($sql);
 $stmt->execute();
 $total = $stmt->rowCount();
